@@ -1,0 +1,445 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body class="blue-sky">
+    <!-- Modal -->
+    <div class="ui medium modal" id="add_pegawai">
+      <i class="close icon"></i>
+      <div class="header">
+        <h3><i class="users icon"></i> Daftar Pegawai</h3>
+      </div>
+      <div class="content">
+            <div class="ui secondary pointing tabed menu">
+                <a class="item" data-tab="first">Daftar Pegawai</a>
+                <a class="active item" data-tab="second">Cari Pegawai</a>
+            </div>
+            <div class="ui bottom tab" data-tab="first">
+                <select>
+                  <option>
+                      Semua Bagian
+                  </option>
+                </select>
+                <table class="ui very basic selectable table">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>NIP</th>
+                        <th>Nama</th>
+                        <th>Bagian</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>01910</td>
+                        <td>Andi</td>
+                        <td>Akademik</td>
+                        <td>
+                            <div class="table-action">
+                              <a href="#" class="ui basic blue mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>01910</td>
+                        <td>Andi</td>
+                        <td>Akademik</td>
+                        <td>
+                            <div class="table-action">
+                              <a href="#" class="ui basic blue mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>01910</td>
+                        <td>Andi</td>
+                        <td>Akademik</td>
+                        <td>
+                            <div class="table-action">
+                              <a href="#" class="ui basic blue mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>01910</td>
+                        <td>Andi</td>
+                        <td>Akademik</td>
+                        <td>
+                            <div class="table-action">
+                              <a href="#" class="ui basic blue mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>01910</td>
+                        <td>Andi</td>
+                        <td>Akademik</td>
+                        <td>
+                            <div class="table-action">
+                              <a href="#" class="ui basic blue mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="ui bottom active tab" data-tab="second">
+                <form class="ui form inverted green segment" action="">
+                  <div class="field">
+                    <label>Bagian</label>
+                    <select>
+                        <option>
+                            Semua Bagian
+                        </option>
+                    </select>
+                  </div>
+                  <div class="field">
+                      <label>Pegawai</label>
+                      <div class="fields">
+                          <div class="four wide field">
+                              <input type="text" placeholder="NIP">
+                          </div>
+                          <div class="twelve wide field">
+                              <input type="text" placeholder="Nama Pegawai">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="text-center">
+                      <button class="ui right labeled icon mini blue basic button">
+                        <i class="search icon"></i> Cari
+                    </button>
+                  </div>
+                </form>
+                <div class="ui info message">
+                    <i class="close icon"></i>
+                    <p>
+                        Klik pada tombol "Cari" di atas untuk melihat data pegawai
+  sesuai dengan NIP atau Nama Pegawai berdasarkan keyword yang dimasukkan
+                    </p>
+                  </div>
+                <div class="m-t-50"></div>
+                <table class="ui very basic selectable table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td>None</td>
+                      </tr>
+                      <tr>
+                        <td>Jamie</td>
+                        <td>Approved</td>
+                        <td>Requires call</td>
+                      </tr>
+                      <tr>
+                        <td>Jill</td>
+                        <td>Denied</td>
+                        <td>None</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+      </div>
+    </div>
+
+    <div class="ui basic modal" id="alert">
+        <i class="close icon"></i>
+        <div class="ui icon header">
+            <i class="trash icon"></i> Hapus Data
+        </div>
+        <div class="content">
+            <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+        </div>
+        <div class="actions">
+            <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i> Tidak
+            </div>
+            <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i> Ya
+            </div>
+        </div>
+    </div>
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="three wide column">
+                    <div class="head">
+                        <a href="pelaporan_landing_akademik.html" class="back">&nbsp;</a>
+                        <img src="../img/pelaporan_logo.png" alt="logo" />
+                        Pelaporan
+                    </div>
+                </div>
+                <div class="thirteen wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul>
+                                            <li>
+                                                <a href="pelaporan_landing_akademik.html"><i class="ifont-passed-exam"></i>Akademik</a>
+                                            </li>
+                                            <li>
+                                                <a href="pelaporan_landing_kepegawaian.html"><i class="ifont-profile"></i>Kepegawaian</a>
+                                            </li>
+                                            <li>
+                                                <a href="pelaporan_landing_keuangan.html"><i class="ifont-analytic-report"></i>Keuangan</a>
+                                            </li>
+                                            <li>
+                                                <a href="pelaporan_landing_perpustakaan.html"><i class="ifont-library"></i>Perpustakaan</a>
+                                            </li>
+                                            <li>
+                                                <a href="pelaporan_kritik_saran.html"><i class="ifont-callout"></i>Kritik &amp; Saran</a>
+                                            </li>
+                                            <li>
+                                                <a href="pelaporan_landing_pengaturan.html" class="cur setting"><i class="ifont-settings-work-tool"></i>Konfigurasi</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="four wide column navigator">
+                    <div class="ui small breadcrumb">
+                        <a class="section" href="akademik_landing_setting.html">Konfigurasi</a>
+                        <i class="right angle icon divider"></i>
+                        <div class="active section">Daftar Pengguna</div>
+                    </div>
+                    <div class="title">
+                        <h2><img src="../img/akademik/setting/daftar_pengguna.png" alt="logo" /> Daftar Pengguna</h2>
+                    </div>
+                </div>
+                <div class="nine wide column filter-field">
+                    &nbsp;
+                </div>
+            </div>
+        </section>
+        <section id="content" class="table-layout">
+            <div class="ui grid table-layout-cell">
+                <div class="sixteen wide column panel">
+                    <section class="table-wrap">
+                        <div class="filter-in">
+                            <div class="ui grid">
+                                <div class="ten wide column">
+                                    &nbsp;
+                                </div>
+                                <div class="six wide column text-right">
+                                    <button class="ui mini button">
+                                        <i class="refresh icon"></i> Refresh
+                                    </button>
+                                    <button class="ui mini button">
+                                        <i class="print icon"></i> Print
+                                    </button>
+                                    <button class="ui blue sea mini button" onclick="floatForm('add')">
+                                        <i class="add icon"></i> Tambah Pengguna
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table class="ui table teal selectable striped very basic">
+                            <thead>
+                                <tr>
+                                    <th width="5%">No</th>
+                                    <th width="5%">NIP</th>
+                                    <th width="15%">Nama</th>
+                                    <th width="20%">Login Terkhir</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>123456</td>
+                                    <td>M. Achmadi</td>
+                                    <td>21 Maret 2016 09:22:55</td>
+                                    <td>
+                                        <div class="table-action">
+                                            <a href="#"><i class="edit icon tooltiped" data-content="Ubah Data Pengguna" onclick="floatForm('detail')"></i></a>
+                                            <a href="#"><i class="delete icon tooltiped" data-content="Hapus Data Pengguna"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>00001</td>
+                                    <td>Andi</td>
+                                    <td>22 Maret 2016 10:22:55</td>
+                                    <td>
+                                        <div class="table-action">
+                                            <a href="#"><i class="edit icon tooltiped" data-content="Ubah Data Pengguna" onclick="floatForm('detail')"></i></a>
+                                            <a href="#"><i class="delete icon tooltiped" data-content="Hapus Data Pengguna"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>00002</td>
+                                    <td>Nurlambang</td>
+                                    <td>25 Februari 2012 00:38:22</td>
+                                    <td>
+                                        <div class="table-action">
+                                            <a href="#"><i class="edit icon tooltiped" data-content="Ubah Data Pengguna" onclick="floatForm('detail')"></i></a>
+                                            <a href="#"><i class="delete icon tooltiped" data-content="Hapus Data Pengguna"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="9">
+                                        <div class="ui right floated pagination menu">
+                                            <a class="icon item">
+                                                <i class="left chevron icon"></i>
+                                            </a>
+                                            <a class="item cur">1</a>
+                                            <a class="item">2</a>
+                                            <a class="item">3</a>
+                                            <a class="item">4</a>
+                                            <a class="icon item">
+                                                <i class="right chevron icon"></i>
+                                            </a>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-form small" id="add">
+        <div class="header">
+            <i class="add icon"></i> Tambah Pengguna
+            <span class="option">
+                <a href="#" class="expand"><i class="expand icon"></i></a>
+                <a href="#" class="minus"><i class="minus icon"></i></a>
+                <a href="#" class="remove"><i class="remove icon"></i></a>
+            </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Login</label>
+                <div class="fields">
+                    <div class="four wide field">
+                        <input type="text" placeholder="NIP">
+                    </div>
+                    <div class="twelve wide field">
+                        <div class="ui icon input">
+                          <input type="text" id="search_pegawai_input" placeholder="Nama Pegawai">
+                          <i class="search icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Keterangan</label>
+                <div class="fields">
+                  <textarea></textarea>
+                </div>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button blue sea noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form" id="detail">
+        <div class="header">
+            <i class="edit icon"></i> Ubah Pengguna
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Login</label>
+                <div class="fields">
+                    <div class="four wide field">
+                        <input type="text" placeholder="NIP" value="123456" />
+                    </div>
+                    <div class="twelve wide field">
+                        <div class="ui icon input">
+                          <input type="text" id="search_pegawai_input" value="Risnandar" placeholder="Nama Pegawai">
+                          <i class="search icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Keterangan</label>
+                <div class="fields">
+                  <textarea>Lorem ipsum dolor sit amet</textarea>
+                </div>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button blue sea noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+        </div>
+    </div>
+
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+<script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#add_pegawai').modal('attach events', '#search_pegawai_input', 'show');
+        $('#alert').modal('attach events', '.table-action .delete', 'show');
+    </script>
+</body>
+
+</html>

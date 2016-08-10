@@ -1,0 +1,741 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body class="green-leaf">
+    <!-- Modal -->
+    <div class="ui basic modal" id="alert">
+        <i class="close icon"></i>
+        <div class="ui icon header">
+            <i class="trash icon"></i> Hapus Data
+        </div>
+        <div class="content">
+            <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+        </div>
+        <div class="actions">
+            <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i> Tidak
+            </div>
+            <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i> Ya
+            </div>
+        </div>
+    </div>
+
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="three wide column">
+                    <div class="head">
+                        <a href="keuangan_landing_referensi.html" class="back">&nbsp;</a>
+                        <img src="../img/sms_logo.png" alt="logo" /> SMS Gateway
+                    </div>
+                </div>
+                <div class="thirteen wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul id="" class="clearfix">
+                                            <li class="item">
+                                                <a href="sms_kotak_masuk.html"><i class="ifont-email"></i>Kotak <br />Masuk</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_landing_presensi.html"><i class="ifont-fingerprint-scan"></i>Presensi</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_landing_penilaian.html"><i class="ifont-passed-exam"></i>Penilaian</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_landing_pengumuman.html" class="cur"><i class="icon ifont-amplifier"></i>Pengumuman</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_saran.html"><i class="icon ifont-callout"></i>Kritik &amp; <br />Saran</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_phonebook.html"><i class="icon ifont-phonebook"></i>Phone <br />Book</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <!--
+            <div class="ui grid">
+                <div class="four wide column navigator">
+                    <div class="ui small breadcrumb">
+                        <a class="section" href="akademik_landing_kesiswaan.html">Pengumuman</a>
+                        <i class="right angle icon divider"></i>
+                        <div class="active section">Kirim Pengumuman</div>
+                    </div>
+                    <div class="title">
+                        <h2>
+                                <img src="../img/sms/kirim_pesan_penilaian.png" alt="logo" />
+                                Kirim Pengumuman
+                            </h2>
+                    </div>
+                </div>
+            </div>
+-->
+        </section>
+
+        <section id="content" class="table-layout">
+            <div class="ui grid table-layout-cell">
+                <div class="five wide column">
+                    <div class="navigator p-l-30 p-b-10">
+                        <div class="ui small breadcrumb">
+                            <a class="section" href="akademik_landing_kesiswaan.html">Pengumuman</a>
+                            <i class="right angle icon divider"></i>
+                            <div class="active section">Kirim Pengumuman</div>
+                        </div>
+                        <div class="title">
+                            <h2>
+                                <img src="../img/sms/kirim_pesan_penilaian.png" alt="logo">
+                                Kirim Pengumuman
+                            </h2>
+                        </div>
+                    </div>
+                    <section class="filter-side panel">
+                        <div class="ui grid">
+                            <div class="sixteen wide column search-head green-leaf2">
+                                <i class="talk outline icon"></i>Pesan
+                                <span>Kirim pesan pengumuman</span>
+                            </div>
+                            <section class="sixteen wide column">
+                                <form class="ui form inverted green segment" action="">
+                                    <div class="field">
+                                        <label>Pengirim :</label>
+                                        <input type="text" />
+                                    </div>
+                                    <div class="field">
+                                        <label>Pesan :</label>
+                                        <textarea rows="3"></textarea>
+                                        <div class="text-right m-t-10">
+                                            <div class="ui tiny label">
+                                                <p>160 Character Left</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="ui info message">
+                                    Ket :
+                                    <ul class="list ui one column grid">
+                                        <li class="column"> <strong>[NOINDUK]</strong>: No Induk Pegawai/Siswa</li>
+                                        <li class="column"> <strong>[PIN]</strong>: PIN Siswa atau Ortu atau Pegawai</li>
+                                        <li class="column"> <strong>[NAMA]</strong>: Nama Pegawai/Siswa</li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+                <div class="eleven wide column panel">
+                    <div class="p-t-20 p-b-20 ui horizontal divider no-bg no-shadow"><i class="chevron circle down grey icon"></i> 1.Pilih Penerima</div>
+                    <div class="table-wrap">
+                        <section class="ui form">
+                            <div class="ui grid">
+                                <div class="six wide no-padding column">
+                                    <div class="m-l-30">
+                                        <div class="header-form">Pilih Penerima</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui pointing tabed secondary menu">
+                                <a class="item active" data-tab="first">PEGAWAI</a>
+                                <a class="item" data-tab="second">SISWA</a>
+                                <a class="item" data-tab="third">ORANG TUA</a>
+                                <a class="item" data-tab="fourth">LAINNYA</a>
+                            </div>
+                            <div class="ui tab active" data-tab="first">
+                                <div class="filter-in">
+                                    <div class="ui grid">
+                                        <div class="six wide column">
+                                            <div class="inline fields no-margin">
+                                                <label>Bagian</label>
+                                                <div class="field">
+                                                    <select>
+                                                        <option>-Semua-</option>
+                                                        <option>Akademik</option>
+                                                        <option>Non AKademik</option>
+                                                    </select>
+                                                </div>
+                                                <button class="ui green mini button">
+                                                    Lihat
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="eight wide column text-right">
+                                            <div class="inline fields no-margin">
+                                                <label>Cari</label>
+                                                <div class="field">
+                                                    <input type="text" placeholder="NIP Pegawai" />
+                                                </div>
+                                                <div class="field">
+                                                    <input type="text" placeholder="Nama Pegawai" />
+                                                </div>
+                                                <button class="ui green mini button">
+                                                    Cari
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="ui table teal selectable striped very basic">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th width="15%">NIP</th>
+                                            <th width="20%">Nama</th>
+                                            <th width="40%">No Ponsel</th>
+                                            <th>Pilih</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>000001</td>
+                                            <td>Andi</td>
+                                            <td>08783291911</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>000002</td>
+                                            <td>Bonar Sitepu</td>
+                                            <td>081237291147</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>000003</td>
+                                            <td>Dini</td>
+                                            <td>08213475644</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>000004</td>
+                                            <td>Eka Mustika</td>
+                                            <td>081137223127</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>000005</td>
+                                            <td>M.Achmadi</td>
+                                            <td>08678888421</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ui tab" data-tab="second">
+                                <div class="filter-in">
+                                    <div class="ui grid">
+                                        <div class="eight wide column">
+                                            <div class="inline fields no-margin">
+                                                <label>Kelas</label>
+                                                <div class="field">
+                                                    <select>
+                                                        <option>-Semua-</option>
+                                                        <option>SMK</option>
+                                                        <option>SMA</option>
+                                                        <option>SMP</option>
+                                                        <option>SD</option>
+                                                        <option>Bimbel</option>
+                                                    </select>
+                                                </div>
+                                                <div class="field">
+                                                    <select>
+                                                        <option>-Semua-</option>
+                                                        <option>10 A</option>
+                                                        <option>10 B</option>
+                                                        <option>10 C</option>
+                                                    </select>
+                                                </div>
+
+                                                <button class="ui green mini button">
+                                                    Lihat
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="eight wide column text-right">
+                                            <div class="inline fields no-margin">
+                                                <label>Cari</label>
+                                                <div class="field">
+                                                    <input type="text" placeholder="NIS Siswa" />
+                                                </div>
+                                                <div class="field">
+                                                    <input type="text" placeholder="Nama Siswa" />
+                                                </div>
+                                                <button class="ui green mini button">
+                                                    Cari
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="ui table teal selectable striped very basic">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th width="15%">NIS</th>
+                                            <th width="20%">Nama</th>
+                                            <th width="40%">No Ponsel</th>
+                                            <th>Pilih</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>000001</td>
+                                            <td>Amelia M</td>
+                                            <td>08783291911</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>000002</td>
+                                            <td>Apriansyah B</td>
+                                            <td>081237291147</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>000003</td>
+                                            <td>Marcelinus</td>
+                                            <td>08213475644</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>000004</td>
+                                            <td>Ria Ajeng</td>
+                                            <td>081137223127</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>000005</td>
+                                            <td>Saskia H</td>
+                                            <td>08678888421</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ui tab" data-tab="third">
+                                <div class="filter-in">
+                                    <div class="ui grid">
+                                        <div class="eight wide column">
+                                            <div class="inline fields no-margin">
+                                                <label>Kelas</label>
+                                                <div class="field">
+                                                    <select>
+                                                        <option>-Semua-</option>
+                                                        <option>SMK</option>
+                                                        <option>SMA</option>
+                                                        <option>SMP</option>
+                                                        <option>SD</option>
+                                                        <option>Bimbel</option>
+                                                    </select>
+                                                </div>
+                                                <div class="field">
+                                                    <select>
+                                                        <option>-Semua-</option>
+                                                        <option>10 A</option>
+                                                        <option>10 B</option>
+                                                        <option>10 C</option>
+                                                    </select>
+                                                </div>
+
+                                                <button class="ui green mini button">
+                                                    Lihat
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="eight wide column text-right">
+                                            <div class="inline fields no-margin">
+                                                <label>Cari</label>
+                                                <div class="field">
+                                                    <input type="text" placeholder="NIS Siswa" />
+                                                </div>
+                                                <div class="field">
+                                                    <input type="text" placeholder="Nama Siswa" />
+                                                </div>
+                                                <button class="ui green mini button">
+                                                    Cari
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="ui table teal selectable striped very basic">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th width="15%">NIS</th>
+                                            <th width="20%">Nama</th>
+                                            <th width="40%">No Ponsel Ortu</th>
+                                            <th>Pilih</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>000001</td>
+                                            <td>Amelia M</td>
+                                            <td>08783291911</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>000002</td>
+                                            <td>Apriansyah B</td>
+                                            <td>081237291147</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>000003</td>
+                                            <td>Marcelinus</td>
+                                            <td>08213475644</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>000004</td>
+                                            <td>Ria Ajeng</td>
+                                            <td>081137223127</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>000005</td>
+                                            <td>Saskia H</td>
+                                            <td>08678888421</td>
+                                            <td>
+                                                <div class="ui checkbox">
+                                                    <input type="checkbox" name="example">
+                                                    <label>&nbsp;</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ui tab" data-tab="fourth">
+                                <div class="filter-in">
+                                    <div class="ui grid">
+                                        <div class="sixteen wide column">
+                                            <div class="inline fields no-margin">
+                                                <div class="field">
+                                                    <input type="text" placeholder="Nama" />
+                                                </div>
+                                                <div class="field">
+                                                    <input type="tel" placeholder="No.Ponsel" />
+                                                </div>
+
+                                                <button class="ui green mini button">
+                                                    Tambahkan
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="p-t-20 p-b-20 ui horizontal divider no-bg no-shadow"><i class="chevron circle down grey icon"></i> 2.Daftar Penerima</div>
+
+                    <div class="table-wrap">
+                        <section class="ui form">
+                            <div class="ui grid">
+                                <div class="six wide no-padding column">
+                                    <div class="m-l-30">
+                                        <div class="header-form">Daftar Penerima</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <table class="ui table teal selectable striped very basic">
+                                <thead>
+                                    <tr>
+                                        <th width="5%">No</th>
+                                        <th width="5%">&nbsp;</th>
+                                        <th width="15%">NIP</th>
+                                        <th width="20%">Nama</th>
+                                        <th>No Ponsel</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="ui checkbox">
+                                                <input type="checkbox" name="example" checked />
+                                                <label>&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        <td>000001</td>
+                                        <td>Andi</td>
+                                        <td>08783291911</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="ui checkbox">
+                                                <input type="checkbox" name="example" checked />
+                                                <label>&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        <td>000002</td>
+                                        <td>Bonar Sitepu</td>
+                                        <td>081237291147</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="ui checkbox">
+                                                <input type="checkbox" name="example" checked />
+                                                <label>&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        <td>000003</td>
+                                        <td>Dini</td>
+                                        <td>08213475644</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </section>
+                    </div>
+
+                    <div class="p-t-20 p-b-20 ui horizontal divider no-bg no-shadow"><i class="chevron circle down grey icon"></i> 3.Jadwal Pengiriman</div>
+                    <div class="table-wrap">
+                        <section class="ui form p-b-40">
+                            <div class="ui grid">
+                                <div class="six wide no-padding column">
+                                    <div class="m-l-30">
+                                        <div class="header-form">Jadwal Pengiriman</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fields required oneline m-t-30">
+                                <div class="one wide field">&nbsp;</div>
+                                <div class="three wide field">
+                                    <label class="strong">Tanggal Pengiriman</label>
+                                </div>
+                                <div class="four wide field ui icon input">
+                                    <input type="text" placeholder="Tanggal Pengiriman" class="datepicker" aria-label="Use the arrow keys to pick a date">
+                                    <i class="calendar icon"></i>
+                                </div>
+                                <div class="one wide field">
+                                    Jam
+                                </div>
+                                <div class="four wide field ui icon input">
+                                    <input type="text" placeholder="Tanggal Presensi" class="clockpicker">
+                                </div>
+                                <div class="three wide field ui icon input text-center">
+                                    <button class="ui green button">
+                                        Kirim
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-form small" id="add">
+        <div class="header">
+            <i class="add icon"></i> Tambah Phonebook
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field required">
+                <label class="strong">No HP</label>
+                <input type="text" />
+            </div>
+
+            <div class="field required">
+                <label class="strong">Nama</label>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea></textarea>
+            </div>
+
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form small" id="detail">
+        <div class="header">
+            <i class="edit icon"></i> Ubah Phonebook
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field required">
+                <label class="strong">No HP</label>
+                <input type="text" value="085621475698" />
+            </div>
+
+            <div class="field required">
+                <label class="strong">Nama</label>
+                <input type="text" placeholder="" value="Galuh Putrawerdana">
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea>Lorem ipsum dolor</textarea>
+            </div>
+
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+        </div>
+    </div>
+
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/jquery-clockpicker.min.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#alert').modal('attach events', '.table-action .delete', 'show');
+        $('.clockpicker').clockpicker({
+            placement: 'top',
+            align: 'left',
+            donetext: 'OK',
+            'default': '09:30'
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body class="green-leaf">
+    <!-- Modal -->
+    <div class="ui basic modal" id="alert">
+        <i class="close icon"></i>
+        <div class="ui icon header">
+            <i class="trash icon"></i> Hapus Data
+        </div>
+        <div class="content">
+            <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+        </div>
+        <div class="actions">
+            <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i> Tidak
+            </div>
+            <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i> Ya
+            </div>
+        </div>
+    </div>
+
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="three wide column">
+                    <div class="head">
+                        <a href="keuangan_landing_referensi.html" class="back">&nbsp;</a>
+                        <img src="../img/sms_logo.png" alt="logo" /> SMS Gateway
+                    </div>
+                </div>
+                <div class="thirteen wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul id="" class="clearfix">
+                                            <li class="item">
+                                                <a href="sms_kotak_masuk.html"><i class="ifont-email"></i>Kotak <br />Masuk</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_landing_presensi.html" class="cur"><i class="ifont-fingerprint-scan"></i>Presensi</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_landing_penilaian.html"><i class="ifont-passed-exam"></i>Penilaian</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_landing_pengumuman.html"><i class="icon ifont-amplifier"></i>Pengumuman</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_saran.html"><i class="icon ifont-callout"></i>Kritik &amp; <br />Saran</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_phonebook.html"><i class="icon ifont-phonebook"></i>Phone <br />Book</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="sms_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="ui centered grid">
+                <div class="eight wide column navigator">
+                    <div class="ui small breadcrumb">
+                        <a class="section" href="sms_landing_presensi.html">Presensi</a>
+                        <i class="right angle icon divider"></i>
+                        <div class="active section">Kirim Laporan Presensi</div>
+                    </div>
+                    <div class="title">
+                        <h2>
+                                <img src="../img/sms/kirim_pesan_presensi.png" alt="logo" />
+                                Kirim Laporan Presensi
+                            </h2>
+                    </div>
+                </div>
+                <div class="ten wide column filter-field">
+                    &nbsp;
+                </div>
+            </div>
+        </section>
+        <section id="content" class="table-layout">
+            <div class="ui centered grid">
+                <div class="eight wide column panel">
+                    <section class="table-wrap p-l-20 p-r-20">
+                        <div class="ui form">
+                            <div class="fields required oneline">
+                                <div class="four wide field">
+                                    <label class="bold">Kirim Laporan Berdasarkan </label>
+                                </div>
+                                <div class="twelve wide field">
+
+                                    <div class="field">
+                                        <div class="ui radio checkbox">
+                                            <input type="radio" name="sendto" checked="checked" />
+                                            <label>Siswa </label>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <textarea></textarea>
+                                        <em>* dispisahkan koma</em>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="inline fields">
+
+                                            <div class="field">
+                                                <select>
+                                                    <option>SMA</option>
+                                                    <option>SMP</option>
+                                                    <option>SD</option>
+                                                    <option>SMK</option>
+                                                    <option>Bimbel</option>
+                                                </select>
+                                            </div>
+                                            <div class="field">
+                                                <select>
+                                                    <option value="-1">- Semua -</option>
+                                                    <option value="46">10 A</option>
+                                                    <option value="47">10 B</option>
+                                                    <option value="65">10 C</option>
+                                                    <option value="48">11 A</option>
+                                                    <option value="49">11 B</option>
+                                                    <option value="50">12 A</option>
+                                                    <option value="51">12 B</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="fields required oneline">
+                                <div class="four wide field">
+                                    <label class="bold">Presensi</label>
+                                </div>
+                                <div class="twelve wide inline fields">
+                                    <div class="field">
+                                        <div class="ui radio checkbox">
+                                            <input type="radio" name="presensi" checked="checked" />
+                                            <label>Harian </label>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="ui radio checkbox">
+                                            <input type="radio" name="presensi" tabindex="0" />
+                                            <label>Pelajaran</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="fields required oneline">
+                                <div class="four wide field">
+                                    <label class="strong">Tanggal Presensi</label>
+                                </div>
+                                <div class="five wide field ui icon input">
+                                    <input type="text" placeholder="Tanggal Presensi" class="datepicker" aria-label="Use the arrow keys to pick a date">
+                                    <i class="calendar icon"></i>
+                                </div>
+                                <div class="one wide field">
+                                    s/d
+                                </div>
+                                <div class="five wide field ui icon input">
+                                    <input type="text" placeholder="Tanggal Presensi" class="datepicker" aria-label="Use the arrow keys to pick a date">
+                                    <i class="calendar icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="fields required oneline">
+                                <div class="four wide field">
+                                    <label class="strong">Pengirim</label>
+                                </div>
+                                <div class="twelve wide field">
+                                    <input type="text" />
+                                </div>
+                            </div>
+
+                            <div class="fields required oneline">
+                                <div class="four wide field">
+                                    <label class="strong">Dikirim Kepada</label>
+                                </div>
+                                <div class="twelve wide field">
+                                    <div class="field">
+                                        <div class="ui checkbox">
+                                            <input type="checkbox" />
+                                            <label>Siswa </label>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="ui checkbox">
+                                            <input type="checkbox" />
+                                            <label>Orang Tua </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="fields required oneline">
+                                <div class="four wide field">
+                                    <label class="strong">Tanggal Pengiriman</label>
+                                </div>
+                                <div class="five wide field ui icon input">
+                                    <input type="text" placeholder="Tanggal Pengiriman" class="datepicker" aria-label="Use the arrow keys to pick a date" />
+                                    <i class="calendar icon"></i>
+                                </div>
+                                <div class="one wide field">
+                                    Jam
+                                </div>
+                                <div class="five wide field ui icon input">
+                                    <input type="text" placeholder="Tanggal Presensi" class="clockpicker" />
+                                </div>
+                            </div>
+
+                            <div class="btn-area m-t-40 m-b-30">
+                                <a id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" href="#">Simpan </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-form" id="add">
+        <div class="header">
+            <i class="add icon"></i> Tambah Rekening Perkiraan
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Kategori</label>
+                <input type="text" value="HARTA" disabled="" />
+            </div>
+
+            <div class="field required">
+                <label class="strong">Kode</label>
+                <div class="fields">
+                    <div class="three wide field">
+                        <input type="text" placeholder="" class="tooltiped-input" data-content="Kode tidak boleh lebih dari 10 karakter" data-position="right center">
+                    </div>
+                </div>
+            </div>
+
+            <div class="field required">
+                <label class="strong">Nama</label>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea></textarea>
+            </div>
+
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form small" id="detail">
+        <div class="header">
+            <i class="edit icon"></i> Ubah Rekening Perkiraan
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Kategori</label>
+                <input type="text" value="HARTA" disabled="" />
+            </div>
+
+            <div class="field required">
+                <label class="strong">Kode</label>
+                <div class="fields">
+                    <div class="three wide field">
+                        <input type="text" placeholder="" value="12345" class="tooltiped-input" data-content="Kode tidak boleh lebih dari 10 karakter" data-position="right center">
+                    </div>
+                </div>
+            </div>
+
+            <div class="field required">
+                <label class="strong">Nama</label>
+                <input type="text" value="Kas BOS" placeholder="">
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea>Kas yang diterima dari sumbangan Bantuan Operasional Sekolah</textarea>
+            </div>
+
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+        </div>
+    </div>
+
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/jquery-clockpicker.min.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#alert').modal('attach events', '.table-action .delete', 'show');
+        $('.clockpicker').clockpicker({
+            placement: 'top',
+            align: 'left',
+            donetext: 'OK',
+            'default': '09:30'
+        });
+    </script>
+</body>
+
+</html>

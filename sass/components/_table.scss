@@ -1,0 +1,391 @@
+.ui[class*="very basic"].table:not(.sortable):not(.striped) td:first-child, .ui[class*="very basic"].table:not(.sortable):not(.striped) th:first-child{
+    padding-left: .71428571em;
+}
+
+table.ui.table{
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            padding: 0;
+            margin: 0;
+            margin-bottom: 5px;
+            &.ui.grid>.column:not(.row){
+                padding: 0;
+            }
+            &.ui.grid+.grid{
+                margin-top: 0;
+            }
+        }
+    }
+
+    tr.separator{
+        background: #FFF;
+        td{
+            padding: 0;
+        }
+    }
+
+    th{
+        font-weight: bold;
+        font-family: 'regular';
+        color: $grey-dark2;
+        border-bottom: 5px solid $grey-light3;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    td{
+        border-bottom-color: $grey-light3;
+        &.grey{
+            background: $green-light2;
+        }
+        &.grey2{
+            background: $grey-light3;
+        }
+        h4{
+            display: inline-block;
+        }
+    }
+
+    tr.red{
+        td:first-child, td[colspan]{
+            background: #ffdfdf;
+        }
+    }
+    tr.blue{
+        td:first-child, td[colspan]{
+            background: #3090bf;
+            color: white;
+            i{
+                color: white;
+            }
+        }
+    }
+    tr.green{
+        td:first-child, td[colspan]{
+            background: #71bd20;
+            color: white;
+            i{
+                color: white;
+            }
+        }
+    }
+    tr.violet{
+        td:first-child, td[colspan]{
+            background: #935bce;
+            color: white;
+            i{
+                color: white;
+            }
+        }
+    }
+    tr.orange{
+        td:first-child, td[colspan]{
+            background: #e45e33;
+            color: white;
+            i{
+                color: white;
+            }
+        }
+    }
+    tr.pink{
+        td:first-child, td[colspan]{
+            background: #f979a8;
+            color: white;
+            i{
+                color: white;
+            }
+        }
+    }
+
+    tr.red-text{
+        td{
+            color: $red
+        }
+    }
+
+    tr{
+        &.green-light{
+            background: #eeffe8;
+        }
+        &.orange-light{
+            background: #eefaf2;
+        }
+        &.red-light{
+            background: #eeeeed;
+        }
+        &.blue-light{
+            background: #eef1f9;
+        }
+        &.grey-light{
+            background: $grey-light5;
+        }
+    }
+
+    &.calendar{
+        td{
+            height: 100px;
+            i{
+                font-size: 18px;
+            }
+        }
+    }
+
+    .sylabus{
+        td{
+            vertical-align: top;
+        }
+        &-desc{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            strong{
+                font-weight: bold;
+                font-family: 'regular';
+                margin-bottom: 10px;
+                display: block;
+            }
+            li{
+                padding-bottom: 10px;
+                margin-left: 15px;
+                list-style: none;
+            }
+        }
+    }
+
+    table.ui.table tr:first-child td{
+        border-top: 1px solid rgba(34,36,38,.1);
+        border-bottom: 1px solid rgba(34,36,38,.1);
+    }
+
+    &.report{
+        .header td{
+            text-transform: uppercase;
+            font-family: 'regular';
+            padding: 10px 0;
+            margin: 0;
+            h3{
+                font-size: 16px;
+                margin-left: -20px;
+                border-left: 5px solid;
+                padding-left: 20px;
+            }
+        }
+
+        &.green{
+            background: $green-light3;
+            .header td{
+                color: $green-leaf2;
+                h3{
+                    border-left-color: $green-leaf2;
+                }
+            }
+
+             tfoot.total{
+                 th{
+                     background: $green-leaf;
+                     color: $white-color;
+                 }
+             }
+        }
+        
+        &.blue{
+            background: $grey-light-blue4;
+            .header td{
+                color: $blue-sea2;
+                h3{
+                    border-left-color: $blue-sea2;
+                }
+            }
+
+             tfoot.total{
+                 th{
+                     background: $blue-sea;
+                     color: $white-color;
+                 }
+             }
+        }
+    }
+
+    .total-arrow{
+        background: $grey-dark5;
+        text-align: center;
+        h3{
+            width: 100%;
+            position: relative;
+            &:after{
+                position: absolute;
+                right: -38px;
+                content: "";
+                border-left: 30px solid $grey-dark5;
+                border-top: 30px solid transparent;
+                border-bottom: 30px solid transparent;
+                top: -17px;
+            }
+        }
+    }
+}
+
+.ui.basic.striped.table tbody tr:nth-child(2n){
+    background-color: $green-light3;
+}
+
+.table-wrap{
+    border-top: 3px solid $green;
+    padding-top: 20px;
+    overflow: hidden;
+    .ui.header{
+        font-family: 'light';
+        padding-left: 40px;
+        color: $grey-dark3;
+        font-size: 24px;
+        .sub.header{
+            margin-left: 5px;
+            display: inline-block;
+            font-size: 16px;
+        }
+    }
+    table{
+        padding: 0 7px;
+    }
+    .tab{
+        padding: 7px;
+    }
+    .menu{
+        margin-left: 7px !important;
+        margin-right: 7px !important;
+    }
+
+    .ui.table{
+        font-size: 13px;
+    }
+}
+
+tr{
+    .table-action{
+        opacity: 0;
+        transition: all .3s ease;
+        text-align: center;
+        padding-right: 20px;
+        &.blocked{
+            padding-right: 0;
+            padding-top: 10px;
+        }
+        a{
+            font-size: 22px;
+            color: #a0a0a0;
+            &:hover{
+                .edit{
+                    color: $orange;
+                }
+                .delete{
+                    color: $red;
+                }
+                .search, .print, .check{
+                    color: $green3;
+                }
+            }
+        }
+    }
+    &:hover{
+        .table-action{
+            opacity: 1;
+        }
+    }
+}
+
+
+.ui.selectable.table tbody tr:hover, .ui.table tbody tr td.selectable:hover,
+.ui.striped.table tbody tr:nth-child(2n):hover{
+    background: $green-light2 !important;
+}
+
+.title-in-table{
+    color: $green2;
+    padding-left: 20px;
+    border-left: 3px solid $green2;
+    margin-left: -10px;
+    text-transform: uppercase;
+}
+
+[data-highcharts-chart]{
+    overflow: hidden;
+}
+
+.no-data{
+    padding: 20px 0;
+    text-align: center;;
+    h3.ui.header{
+        display: inline-block;
+        color: $grey-dark2;
+    }
+    a{
+        color: $green;
+    }
+}
+
+.ui.table{
+    tfoot{
+        &.total{
+            background: $grey-light4;
+            th{
+                background: $grey-light;
+                font-size: 14px;
+            }
+
+            &.big{
+                th{
+                    font-size: 20px;
+                }
+            }
+        }
+        &.green{
+            th{
+                background: $green4;
+                color: $green-light3;
+            }
+        }
+    }
+
+    tr.branch{
+        td:first-child{
+            cursor: pointer;
+        }
+    }
+}
+
+//Signature
+.signature{
+    float: right;
+    text-align: center;
+    margin: 20px 40px;
+    h4{
+        margin-top: 70px;
+        font-size: 14px;
+        span{
+            display: block;
+            padding: 10px 40px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid $grey-dark3;
+        }
+    }
+}
+
+//Table Overflow
+.table-overflow{
+    overflow-x: scroll;
+    table{
+        table-layout: fixed;
+    }
+    th, td{
+         min-width: 150px;
+    }
+}
+
+
+.ui.inverted.green.table{
+    background: $green-light2 !important;
+    color: $grey-dark-green !important;
+}

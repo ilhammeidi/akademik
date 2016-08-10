@@ -1,0 +1,572 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body class="blue-sky">
+    <!-- Modal -->
+
+
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="three wide column">
+                    <div class="head">
+                        <a href="akademik_landing_psb.html" class="back">&nbsp;</a>
+                        <img src="../img/pelaporan_logo.png" alt="logo" /> Pelaporan
+                    </div>
+                </div>
+                <div class="thirteen wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul>
+                                            <li>
+                                                <a href="pelaporan_landing_akademik.html" class="cur"><i class="ifont-passed-exam"></i>Akademik</a>
+                                            </li>
+                                            <li>
+                                                <a href="pelaporan_landing_kepegawaian.html"><i class="ifont-profile"></i>Kepegawaian</a>
+                                            </li>
+                                            <li>
+                                                <a href="pelaporan_landing_keuangan.html"><i class="ifont-analytic-report"></i>Keuangan</a>
+                                            </li>
+                                            <li>
+                                                <a href="pelaporan_landing_perpustakaan.html"><i class="ifont-library"></i>Perpustakaan</a>
+                                            </li>
+                                            <li>
+                                                <a href="pelaporan_kritik_saran.html"><i class="ifont-callout"></i>Kritik &amp; Saran</a>
+                                            </li>
+                                            <li>
+                                                <a href="pelaporan_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Konfigurasi</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="six wide column navigator">
+                    <div class="ui small breadcrumb">
+                        <a class="section" href="pelaporan_akademik_landing.html">Akademik</a>
+                        <i class="right angle icon divider"></i>
+                        <div class="active section">Rekapitulasi Informasi Siswa </div>
+                    </div>
+                    <div class="title">
+                        <h2><img src="../img/pelaporan/akademik/rekapitulasi_penerimaan_siswa.png" alt="logo" /> Rekapitulasi Informasi Siswa</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content" class="table-layout">
+            <div class="ui grid table-layout-cell">
+                <div class="six wide column">
+                    <section class="filter-side panel">
+                        <div class="ui grid">
+                            <div class="sixteen wide column search-head blue-light">
+                                <i class="users icon"></i> Pencarian Siswa
+                                <span>Menampilkan data siswa</span>
+                            </div>
+                            <div class="sixteen wide column">
+                                <div class="ui secondary pointing tabed menu">
+                                    <a class="active item" data-tab="first">Pilih Siswa</a>
+                                    <a class="item" data-tab="second">Cari Siswa</a>
+                                </div>
+                                <div class="ui active bottom tab" data-tab="first">
+                                    <div class="ui grid">
+                                        <section class="sixteen wide column">
+                                            <div class="ui form">
+                                                <div class="inline fields">
+                                                    <div class="four wide field">
+                                                        <label>Departemen</label>
+                                                    </div>
+                                                    <div class="twelve wide field">
+                                                        <select>
+                                                            <option>SMA</option>
+                                                            <option>SMP</option>
+                                                            <option>SD</option>
+                                                            <option>Bimbel</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inline fields">
+                                                    <div class="four wide field">
+                                                        <label>Tingkat</label>
+                                                    </div>
+                                                    <div class="twelve wide field">
+                                                        <select>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inline fields">
+                                                    <div class="four wide field">
+                                                        <label>Kelas</label>
+                                                    </div>
+                                                    <div class="twelve wide field">
+                                                        <select>
+                                                            <option>10 A</option>
+                                                            <option>10 B</option>
+                                                            <option>10 C</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </section>
+                                        <section class="sixteen wide column">
+                                            <table class="ui single line selectable table very basic">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>NIS</th>
+                                                        <th>NAMA</th>
+                                                        <th>&nbsp;</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>SMA1012001</td>
+                                                        <td>AMELIA M</td>
+                                                        <td><a href="#" class="ui basic blue sea mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>SMA1012002</td>
+                                                        <td>APRIANSYAH B</td>
+                                                        <td><a href="#" class="ui basic blue sea mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>SMA1012003</td>
+                                                        <td>MARCELLINUS</td>
+                                                        <td><a href="#" class="ui basic blue sea mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>SMA1012004</td>
+                                                        <td>RIA AJENG</td>
+                                                        <td><a href="#" class="ui basic blue sea mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>SMA1012005</td>
+                                                        <td>SASKIA H</td>
+                                                        <td><a href="#" class="ui basic blue sea mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="ui bottom tab" data-tab="second">
+                                    <div class="ui form">
+                                        <div class="inline fields">
+                                            <div class="three wide field">
+                                                <label>NIS</label>
+                                            </div>
+                                            <div class="thirteen wide field">
+                                                <input type="text" placeholder="NIS Siswa" />
+                                            </div>
+                                        </div>
+
+                                        <div class="inline fields">
+                                            <div class="three wide field">
+                                                <label>NISN</label>
+                                            </div>
+                                            <div class="thirteen wide field">
+                                                <input type="text" placeholder="NISN Siswa"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="inline fields">
+                                            <div class="three wide field">
+                                                <label>Nama</label>
+                                            </div>
+                                            <div class="thirteen wide field">
+                                                <input type="text" placeholder="Nama Siswa"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-area">
+                                        <button class="mini ui blue sea button tooltiped" data-content="Tampilkan detail siswa" data-position="top center">
+                                          Tampil
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="ten wide column panel">
+                    <div class="ui grid">
+                      <div class="sixteen wide column">
+                            <section class="ui form detail ui grid no-margin">
+                                <div class="ui accordion ten wide column">
+                                  <div class="title active">
+                                    <i class="dropdown icon"></i>
+                                    Data Pribadi Calon Siswa
+                                  </div>
+                                  <div class="content active">
+                                      <div class="fields">
+                                            <div class="four wide field">
+                                                <label>1. NIS</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : 00011
+                                            </div>
+                                        </div>
+                                        <div class="fields">
+                                            <div class="four wide field">
+                                                <label>2. Name Siswa</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : Ria Ajeng
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>3. Jenis Kelamin</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : Perempuan
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>4. Tempat Lahir</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : Yogyakarta
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>5. Tanggal Lahir</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : 03 April 1985
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>6. Agama</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : Islam
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>7. Suku</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : Jawa
+                                            </div>
+                                        </div>
+                                  </div>
+                                  <div class="title">
+                                    <i class="dropdown icon"></i>
+                                    Keterangan Tempat Tinggal
+                                  </div>
+                                  <div class="content">
+                                      <div class="fields oneline">
+                                          <div class="four wide field">
+                                              <label>10. Alamat</label>
+                                          </div>
+                                          <div class="twelve wide field">
+                                              &nbsp;
+                                          </div>
+                                      </div>
+                                      <div class="fields oneline">
+                                          <div class="four wide field">
+                                              <label>11. Telepon</label>
+                                          </div>
+                                          <div class="twelve wide field">
+                                              &nbsp;
+                                          </div>
+                                      </div>
+                                      <div class="fields oneline">
+                                          <div class="four wide field">
+                                              <label>12. HP</label>
+                                          </div>
+                                          <div class="twelve wide field">
+                                              &nbsp;
+                                          </div>
+                                      </div>
+                                      <div class="fields oneline">
+                                          <div class="four wide field">
+                                              <label>13. Email</label>
+                                          </div>
+                                          <div class="twelve wide field">
+                                              &nbsp;
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="title">
+                                    <i class="dropdown icon"></i>
+                                    Keterangan Lainnya
+                                  </div>
+                                  <div class="content">
+                                      <div class="fields oneline">
+                                          <div class="four wide field">
+                                              <label>14. Keterangan</label>
+                                          </div>
+                                          <div class="twelve wide field">
+                                              &nbsp;
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+
+                                <div class="six wide column">
+                                    <div class="ui link cards ">
+                                      <div class="card no-margin">
+                                            <div class="image">
+                                              <img src="../img/stevie.jpg" alt="profile">
+                                            </div>
+                                            <div class="content">
+                                              <div class="header">Ria Ajeng</div>
+                                              <div class="meta">
+                                                PSMA120005
+                                              </div>
+                                              <div class="description">
+                                                  Proses Penerimaan:  Pendaftaran SMA 2011
+                                              </div>
+                                            </div>
+                                            <div class="extra content">
+                                              <span class="right floated">
+                                                Gelombang 1
+                                              </span>
+                                              <span>
+                                                <i class="university icon"></i>
+                                                Departemen:  SMA
+                                              </span>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </section>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-form" id="add">
+        <div class="header">
+            <i class="add icon"></i> Tambah Kelas
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Departemen</label>
+                <div class="field">
+                    <select>
+                        <option>SMA</option>
+                        <option>SMP</option>
+                        <option>SD</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Kelas</label>
+                <div class="fields">
+                    <div class="four wide">
+                        <input type="text" disabled="" value="10" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Tahun Ajaran</label>
+                <div class="field">
+                    <input type="text" disabled="" value="2016/2017" />
+                </div>
+            </div>
+
+            <div class="field required">
+                <label>Kelas</label>
+                <div class="fields">
+                    <div class="four wide">
+                        <input type="text" class="tooltiped-input" data-content="Kelas tidak boleh kosong" data-position="right center" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Wali Kelas</label>
+                <div class="fields">
+                    <div class="four wide field">
+                        <input type="text" placeholder="NIP">
+                    </div>
+                    <div class="twelve wide field">
+                        <div class="ui icon input">
+                            <input type="text" id="search_kepsek_input" placeholder="Nama Kepala Sekolah">
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Kapasitas</label>
+                <div class="fields">
+                    <div class="four wide">
+                        <input type="text" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Keterangan</label>
+                <div class="fields">
+                    <textarea></textarea>
+                </div>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button blue noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form" id="detail">
+        <div class="header">
+            <i class="edit icon"></i> Ubah Departemen
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Departemen</label>
+                <div class="field">
+                    <select>
+                        <option>SMA</option>
+                        <option>SMP</option>
+                        <option>SD</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Kelas</label>
+                <div class="fields">
+                    <div class="four wide">
+                        <input type="text" disabled="" value="10" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Tahun Ajaran</label>
+                <div class="field">
+                    <input type="text" disabled="" value="2016/2017" />
+                </div>
+            </div>
+
+            <div class="field required">
+                <label>Kelas</label>
+                <div class="fields">
+                    <div class="four wide">
+                        <input type="text" value="12 B" class="tooltiped-input" data-content="Kelas tidak boleh kosong" data-position="right center" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Wali Kelas</label>
+                <div class="fields">
+                    <div class="four wide field">
+                        <input type="text" placeholder="NIP">
+                    </div>
+                    <div class="twelve wide field">
+                        <div class="ui icon input">
+                            <input type="text" id="search_kepsek_input" placeholder="Nama Kepala Sekolah">
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Kapasitas</label>
+                <div class="fields">
+                    <div class="four wide">
+                        <input type="text" value="30" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Keterangan</label>
+                <div class="fields">
+                    <textarea> Sekedar contoh. Menu ini mengatur setiap nama kelas yang ada di setiap tingkatan di sekolah. Ubah atau tambahkan data ini sesuai dengan nama-nama kelas di sekolah.</textarea>
+                </div>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button blue noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+        </div>
+    </div>
+
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../js/vendors/highcharts.js"></script>
+    <script src="../js/vendors/data.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#detail_calon_siswa').modal('attach events', '.detail-siswa', 'show');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+.icons{
+    background: url(../img/sprite-x.png) no-repeat transparent;
+    display: inline-block;
+    &.user{
+        background-position: -4px -2px;
+        width: 11px;
+        height: 17px;
+        position: relative;
+        top: 3px;
+    }
+    
+    &.basket{
+        background-position: -1px -72px;
+        width: 17px;
+        height: 17px;
+        position: relative;
+        top: 3px;
+    }
+    
+    &.search{
+        background-position: -2px -145px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    &.arrow{
+        background-position: -2px -191px;
+        width: 27px;
+        height: 13px;
+    }
+    
+    &.arrow.left{
+        background-position: -5px -233px;
+        width: 27px;
+        height: 13px;
+    }
+    
+    &.arrow-black{
+        background-position: -4px -274px;
+        width: 27px;
+        height: 13px;
+    }
+    &.fb{
+        background-position: -11px -395px;
+        width: 18px;
+        height: 16px; 
+    }
+    &.tw{
+        background-position: -8px -348px;
+        width: 18px;
+        height: 14px; 
+    }
+    &.ig{
+        background-position: -7px -454px;
+        width: 18px;
+        height: 14px; 
+    }
+    &.arrow-yellow{
+        background-position: -8px -502px;
+        width: 55px;
+        height: 34px;
+    }
+    &.refresh{
+        background-position: -18px -576px;
+        width: 27px;
+        height: 27px;
+    }
+    &.zoomin{
+        background-position: -20px -650px;
+        width: 27px;
+        height: 27px;
+    }
+    &.zoomout{
+        background-position: -20px -731px;
+        width: 27px;
+        height: 27px;
+    }
+    &.camera{
+        background-position: -26px -812px;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        position: relative;
+        top: -1px;
+    }
+    &.drag{
+        background-position: -10px -889px;
+        width: 53px;
+        height: 53px;
+        position: absolute;
+        left: 20px;
+    }
+    &.plus{
+        background-position: -19px -1027px;
+        width: 35px;
+        height: 29px;
+    }
+    
+}

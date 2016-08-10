@@ -1,0 +1,772 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+
+        <!-- Froala WYSWYG Editor -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="../css/froala_editor.css">
+       <link rel="stylesheet" href="../css/froala_style.css">
+       <link rel="stylesheet" href="../css/plugins/code_view.css">
+       <link rel="stylesheet" href="../css/plugins/image_manager.css">
+       <link rel="stylesheet" href="../css/plugins/image.css">
+       <link rel="stylesheet" href="../css/plugins/table.css">
+       <link rel="stylesheet" href="../css/plugins/video.css">
+       <link rel="stylesheet" href="../css/plugins/colors.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+       <!-- END -->
+
+        <link rel="stylesheet" href="../css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body class="blue-sea">
+        <!-- Modal -->
+        <div class="ui modal" id="detail_event">
+              <i class="close icon"></i>
+              <div class="header">
+                <h3><i class="calendar icon"></i> Detail Kegiatan</h3>
+              </div>
+              <div class="content">
+                  <div class="ui grid">
+                      <aside class="four wide column">
+                          <div class="event list">
+                              <h3>Kegiatan :</h3>
+                              <ul>
+                                  <li>
+                                      <a href="#" class="cur">Liburan <span class="date">(04/07/11 - 09/07/11)</span></a>
+                                  </li>
+                                  <li>
+                                      <a href="#">KBM <span class="date">(04/07/11 - 09/07/11)</span></a>
+                                  </li>
+                                  <li>
+                                      <a href="#">UTS <span class="date">(04/07/11 - 09/07/11)</span></a>
+                                  </li>
+                                  <li>
+                                      <a href="#">UAS <span class="date">(04/07/11 - 09/07/11)</span></a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </aside>
+                      <section class="ten wide column">
+                          <div class="ui form detail">
+                              <div class="fields">
+                                    <div class="four wide field">
+                                        <label>Departemen</label>
+                                    </div>
+                                    <div class="twelve wide field">
+                                        : SMA
+                                    </div>
+                                </div>
+                                <div class="fields">
+                                      <div class="four wide field">
+                                          <label>Kalender Akademik</label>
+                                      </div>
+                                      <div class="twelve wide field">
+                                          : Tahun Ajaran 2016-2017
+                                      </div>
+                                  </div>
+                                  <div class="fields">
+                                        <div class="four wide field">
+                                            <label>Periode</label>
+                                        </div>
+                                        <div class="twelve wide field">
+                                            : 	01 Juni 2011 s/d 31 Juli 2012
+                                        </div>
+                                    </div>
+                                    <div class="fields">
+                                          <div class="four wide field">
+                                             <label>Bulan Kegiatan</label>
+                                          </div>
+                                          <div class="nine wide field">
+                                              <input type="text" class="hide" id="datepicker" />
+                                              <div id="date-container"></div>
+                                          </div>
+                                    </div>
+                          </div>
+                      </section>
+                  </div>
+              </div>
+        </div>
+
+        <div class="ui modal" id="add_calendar">
+            <i class="close icon"></i>
+            <div class="header">
+                <h3><i class="info circle icon"></i> Kalendar Akademik</h3>
+            </div>
+            <div class="content">
+                    <div class="filter-in">
+                        <div class="ui grid">
+                            <div class="eight wide column">
+                                <select>
+                                    <option>Departemen</option>
+                                    <option>SMA</option>
+                                    <option>SMP</option>
+                                    <option>SD</option>
+                                </select>
+                            </div>
+                            <div class="eight wide column text-right">
+                                <button class="ui mini button">
+                                    <i class="refresh icon"></i> Refresh
+                                </button>
+                                <button class="ui mini blue sea button" onclick="addRow('tb_info')">
+                                    <i class="add icon"></i> Tambah Kalender Akademik
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="ui very basic selectable table" id="tb_info">
+                        <thead>
+                            <tr>
+                                <th>Kalender Akademik</th>
+                                <th>Periode</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hide">
+                                <td>
+                                    <div class="ui form">
+                                        <input type="text" placeholder="Kalender Akademik" value="" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ui form">
+                                        <input type="text" placeholder="Periode" value="" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-action">
+                                          <a href="#"><i class="check icon tooltiped" data-content="Simpan Kalender Akademik"></i></a>
+                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Kalender Akademik"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Tahun Ajaran 2011-2012
+                                </td>
+                                <td>
+                                    01 Juni 2011 s/d 31 Juli 2012
+                                </td>
+                                <td>
+                                    <div class="table-action">
+                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Kalender Akademik"></i></a>
+                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Kalender Akademik"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+
+        <div class="ui basic modal" id="alert">
+            <i class="close icon"></i>
+            <div class="ui icon header">
+                <i class="trash icon"></i>
+                Hapus Data
+            </div>
+            <div class="content">
+                <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+            </div>
+            <div class="actions">
+              <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i>
+                Tidak
+              </div>
+              <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i>
+                Ya
+              </div>
+            </div>
+        </div>
+        <!-- END -->
+        <div class="main-content" id="container">
+            <section class="filter-top">
+                <div class="ui grid head-wrap">
+                    <div class="three wide column">
+                        <div class="head">
+                            <a href="#" class="back">&nbsp;</a>
+                            <img src="../img/guru_logo.png" alt="logo" />
+                            Info Guru
+                        </div>
+                    </div>
+                    <div class="thirteen wide column white-wrap">
+                        <section class="landing-menu">
+                            <header>
+                                <div class="ui grid">
+                                    <div class="row">
+                                        <nav class="thirteen wide column">
+                                                <ul id="owl">
+                                                    <li class="item">
+                                                        <a href="guru_dashboard.html"><i class="ifont-home-interface"></i>Beranda</a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="guru_landing_buletin.html"><i class="ifont-print"></i>Buletin</a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="guru_kalender_akademik.html" class="cur"><i class="icon ifont-clock"></i>Kalender <br />Akademik</a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="guru_jadwal_mengajar.html"><i class="icon ifont-clock-2"></i>Jadwal <br />Mengajar</a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="guru_landing_penilaian.html"><i class="ifont-top-grades"></i>Penilaian</a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="guru_info_siswa.html"><i class="icon ifont-people"></i>Info Siswa</a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="guru_landing_catatan_siswa.html"><i class="ifont-editing"></i>Catatan Siswa</a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="guru_landing_pustaka.html"><i class="ifont-book-2"></i>Katalog <br />Pustaka</a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="guru_file_sharing.html"><i class="ifont-share-document"></i>File <br />Sharing</a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="guru_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                                    </li>
+                                            </ul>
+                                        </nav>
+
+                                        <div class="three wide no-padding column">
+                                            <div class="user">
+                                                <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                                <figure>
+                                                    <img src="../img/user-default.png" alt="user" />
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </section>
+                    </div>
+                </div>
+                <div class="ui grid">
+                    <div class="four wide column navigator">
+                        <div class="ui small breadcrumb">
+                          <a class="section" href="#">Info Guru</a>
+                          <i class="right angle icon divider"></i>
+                          <div class="active section">Kalender Akademik</div>
+                        </div>
+                        <div class="title">
+                            <h2><img src="../img/akademik/jadwal/kalender_akademik.png" alt="logo" />Kalender Akademik</h2>
+                        </div>
+                    </div>
+                    <div class="eleven wide column filter-field">
+                        <div class="ui form">
+                            <div class="fields">
+                                <div class="two wide field">
+                                    <label>Departemen</label>
+                                    <select>
+                                        <option>SMA</option>
+                                        <option>SMP</option>
+                                        <option>SD</option>
+                                    </select>
+                                </div>
+
+                                <div class="five wide field">
+                                    <label>Kalender Akademik</label>
+                                    <select>
+                                        <option>Tahun Ajaran 2016-2017 (Aktif)</option>
+                                        <option>10 B</option>
+                                        <option>10 C</option>
+                                    </select>
+                                </div>
+                                <div class="one wide field">
+                                    <label>&nbsp;</label>
+                                    <a href="#" id="add_info_input"><i class="add circle green icon">&nbsp;</i></a>
+                                </div>
+
+                                <div class="four wide field">
+                                    <label>Periode</label>
+                                    <select disabled="">
+                                        <option>01 Juni 2011 s/d 31 Juli 2012</option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <div class="m-t-10">
+                                        <div class="ui blue sea animated button">
+                                            <div class="visible content">Search</div>
+                                            <div class="hidden content">
+                                                <i class="search icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+             <section id="content" class="table-layout">
+                <div class="ui grid table-layout-cell">
+                    <div class="sixteen wide column panel">
+                        <section class="table-wrap">
+                            <div class="filter-in">
+                                <div class="ui grid">
+                                  <div class="five wide column">
+                                      <button class="ui mini button">
+                                         <i class="arrow left icon"></i> Bulan sebelumnya
+                                      </button>
+                                  </div>
+                                  <div class="six wide column text-center">
+                                      <button class="ui mini button">
+                                        <i class="refresh icon"></i> Refresh
+                                      </button>
+                                      <button class="ui mini button">
+                                        <i class="print icon"></i> Print
+                                      </button>
+                                      <button class="ui mini blue sea button" onclick="floatForm('add')">
+                                          <i class="add icon"></i> Tambah Kegiatan
+                                      </button>
+                                  </div>
+                                  <div class="five wide column text-right">
+                                      <button class="ui mini button">
+                                         Bulan selanjutnya <i class="arrow right icon"></i>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <table class="ui table celled structured">
+                                  <thead>
+                                    <tr>
+                                        <th class="text-center" rowspan="2">Kegiatan</th>
+                                        <th class="text-center" width="15%" colspan="4">Jun 16</th>
+                                        <th class="text-center" width="15%" colspan="4">Jul 16</th>
+                                        <th class="text-center" width="15%" colspan="4">Agust 16</th>
+                                        <th class="text-center" width="15%" colspan="4">Sept 16</th>
+                                        <th class="text-center" width="15%" colspan="4">Okt 16</th>
+                                        <th class="text-center" width="15%" colspan="4">Nov 16</th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+                                    </tr>
+                                </thead>
+                                  <tbody>
+                                    <tr class="blue">
+                                        <td class="text-center">1. KBM</td>
+                                        <td colspan="24" class="text-center">
+                                            <strong><i class="calendar icon"></i> 1 - 31</strong>
+                                            <div class="table-action blocked">
+                                              <a href="#"><i class="search icon tooltiped detail-event" data-content="Detail Kegiatan"></i></a>
+                                              <a href="#"><i class="edit icon tooltiped" onclick="floatForm('detail')" data-content="Ubah Kegiatan"></i></a>
+                                              <a href="#"><i class="delete icon tooltiped" data-content="Hapus Kegiatan"></i></a>
+                                          </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="green">
+                                        <td class="text-center">2. Liburan</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td colspan="2" class="text-center">
+                                            <strong><i class="calendar icon"></i>  4 - 9 </strong>
+                                            <div class="table-action blocked">
+                                              <a href="#"><i class="search icon tooltiped detail-event" data-content="Detail Kegiatan"></i></a>
+                                              <a href="#"><i class="edit icon tooltiped" onclick="floatForm('detail')" data-content="Ubah Kegiatan"></i></a>
+                                              <a href="#"><i class="delete icon tooltiped" data-content="Hapus Kegiatan"></i></a>
+                                          </div>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr class="violet">
+                                        <td class="text-center">3. UTS</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td colspan="2" class="text-center">
+                                            <strong><i class="calendar icon"></i>  7 - 12</strong>
+                                                <div class="table-action blocked">
+                                                  <a href="#"><i class="search icon tooltiped detail-event" data-content="Detail Kegiatan"></i></a>
+                                                  <a href="#"><i class="edit icon tooltiped" onclick="floatForm('detail')" data-content="Ubah Kegiatan"></i></a>
+                                                  <a href="#"><i class="delete icon tooltiped" data-content="Hapus Kegiatan"></i></a>
+                                              </div>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr class="orange">
+                                        <td class="text-center">4. Pesantren Kilat <br /> 05/03/12 - 11/03/12</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td colspan="2" class="text-center">
+                                            <strong><i class="calendar icon"></i>  7 - 12</strong>
+                                                <div class="table-action blocked">
+                                                  <a href="#"><i class="search icon tooltiped detail-event" data-content="Detail Kegiatan"></i></a>
+                                                  <a href="#"><i class="edit icon tooltiped" onclick="floatForm('detail')" data-content="Ubah Kegiatan"></i></a>
+                                                  <a href="#"><i class="delete icon tooltiped" data-content="Hapus Kegiatan"></i></a>
+                                              </div>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td colspan="2" class="text-center">
+                                            <strong><i class="calendar icon"></i>  7 - 12</strong>
+                                                <div class="table-action blocked">
+                                                  <a href="#"><i class="search icon tooltiped detail-event" data-content="Detail Kegiatan"></i></a>
+                                                  <a href="#"><i class="edit icon tooltiped" onclick="floatForm('detail')" data-content="Ubah Kegiatan"></i></a>
+                                                  <a href="#"><i class="delete icon tooltiped" data-content="Hapus Kegiatan"></i></a>
+                                              </div>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr class="pink">
+                                        <td class="text-center">5. UAS <br />05/03/12 - 11/03/12</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="floating-form" id="add">
+            <div class="header">
+                <i class="add icon"></i> Tambah Kegiatan
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+                 <div class="field">
+                       <label class="strong">Departemen</label>
+                       <select disabled="">
+                           <option>
+                               SMA
+                           </option>
+                           <option>
+                               SMP
+                           </option>
+                           <option>
+                               SD
+                           </option>
+                       </select>
+                 </div>
+
+                 <div class="field">
+                       <label class="strong">Kalender Akademik</label>
+                       <input type="text" disabled value="Tahun Ajaran 2011-2012" />
+                 </div>
+
+                 <div class="field">
+                       <label class="strong">Periode</label>
+                       <input type="text" disabled value="01 Juni 2011 s/d 31 Juli 2012" />
+                 </div>
+
+
+
+                  <div class="field required">
+                        <label class="strong">Pelajaran</label>
+                        <select>
+                            <option>Agama</option>
+                            <option>Bhs Arab</option>
+                        </select>
+                  </div>
+
+                  <div class="field required">
+                       <label class="strong">Nama Kegiatan</label>
+                       <input type="text" placeholder="" class="tooltiped-input" data-content="Nama kegiatan tidak boleh lebih dari 50 karakter" data-position="right center">
+                 </div>
+
+                 <div class="field required ui icon input">
+                       <label class="strong">Tgl Mulai</label>
+                       <input type="text" placeholder="" class="datepicker">
+                       <i class="calendar icon"></i>
+                 </div>
+
+                 <div class="field required ui icon input">
+                       <label class="strong">Tgl Akhir</label>
+                       <input type="text" placeholder="" class="datepicker">
+                       <i class="calendar icon"></i>
+                 </div>
+
+                  <div class="field">
+                        <label class="strong">Kegiatan</label>
+                        <textarea id="add_desc" rows="5" placeholder="Tulis Deskripsi"></textarea>
+                  </div>
+
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button blue sea noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Simpan</button>
+            </div>
+        </div>
+
+        <div class="floating-form" id="detail">
+            <div class="header">
+                <i class="edit icon"></i> Ubah Jadwal Guru
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+                 <div class="field">
+                       <label class="strong">Departemen</label>
+                       <select disabled="">
+                           <option>
+                               SMA
+                           </option>
+                           <option>
+                               SMP
+                           </option>
+                           <option>
+                               SD
+                           </option>
+                       </select>
+                 </div>
+
+                 <div class="field">
+                       <label class="strong">Kalender Akademik</label>
+                       <input type="text" disabled value="Tahun Ajaran 2011-2012" />
+                 </div>
+
+                 <div class="field">
+                       <label class="strong">Periode</label>
+                       <input type="text" disabled value="01 Juni 2011 s/d 31 Juli 2012" />
+                 </div>
+
+
+
+                  <div class="field required">
+                        <label class="strong">Pelajaran</label>
+                        <select>
+                            <option>Agama</option>
+                            <option>Bhs Arab</option>
+                        </select>
+                  </div>
+
+                  <div class="field required">
+                       <label class="strong">Nama Kegiatan</label>
+                       <input type="text" value="Pesantren Kilat" placeholder="" class="tooltiped-input" data-content="Nama kegiatan tidak boleh lebih dari 50 karakter" data-position="right center">
+                 </div>
+
+                 <div class="field required ui icon input">
+                       <label class="strong">Tgl Mulai</label>
+                       <input type="text" value="Jun 10 2016" placeholder="" class="datepicker">
+                       <i class="calendar icon"></i>
+                 </div>
+
+                 <div class="field required ui icon input">
+                       <label class="strong">Tgl Akhir</label>
+                       <input type="text" value="Jun 17 2016" placeholder="" class="datepicker">
+                       <i class="calendar icon"></i>
+                 </div>
+
+                  <div class="field">
+                        <label class="strong">Kegiatan</label>
+                        <textarea id="edit_desc" rows="5" placeholder="Tulis Deskripsi">
+                            <h1>Custom Color Picker</h1>
+
+                    <p>Using the <code>colors.min.js</code> plugin you can add in the WYSIWYG HTML editor the color picker feature.</p>
+
+                    <p>There are 4 options that can be used to customize the color picker:</p>
+                    <ul>
+                        <li><a href="https://www.froala.com/wysiwyg-editor/v2.0/docs/options#colorsBackground" title="colorsBackground option" target="_blank">colorsBackground</a> - An array of colors used in the colors popup for background.</li>
+                        <li><a href="https://www.froala.com/wysiwyg-editor/v2.0/docs/options#colorsDefaultTab" title="colorsDefaultTab option" target="_blank">colorsDefaultTab</a> - Specifies the default color tab from the colors popup.</li>
+                        <li><a href="https://www.froala.com/wysiwyg-editor/v2.0/docs/options#colorsStep" title="colorsStep option" target="_blank">colorsStep</a> - The number of colors displayed on a line in the colors popup.</li>
+                        <li><a href="https://www.froala.com/wysiwyg-editor/v2.0/docs/options#colorsText" title="colorsText option" target="_blank">colorsText</a> - An array of colors used in the colors popup for text.</li>
+                    </ul>
+                        </textarea>
+                  </div>
+
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button blue sea noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+            </div>
+        </div>
+
+        <div class="popup-dim"></div>
+        <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+<script src="../js/vendors/owl.carousel.js"></script>
+        <script src="../js/vendors/pikaday.js"></script>
+        <script src="../js/vendors/pikaday.jquery.js"></script>
+        <script src="../js/vendors/jquery.noty.packaged.js"></script>
+        <script src="../js/vendors/relax.js"></script>
+        <script src="../js/vendors/jquery-clockpicker.min.js"></script>
+        <script src="../semantic/dist/semantic.min.js"></script>
+
+        <!-- Froala WYSWYG Editor -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/froala_editor.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/align.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/code_beautifier.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/code_view.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/draggable.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/image.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/image_manager.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/link.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/lists.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/paragraph_format.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/paragraph_style.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/table.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/video.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/url.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/entities.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/colors.min.js"></script>
+        <!-- END -->
+
+        <script src="../js/main.js"></script>
+        <script>
+            $('#add_calendar').modal('attach events', '#add_info_input', 'show');
+            $('#detail_event').modal('attach events', '.detail-event', 'show');
+            $('#alert').modal('attach events', '.table-action .delete', 'show');
+            var picker = new Pikaday(
+           {
+               field: document.getElementById('datepicker'),
+               firstDay: 1,
+               minDate: new Date(2000, 0, 1),
+               maxDate: new Date(2020, 12, 31),
+               yearRange: [2000, 2020],
+               bound: false,
+               container: document.getElementById('date-container'),
+               onOpen: function(){
+                   for(i=19;i<=24;i++){
+                       $('[data-day='+i+']').addClass('is-selected')
+                   }
+               }
+           });
+
+            $(function () {
+                $('#add_desc, #edit_desc').froalaEditor({
+                    enter: $.FroalaEditor.ENTER_P,
+                    height: 200,
+                    toolbarBottom: true,
+                    colorsBackground: [
+              '#15E67F', '#E3DE8C', '#D8A076', '#D83762', '#76B6D8', 'REMOVE',
+              '#1C7A90', '#249CB8', '#4ABED9', '#FBD75B', '#FBE571', '#FFFFFF'
+            ],
+                    colorsDefaultTab: 'background',
+                    colorsStep: 6,
+                    colorsText: [
+              '#15E67F', '#E3DE8C', '#D8A076', '#D83762', '#76B6D8', 'REMOVE',
+              '#1C7A90', '#249CB8', '#4ABED9', '#FBD75B', '#FBE571', '#FFFFFF'
+            ]
+                });
+            });
+        </script>
+    </body>
+</html>

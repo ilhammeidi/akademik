@@ -1,0 +1,838 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body class="orange-rock">
+        <!-- Modal -->
+        <div class="ui medium modal" id="add_siswa">
+            <i class="close icon"></i>
+            <div class="header">
+                <h3><i class="user icon"></i> Cari Siswa</h3>
+            </div>
+            <div class="content">
+                <div class="ui secondary pointing tabed menu">
+                    <a class="item" data-tab="first">Cari Siswa</a>
+                    <a class="active item" data-tab="second">Pilih Siswa</a>
+                </div>
+
+                <div class="ui bottom tab" data-tab="first">
+                    <form class="ui form inverted green segment" action="">
+                        <div class="field">
+                            <label>Departemen</label>
+                            <select>
+                                <option>Semua Departemen </option>
+                                <option>SMA </option>
+                                <option>SMP </option>
+                                <option>SD </option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Siswa</label>
+                            <div class="fields">
+                                <div class="four wide field">
+                                    <input type="text" placeholder="NIS">
+                                </div>
+                                <div class="twelve wide field">
+                                    <input type="text" id="#" placeholder="Nama Siswa">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="ui right labeled icon mini teal basic button">
+                                <i class="search icon"></i> Cari
+                            </button>
+                        </div>
+                    </form>
+                    <div class="ui info message">
+                        <i class="close icon"></i>
+                        <p>
+                            Klik pada tombol "Cari" di atas untuk melihat data siswa sesuai dengan NIS atau Nama Siswa berdasarkan keyword yang dimasukkan
+                        </p>
+                    </div>
+                    <div class="m-t-50"></div>
+                    <table class="ui very basic selectable table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>NIS</th>
+                                <th>Nama</th>
+                                <th>Dept.</th>
+                                <th>Kelas</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>01910</td>
+                                <td>Andi Prasetya</td>
+                                <td>SMA</td>
+                                <td>10A</td>
+                                <td>
+                                    <div class="table-action">
+                                        <a href="#" class="ui basic orange mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>01910</td>
+                                <td>Andi Gemilang</td>
+                                <td>SMA</td>
+                                <td>10C</td>
+                                <td>
+                                    <div class="table-action">
+                                        <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ui bottom active tab" data-tab="second">
+                    <div class="ui form m-b-40">
+                        <div class="fields">
+                            <div class="eight wide field">
+                                <label>Departemen</label>
+                                <select>
+                                    <option>Semua Departemen</option>
+                                    <option>SMA</option>
+                                    <option>SMP</option>
+                                    <option>SD</option>
+                                </select>
+                            </div>
+                            <div class="eight wide field">
+                                <label>Tahun Ajaran</label>
+                                <select>
+                                    <option>2016/2017 (Aktif)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="fields">
+                            <div class="eight wide field">
+                                <label>Tingkat</label>
+                                <select>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                            </div>
+                            <div class="eight wide field">
+                                <label>Kelas</label>
+                                <select>
+                                    <option>10 A</option>
+                                    <option>10 B</option>
+                                    <option>10 C</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <table class="ui very basic selectable table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>NIS</th>
+                                <th>Nama</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>01910</td>
+                                <td>Andi</td>
+                                <td>
+                                    <div class="table-action">
+                                        <a href="#" class="ui basic orange mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>01910</td>
+                                <td>Andi</td>
+                                <td>
+                                    <div class="table-action">
+                                        <a href="#" class="ui basic orange mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>01910</td>
+                                <td>Andi</td>
+                                <td>
+                                    <div class="table-action">
+                                        <a href="#" class="ui basic orange mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>01910</td>
+                                <td>Andi</td>
+                                <td>
+                                    <div class="table-action">
+                                        <a href="#" class="ui basic orange mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>01910</td>
+                                <td>Andi</td>
+                                <td>
+                                    <div class="table-action">
+                                        <a href="#" class="ui basic orange mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div class="ui coupled modal" id="detail_pustaka">
+          <i class="close icon"></i>
+          <div class="header">
+            <h3><i class="file icon"></i> Detail Pustaka</h3>
+            <button class="ui mini button"><i class="print icon"></i> Cetak</button>
+          </div>
+          <div class="image content">
+              <div class="ui medium image">
+                  <div class="ui link cards">
+                      <div class="card no-margin">
+                            <div class="image">
+                              <img src="../img/dummy/book2.jpg" alt="book">
+                            </div>
+                            <div class="content">
+                              <div class="header">Book Title One</div>
+                              <div class="meta">
+                                John Doe
+                              </div>
+                            </div>
+                            <div class="extra content">
+                              <span>
+                                <i class="building icon"></i>
+                                 Graha Multi Karya
+                              </span>
+                            </div>
+                          </div>
+                  </div>
+              </div>
+              <div class="description">
+                  <div class="ui grid">
+                      <div class="sixteen wide column no-padding">
+                            <section class="ui form detail">
+                                <div class="ui styled accordion">
+                                  <div class="content active">
+                                      <div class="fields">
+                                            <div class="four wide field">
+                                                <label>1. Judul</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : Matematika
+                                            </div>
+                                        </div>
+                                        <div class="fields">
+                                            <div class="four wide field">
+                                                <label>2. Harga Satuan</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : Rp 35.000
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>3. Katalog</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : 510 - Matematika
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>4. Penerbit</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : AND - Andi Yogyakarta
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>5. Penulis</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : SJ - Setyawan Jani
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>6. Tahun Terbit	</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : 2011
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>7. Format</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : BU - Buku
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>8. Keyword</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : Matematika
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>9. Keterangan Fisik	</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                : Baru
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field">
+                                                <label>10. Abstraksi	</label>
+                                            </div>
+                                            <div class="twelve wide field">
+                                                :
+                                            </div>
+                                        </div>
+                                        <div class="fields oneline">
+                                            <div class="four wide field no-border">
+                                                <label>11. Alokasi Jumlah		</label>
+                                            </div>
+                                            <div class="twelve wide field no-border">
+                                                <table class="ui basic table">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Perpustakaan</th>
+                                                      <th>Jumlah</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <td>Perpustakaan SMA</td>
+                                                      <td>20</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Perpustakaan SMP</td>
+                                                      <td>15</td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                  </div>
+                                </div>
+                            </section>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="ui coupled modal" id="detail_perpus">
+          <i class="close icon"></i>
+          <div class="header">
+            <h3><i class="book icon"></i> Daftar Judul</h3>
+          </div>
+          <section class="content">
+              <div class="ui three column grid">
+                  <div class="column">
+                      <div class="ui link cards detail-pustaka">
+                         <div class="ui card fluid">
+                           <div class="content">
+                             <img class="left floated tiny ui bordered image" src="../img/dummy/book1.jpg">
+                             <div class="header">
+                               Book Title One
+                             </div>
+                             <div class="meta">
+                               John Doe
+                             </div>
+                             <p>
+                               Graha Multi Karya
+                             </p>
+                           </div>
+                         </div>
+                       </div>
+                  </div>
+                  <div class="column">
+                      <div class="ui link cards detail-pustaka">
+                         <div class="ui card fluid">
+                           <div class="content">
+                             <img class="left floated tiny ui bordered image" src="../img/dummy/book2.jpg">
+                             <div class="header">
+                               Book Title Two
+                             </div>
+                             <div class="meta">
+                               Lil Galaghaer
+                             </div>
+                             <p>
+                               Graha Multi Karya
+                             </p>
+                           </div>
+                         </div>
+                       </div>
+                  </div>
+                  <div class="column">
+                      <div class="ui link cards detail-pustaka">
+                         <div class="ui card fluid">
+                           <div class="content">
+                             <img class="left floated tiny ui bordered image" src="../img/dummy/book3.jpg">
+                             <div class="header">
+                               Book Title Three
+                             </div>
+                             <div class="meta">
+                               Mita Pinamay
+                             </div>
+                             <p>
+                               Graha Multi Karya
+                             </p>
+                           </div>
+                         </div>
+                       </div>
+                  </div>
+
+                  <div class="column">
+                      <div class="ui link cards detail-pustaka">
+                         <div class="ui card fluid">
+                           <div class="content">
+                             <img class="left floated tiny ui bordered image" src="../img/dummy/book6.jpg">
+                             <div class="header">
+                               Book Title One
+                             </div>
+                             <div class="meta">
+                               John Doe
+                             </div>
+                             <p>
+                               Graha Multi Karya
+                             </p>
+                           </div>
+                         </div>
+                       </div>
+                  </div>
+                  <div class="column">
+                      <div class="ui link cards detail-pustaka">
+                         <div class="ui card fluid">
+                           <div class="content">
+                             <img class="left floated tiny ui bordered image" src="../img/dummy/book5.jpg">
+                             <div class="header">
+                               Book Title Two
+                             </div>
+                             <div class="meta">
+                               Lil Galaghaer
+                             </div>
+                             <p>
+                               Graha Multi Karya
+                             </p>
+                           </div>
+                         </div>
+                       </div>
+                  </div>
+                  <div class="column">
+                      <div class="ui link cards detail-pustaka">
+                         <div class="ui card fluid">
+                           <div class="content">
+                             <img class="left floated tiny ui bordered image" src="../img/dummy/book4.jpg">
+                             <div class="header">
+                               Book Title Three
+                             </div>
+                             <div class="meta">
+                               Mita Pinamay
+                             </div>
+                             <p>
+                               Graha Multi Karya
+                             </p>
+                           </div>
+                         </div>
+                       </div>
+                  </div>
+              </div>
+          </section>
+        </div>
+
+        <div class="ui basic modal" id="alert">
+            <i class="close icon"></i>
+            <div class="ui icon header">
+                <i class="trash icon"></i>
+                Hapus Data
+            </div>
+            <div class="content">
+                <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+            </div>
+            <div class="actions">
+              <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i>
+                Tidak
+              </div>
+              <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i>
+                Ya
+              </div>
+            </div>
+        </div>
+
+        <!-- END -->
+        <div class="main-content" id="container">
+            <section class="filter-top">
+                <div class="ui grid head-wrap">
+                    <div class="three wide column">
+                        <div class="head">
+                            <a href="perpustakaan_landing_referensi.html" class="back">&nbsp;</a>
+                            <img src="../img/perpustakaan/perpustakaan_logo.png" alt="logo" />
+                            Perpustakaan
+                        </div>
+                    </div>
+                    <div class="thirteen wide column white-wrap">
+                        <section class="landing-menu">
+                            <header>
+                                <div class="ui grid">
+                                    <div class="row">
+                                        <nav class="fourteen wide column">
+                                            <ul id="" class="clearfix">
+                                                <li class="item">
+                                                    <a href="perpustakaan_landing_referensi.html"><i class="icon ifont-overview"></i>Referensi</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="perpustakaan_landing_pustaka.html"><i class="icon ifont-book-2"></i>Pustaka</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="perpustakaan_landing_peminjaman.html"><i class="icon ifont-book-upload"></i>Peminjaman</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="perpustakaan_landing_pengembalian.html" class="cur"><i class="icon ifont-book-download"></i>Pengembalian</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="perpustakaan_landing_aktivitas.html"><i class="icon ifont-man-reading"></i>Aktivitas</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="perpustakaan_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+
+                                        <div class="two wide no-padding column">
+                                            <div class="user">
+                                                <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                                <figure>
+                                                    <img src="../img/user-default.png" alt="user" />
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </section>
+                    </div>
+                </div>
+                <div class="ui grid">
+                    <div class="five wide column navigator">
+                        <div class="ui small breadcrumb">
+                          <a class="section" href="perpustakaan_landing_referensi.html">Perpustakaan</a>
+                          <i class="right angle icon divider"></i>
+                          <div class="active section">Daftar Penerimaan Denda</div>
+                        </div>
+                        <div class="title">
+                            <h2>
+                                <img src="../img/perpustakaan/pengembalian/daftar_penerimaan_denda.png" alt="logo" />
+                                Daftar Penerimaan Denda
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="eleven wide column filter-field">
+                            <div class="ui form">
+                              <div class="fields">
+                                  <div class="three wide field">
+                                      <label>Tampil Berdasarkan</label>
+                                      <select>
+                                            <option value="all">100 Peminjaman Terakhir</option>
+                        					<option value="tglpinjam">Tanggal Peminjaman</option>
+                        					<option value="tglkembali">Jadwal Pengembalian</option>
+                        					<option value="nis" selected="">NIS Siswa</option>
+                        					<option value="nip">NIP Pegawai</option>
+                                      </select>
+                                  </div>
+
+                                  <div class="four wide field">
+                                      <label>Peminjam</label>
+                                      <input type="text" placeholder="NIS" />
+                                  </div>
+
+                                  <div class="four wide field">
+                                      <label>&nbsp;</label>
+                                      <div class="ui icon input">
+                                          <input type="text" id="search_siswa_input" placeholder="Nama">
+                                          <i class="search icon"></i>
+                                      </div>
+                                  </div>
+
+                                  <div class="field">
+                                      <div class="m-t-10">
+                                          <div class="ui brown animated button">
+                                              <div class="visible content">Search</div>
+                                              <div class="hidden content">
+                                                  <i class="search icon"></i>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                              </div>
+                          </div>
+                    </div>
+                </div>
+            </section>
+             <section id="content" class="table-layout">
+                <div class="ui grid table-layout-cell">
+                    <div class="sixteen wide column panel">
+                        <section class="table-wrap">
+                            <div class="filter-in">
+                                <div class="ui grid">
+                                  <div class="nine wide column">
+                                      &nbsp;
+                                  </div>
+                                  <div class="seven wide column text-right">
+                                      <button class="ui mini button">
+                                        <i class="refresh icon"></i> Refresh
+                                      </button>
+                                      <button class="ui mini button">
+                                        <i class="print icon"></i> Print
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <table class="ui single line teal very basic selectable table">
+                                 <thead>
+                                   <tr>
+                                       <th width="5%">No</th>
+                                       <th class="center aligned" width="15%">Tanggal Pengembalian</th>
+                                       <th class="center aligned" width="15%">Jadwal Kembali</th>
+                                       <th class="center aligned" width="15%">Tanggal Pinjam</th>
+                                       <th width="20%">Anggota</th>
+                                       <th width="20%">Kode Pustaka</th>
+                                       <th class="center aligned" width="10%">Denda</th>
+                                       <th>Keterangan</th>
+                                  </tr>
+                                 </thead>
+                                 <tbody>
+                                       <tr>
+                                           <td>1</td>
+                                           <td class="center aligned">26 Jul 2016</td>
+                                           <td class="center aligned">25 Jul 2016</td>
+                                           <td class="center aligned">20 Jul 2016</td>
+                                           <td>SMA1012002
+                                               <div class="bold">
+                                                   APRIANSYAH B
+                                               </div>
+                                            </td>
+                                            <td>
+                                               510/SJ/M/00001/BU
+                                               <div class="bold">
+                                                   Matematika
+                                               </div>
+                                           </td>
+                                           <td class="right aligned">Rp 0,-</td>
+                                           <td>Lorem Ipsum dolor sit amet</td>
+                                       </tr>
+                                       <tr class="error">
+                                           <td>2</td>
+                                           <td class="center aligned">16 Jul 2016</td>
+                                           <td class="center aligned">16 Jul 2016</td>
+                                           <td class="center aligned">10 Jul 2016</td>
+                                           <td>SMA110001
+                                               <div class="bold">
+                                                   AMELIA M
+                                               </div>
+                                            </td>
+                                            <td>
+                                               510/SJ/M/00001/BU
+                                               <div class="bold">
+                                                   Matematika
+                                               </div>
+                                           </td>
+                                           <td class="right aligned">Rp 0,-</td>
+                                           <td>Lorem Ipsum dolor sit amet</td>
+                                       </tr>
+                                       <tr class="error">
+                                           <td>3</td>
+                                           <td class="center aligned">30 Jun 2016</td>
+                                           <td class="center aligned">31 Jun 2016</td>
+                                           <td class="center aligned">25 Jun 2016</td>
+                                           <td>SMA110001
+                                               <div class="bold">
+                                                   Bana Ferdiansyah
+                                               </div>
+                                            </td>
+                                            <td>
+                                               510/SJ/M/00002/BU
+                                               <div class="bold">
+                                                   Biologi
+                                               </div>
+                                           </td>
+                                           <td class="right aligned">Rp 10.000,-</td>
+                                           <td>Lorem Ipsum dolor sit amet</td>
+                                       </tr>
+                                       <tr>
+                                           <td>4</td>
+                                           <td class="center aligned">25 Jun 2016</td>
+                                           <td class="center aligned">28 Jun 2016</td>
+                                           <td class="center aligned">20 Jun 2016</td>
+                                           <td>SMA110001
+                                               <div class="bold">
+                                                   MARCELLINUS
+                                               </div>
+                                            </td>
+                                            <td>
+                                               510/SJ/M/00003/BU
+                                               <div class="bold">
+                                                   Komputer
+                                               </div>
+                                           </td>
+                                           <td class="right aligned">Rp 30.000,-</td>
+                                           <td>Lorem Ipsum dolor sit amet</td>
+                                       </tr>
+                                 </tbody>
+                               </table>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="floating-form small" id="add">
+            <div class="header">
+                <i class="add icon"></i> Perpanjang Peminjaman
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+                 <div class="fields oneline">
+                     <div class="four wide field">
+                         <label class="strong">Kode Pustaka</label>
+                     </div>
+                     <div class="twelve wide field">
+                           11111/BMS/K/00002/BU
+                     </div>
+                </div>
+
+                <div class="fields oneline">
+                    <div class="four wide field">
+                        <label class="strong">Judul</label>
+                    </div>
+                    <div class="twelve wide field">
+                          Komputer
+                    </div>
+               </div>
+
+               <hr class="divider no-margin" />
+
+                 <div class="field required ui icon input">
+                       <label class="strong">Tanggal Kembali</label>
+                       <input type="text" placeholder="" class="datepicker" />
+                       <i class="calendar icon"></i>
+                 </div>
+
+                 <div class="field">
+                        <label class="strong">Keterangan</label>
+                       <textarea></textarea>
+                 </div>
+
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button brown noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+            </div>
+        </div>
+
+        <div class="floating-form small" id="detail">
+            <div class="header">
+                <i class="edit icon"></i> Ubah Perpustakaan
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+                 <div class="field required">
+                       <label class="strong">Departemen</label>
+                       <select>
+                           <option>
+                               SMA
+                           </option>
+                           <option>
+                               SMP
+                           </option>
+                           <option>
+                               SD
+                           </option>
+                       </select>
+                 </div>
+
+                 <div class="field required">
+                       <label class="strong">Nama</label>
+                       <input type="text" placeholder="" value="Perpustakaan Bimbel" class="tooltiped-input" data-content="Nama perpustakaan tidak boleh lebih dari 50 karakter" data-position="right center">
+                 </div>
+
+                 <div class="field">
+                        <label class="strong">Keterangan</label>
+                       <textarea>Lorem ipsum dolor</textarea>
+                 </div>
+
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button brown noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+            </div>
+        </div>
+
+        <div class="popup-dim"></div>
+        <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+<script src="../js/vendors/owl.carousel.js"></script>
+        <script src="../js/vendors/pikaday.js"></script>
+        <script src="../js/vendors/pikaday.jquery.js"></script>
+        <script src="../js/vendors/jquery.noty.packaged.js"></script>
+        <script src="../js/vendors/relax.js"></script>
+        <script src="../semantic/dist/semantic.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script>
+            $('.coupled.modal').modal({
+                allowMultiple: false
+            });
+            $('#add_siswa').modal('attach events', '#search_siswa_input', 'show');
+            $('#detail_perpus').modal('attach events', '.detail-perpus', 'show');
+            $('#detail_pustaka').modal('attach events', '.detail-pustaka', 'show');
+            $('#alert').modal('attach events', '.table-action .delete', 'show');
+        </script>
+    </body>
+</html>

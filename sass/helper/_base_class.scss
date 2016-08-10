@@ -1,0 +1,77 @@
+.no-border{
+    border: none !important;
+}
+
+.no-margin{
+    margin: 0 !important;
+}
+
+.no-padding{
+    padding: 0 !important;
+}
+.no-bg{
+    background: none !important;
+}
+.no-shadow{
+    box-shadow: none !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.strong{
+    font-family: 'semi-bold'
+}
+
+.text-red{
+    color: $red;
+}
+
+.text-blue{
+    color: $blue;
+}
+
+.text-blue2{
+    color: $blue2;
+}
+
+.text-orange{
+    color: $orange;
+}
+
+.text-grey{
+    color: $grey-dark3;
+}
+
+.text-green{
+    color: $green3;
+}
+
+.lowercase{
+    text-transform: lowercase !important;
+}
+
+.uppercase{
+    text-transform: uppercase !important;
+}
+
+.normalcase{
+    text-transform: none !important;
+}
+
+.icon.white{
+    color: $white-color;
+}
+
+.ui.white.header{
+    color: $white-color !important;
+}

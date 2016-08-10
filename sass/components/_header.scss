@@ -1,0 +1,153 @@
+.head{
+    position: relative;
+    display: block;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: $green;
+    font-family: 'regular';
+    .back{
+        display: inline-block;
+        background: url(../img/back.png) no-repeat 0 5px;
+        width: 22px;
+        height: 28px;
+        border-right: 1px solid $grey-light5;
+        padding: 0 18px;
+    }
+    img{
+        margin: 0 5px 0 10px;
+        display: inline-block;
+        height: 20px;
+    }
+}
+
+.landing-menu{
+    header{
+        font-size: 14px;
+        border-bottom: 1px solid $grey-light;
+        display: block;
+        position: relative;
+        > .ui.grid{
+            margin-right: 0;
+        }
+        nav{
+            padding: 0 !important;
+            ul{
+                width: 830px;
+                margin: 0 0 0 60px;
+                padding: 0;
+                li{
+                    float: left;
+                    margin-right: 15px;
+                    list-style: none;
+                    position: relative;
+                    a{
+                        width: auto;
+                        padding-left: 32px;
+                        padding-right: 10px;
+                        margin: 10px 5px 10px 0;
+                        color: $grey-light-green;
+                        line-height: 16px;
+                        position: relative;
+                        height: 60px;
+                        display: table-cell;
+                        vertical-align: middle;;
+                        &.cur{
+                            color: $green;
+                            border-bottom: 3px solid $green;
+                            i{
+                                color: $green;
+                            }
+                        }
+                        i{
+                            margin-right: 6px;
+                            font-size: 22px;
+                            float: left;
+                            margin-top: 6px;
+                            color: #c1dad7;
+                            position: absolute;
+                            left: 0;
+                            top:10px;
+                        }
+                    }
+                    a.setting:before{
+                        content: '';
+                        border-left: 1px dashed $grey-light-green;
+                        position: absolute;
+                        left: -13px;
+                        height: 30px;
+                        position: absolute;
+                        top: 15px;
+                    }
+                }
+            }
+        }
+
+        .user{
+            float: right;
+            margin-top: 13px;
+            margin-right: 5px;
+            &-name{
+                color: $grey-dark2;
+                float: left;
+                text-align: right;
+                a{
+                    color: $green2;
+                    display: block;
+                    font-size: 11px;
+                }
+            }
+            figure{
+                overflow: hidden;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: $green;
+                float: left;
+                margin: 0 5px;
+                img{
+                    width: 100%;
+                    min-height: 36px;
+                }
+            }
+        }
+    }
+}
+
+//Naviagtion Arrow Slider Menu
+.owl-theme .owl-controls{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .owl-buttons div{
+        background: none;
+        color: $grey-light-green;
+        font-size: 34px;
+        position: absolute;
+        top:-17px;
+        &.owl-prev{
+            left: -45px;
+        }
+        &.owl-next{
+            right: -23px;
+        }
+    }
+}
+
+
+#owl .owl-wrapper .owl-item:nth-child(2){
+    a{
+        padding-left: 45px;
+        &.ifont-people-add{
+            margin-left: 15px;
+        }
+        .green-leaf &{
+            padding-left: 32px;
+        }
+        .ifont-people-add{
+            .green-leaf &{
+                margin-left: 0;
+            }
+        }
+    }
+}

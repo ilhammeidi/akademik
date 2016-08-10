@@ -1,0 +1,444 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Modal -->
+        <div class="ui basic modal" id="alert">
+            <i class="close icon"></i>
+            <div class="ui icon header">
+                <i class="trash icon"></i>
+                Hapus Data
+            </div>
+            <div class="content">
+                <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+            </div>
+            <div class="actions">
+              <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i>
+                Tidak
+              </div>
+              <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i>
+                Ya
+              </div>
+            </div>
+        </div>
+        <!-- END -->
+        <div class="main-content" id="container">
+            <section class="filter-top">
+                <div class="ui grid head-wrap">
+                    <div class="three wide column">
+                        <div class="head">
+                            <a href="akademik_landing_referensi.html" class="back">&nbsp;</a>
+                            <img src="../img/akademik/akademik_logo.png" alt="logo" />
+                            Akademik
+                        </div>
+                    </div>
+                    <div class="thirteen wide column white-wrap">
+                        <section class="landing-menu">
+                            <header>
+                                <div class="ui grid">
+                                    <div class="row">
+                                        <nav class="thirteen wide column">
+                                            <ul>
+                                                <li>
+                                                    <a href="akademik_landing_referensi.html"><i class="ifont-graduation-gat"></i>Referensi</a>
+                                                </li>
+                                                <li>
+                                                    <a href="akademik_landing_psb.html"><i class="ifont-people-add"></i>PSB</a>
+                                                </li>
+                                                <li>
+                                                    <a href="akademik_landing_guru.html" class="cur"><i class="ifont-teacher"></i>Guru &amp; <br />Pelajaran</a>
+                                                </li>
+                                                <li>
+                                                    <a href="akademik_landing_jadwal.html"><i class="icon ifont-clock"></i>Jadwal &amp; <br />Kalender</a>
+                                                </li>
+                                                <li>
+                                                    <a href="akademik_landing_kesiswaan.html"><i class="icon ifont-people"></i>Kesiswaan</a>
+                                                </li>
+                                                <li>
+                                                    <a href="akademik_landing_presensi.html"><i class="icon ifont-touch"></i>Presensi</a>
+                                                </li>
+                                                <!--
+                                                <li>
+                                                    <a href="#"><i class="ifont-top-grades"></i>Penilaian</a>
+                                                </li>
+                                                 <li>
+                                                    <a href="#"><i class="ifont-upstair"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="ifont-runner"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="ifont-analytic-report"></i>Lorem Ipsum</a>
+                                                </li> -->
+                                                <li>
+                                                    <a href="#"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+
+                                        <div class="three wide no-padding column">
+                                            <div class="user">
+                                                <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                                <figure>
+                                                    <img src="../img/user-default.png" alt="user" />
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </section>
+                    </div>
+                </div>
+                <div class="ui grid">
+                    <div class="four wide column navigator">
+                        <div class="ui small breadcrumb">
+                          <a class="section" href="akademik_landing_guru_pelajaran.html">Guru &amp; Pelajaran</a>
+                          <i class="right angle icon divider"></i>
+                          <div class="active section">Daftar Pelajaran</div>
+                        </div>
+                        <div class="title">
+                            <h2><img src="../img/akademik/gupel/daftar_pelajaran.png" alt="logo" />Daftar Pelajaran</h2>
+                        </div>
+                    </div>
+                    <div class="nine wide column filter-field">
+                        &nbsp;
+                    </div>
+                </div>
+            </section>
+             <section id="content" class="table-layout">
+                <div class="ui grid table-layout-cell">
+                    <div class="sixteen wide column panel">
+                        <section class="table-wrap">
+                            <div class="filter-in">
+                                <div class="ui grid">
+                                  <div class="eleven wide column">
+                                      <div class="ui form p-l-30">
+                                        <div class="inline fields">
+                                            <label>Departement</label>
+                                          <div class="field">
+                                            <select>
+                                                <option>SMA</option>
+                                                <option>SMP</option>
+                                                <option>SD</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="five wide column text-right">
+                                      <button class="ui mini button">
+                                        <i class="refresh icon"></i> Refresh
+                                      </button>
+                                      <button class="ui mini button">
+                                        <i class="print icon"></i> Print
+                                      </button>
+                                      <button class="ui blue mini button" onclick="floatForm('add')">
+                                        <i class="add icon"></i> Tambah Pelajaran
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <table class="ui table teal selectable striped very basic">
+                                  <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th width="7%">Singkatan</th>
+                                        <th width="10%">Nama</th>
+                                        <th>Sifat</th>
+                                        <th>Keterangan</th>
+                                        <th>Status</th>
+                                        <th width="10%">&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>	AGM</td>
+                                      <td>	Agama</td>
+                                      <td>	Wajib</td>
+                                      <td>  Sekedar contoh. Menu ini mengatur nama dan kode pelajaran yang diajarkan di sekolah. Ubah atau tambahkan data ini sesuai dengan pelajaran-pelajaran yang ada di sekolah.</td>
+                                      <td>	<i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                                      <td>
+                                          <div class="table-action">
+                                              <a href="#"><i class="edit icon tooltiped" data-content="Ubah Pelajaran" onclick="floatForm('detail')"></i></a>
+                                              <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pelajaran"></i></a>
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>	AGM</td>
+                                      <td>	Agama</td>
+                                      <td>	Wajib</td>
+                                      <td>  Sekedar contoh. Menu ini mengatur nama dan kode pelajaran yang diajarkan di sekolah. Ubah atau tambahkan data ini sesuai dengan pelajaran-pelajaran yang ada di sekolah.</td>
+                                      <td>	<i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                                      <td>
+                                          <div class="table-action">
+                                              <a href="#"><i class="edit icon tooltiped" data-content="Ubah Pelajaran" onclick="floatForm('detail')"></i></a>
+                                              <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pelajaran"></i></a>
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>	ING</td>
+                                      <td>	Bahasa Inggris</td>
+                                      <td>	Wajib</td>
+                                      <td>  &nbsp;</td>
+                                      <td>	<i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                                      <td>
+                                          <div class="table-action">
+                                              <a href="#"><i class="edit icon tooltiped" data-content="Ubah Pelajaran" onclick="floatForm('detail')"></i></a>
+                                              <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pelajaran"></i></a>
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>	FIS</td>
+                                      <td>	Fisika</td>
+                                      <td>	Wajib</td>
+                                      <td>  Sekedar contoh. Menu ini mengatur nama dan kode pelajaran yang diajarkan di sekolah. Ubah atau tambahkan data ini sesuai dengan pelajaran-pelajaran yang ada di sekolah.</td>
+                                      <td>	<i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                                      <td>
+                                          <div class="table-action">
+                                              <a href="#"><i class="edit icon tooltiped" data-content="Ubah Pelajaran" onclick="floatForm('detail')"></i></a>
+                                              <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pelajaran"></i></a>
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>5</td>
+                                      <td>	MTK</td>
+                                      <td>	Matematika</td>
+                                      <td>	Wajib</td>
+                                      <td>  &nbsp;</td>
+                                      <td>	<i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                                      <td>
+                                          <div class="table-action">
+                                              <a href="#"><i class="edit icon tooltiped" data-content="Ubah Pelajaran" onclick="floatForm('detail')"></i></a>
+                                              <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pelajaran"></i></a>
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>6</td>
+                                      <td>	MLK</td>
+                                      <td>	Muatan Lokal</td>
+                                      <td>	Tambahan</td>
+                                      <td>  &nbsp;</td>
+                                      <td>	<i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                                      <td>
+                                          <div class="table-action">
+                                              <a href="#"><i class="edit icon tooltiped" data-content="Ubah Pelajaran" onclick="floatForm('detail')"></i></a>
+                                              <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pelajaran"></i></a>
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>7</td>
+                                      <td>	PKN</td>
+                                      <td>	Pendidikan Kewarganegaraan</td>
+                                      <td>	Wajib</td>
+                                      <td>  &nbsp;</td>
+                                      <td>	<i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                                      <td>
+                                          <div class="table-action">
+                                              <a href="#"><i class="edit icon tooltiped" data-content="Ubah Pelajaran" onclick="floatForm('detail')"></i></a>
+                                              <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pelajaran"></i></a>
+                                          </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                  <tfoot>
+                                    <tr><th colspan="7">
+                                      <div class="ui right floated pagination menu">
+                                        <a class="icon item">
+                                          <i class="left chevron icon"></i>
+                                        </a>
+                                        <a class="item cur">1</a>
+                                        <a class="item">2</a>
+                                        <a class="item">3</a>
+                                        <a class="item">4</a>
+                                        <a class="icon item">
+                                          <i class="right chevron icon"></i>
+                                        </a>
+                                      </div>
+                                    </th>
+                                  </tr></tfoot>
+                                </table>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="floating-form small" id="add">
+            <div class="header">
+                <i class="add icon"></i> Tambah Pelajaran
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+                 <div class="field required">
+                       <label class="strong">Departemen</label>
+                       <select disabled="">
+                           <option>
+                               SMA
+                           </option>
+                           <option>
+                               SMP
+                           </option>
+                           <option>
+                               SD
+                           </option>
+                       </select>
+                 </div>
+
+                 <div class="field required">
+                       <label class="strong">Nama</label>
+                       <input type="text" placeholder="" class="tooltiped-input" data-content="Nama Pelajaran tidak boleh lebih dari 50 karakter" data-position="right center" />
+                 </div>
+
+                 <div class="field required">
+                        <label class="strong">Singkatan</label>
+                        <div class="fields">
+                            <div class="four wide field">
+                                <input type="text" placeholder="" class="tooltiped-input" data-content="Nama Singkatan tidak boleh lebih dari 4 karakter" data-position="right center" />
+                            </div>
+                        </div>
+                 </div>
+
+                 <div class="field required">
+                        <label class="strong">Sifat</label>
+                        <div class="fields">
+                            <div class="twelve wide field">
+                                <div class="ui radio checkbox">
+                                  <input type="radio" name="sf" checked="" tabindex="0" class="hidden">
+                                  <label>Wajib</label>
+                                </div>
+
+                                <div class="ui radio checkbox">
+                                     <input type="radio" name="sf" tabindex="0" class="hidden">
+                                     <label>Tambahan</label>
+                               </div>
+                         </div>
+                        </div>
+                 </div>
+
+                 <div class="field">
+                        <label>Keterangan</label>
+                       <textarea></textarea>
+                 </div>
+
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button blue noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Simpan</button>
+            </div>
+        </div>
+
+        <div class="floating-form" id="detail">
+            <div class="header">
+                <i class="edit icon"></i> Ubah Semester
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+                 <div class="field required">
+                       <label class="strong">Departemen</label>
+                       <select disabled="">
+                           <option>
+                               SMA
+                           </option>
+                           <option>
+                               SMP
+                           </option>
+                           <option>
+                               SD
+                           </option>
+                       </select>
+                 </div>
+
+                 <div class="field required">
+                       <label class="strong">Nama</label>
+                       <input type="text" placeholder="" value="Bahasa Indonesia" class="tooltiped-input" data-content="Nama Pelajaran tidak boleh lebih dari 50 karakter" data-position="right center" />
+                 </div>
+
+                 <div class="field required">
+                        <label class="strong">Singkatan</label>
+                        <div class="fields">
+                            <div class="four wide field">
+                                <input type="text" placeholder="" value="INA" class="tooltiped-input" data-content="Nama Singkatan tidak boleh lebih dari 4 karakter" data-position="right center" />
+                            </div>
+                        </div>
+                 </div>
+
+                 <div class="field required">
+                        <label class="strong">Sifat</label>
+                        <div class="fields">
+                            <div class="twelve wide field">
+                                <div class="ui radio checkbox">
+                                  <input type="radio" name="sf" checked="" tabindex="0" class="hidden">
+                                  <label>Wajib</label>
+                                </div>
+
+                                <div class="ui radio checkbox">
+                                     <input type="radio" name="sf" tabindex="0" class="hidden">
+                                     <label>Tambahan</label>
+                               </div>
+                         </div>
+                        </div>
+                 </div>
+
+                 <div class="field">
+                        <label>Keterangan</label>
+                       <textarea>Sekedar contoh. Menu ini mengatur nama dan kode pelajaran yang diajarkan di sekolah. Ubah atau tambahkan data ini sesuai dengan pelajaran-pelajaran yang ada di sekolah.</textarea>
+                 </div>
+
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button blue noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+            </div>
+        </div>
+
+        <div class="popup-dim"></div>
+        <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+<script src="../js/vendors/owl.carousel.js"></script>
+        <script src="../js/vendors/pikaday.js"></script>
+        <script src="../js/vendors/pikaday.jquery.js"></script>
+        <script src="../js/vendors/jquery.noty.packaged.js"></script>
+        <script src="../js/vendors/relax.js"></script>
+        <script src="../semantic/dist/semantic.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script>
+            $('#detail_pegawai').modal('attach events', '.detai-pegawai', 'show');
+            $('#alert').modal('attach events', '.table-action .delete', 'show');
+        </script>
+    </body>
+</html>

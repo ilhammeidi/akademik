@@ -1,0 +1,165 @@
+.navigator {
+    padding-top: 0 !important;
+    padding-left: 20px !important;
+    > * {
+        padding-left: 10px;
+    }
+    .breadcrumb {
+        margin-bottom: 10px;
+        font-size: 13px;
+        a {
+            color: $green;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .divider {
+            color: $grey-dark2;
+        }
+        .active {
+            text-transform: none;
+        }
+    }
+}
+
+.filter {
+    &-top {
+        display: table-header-group;
+        width: 100%;
+        text-align: left;
+        > * {
+            .ui.form {
+                margin-top: 10px;
+            }
+        }
+        .head-wrap {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            background: $white-color;
+            box-shadow: 0 1px 10px -5px rgba(0, 0, 0, 0.15);
+            > * {
+                padding-bottom: 0 !important;
+            }
+            .landing-menu .ui.grid .row {
+                padding-top: 0;
+            }
+        }
+        .filter-field {
+            padding-top: 0 !important;
+            padding-left: 10px !important;
+        }
+    }
+    &-side,
+    &-in {
+        width: 100%;
+        overflow: hidden;
+    }
+    &-side {
+        > .ui.grid>.column:not(.row),
+        > .ui.grid>.row>.column {
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
+        }
+        > .ui.grid>.column.row {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .ui.form .inline.field {
+            margin-bottom: 5px;
+        }
+        .ui.form .inline.field label,
+        .ui.form .inline.fields label {
+            width: 170px;
+            color: $grey-dark-green;
+            padding-left: 10px;
+        }
+        .ui.form .inline.field>input,
+        .ui.form .inline.field>select,
+        .ui.form .inline.fields .field>input,
+        .ui.form .inline.fields .field>select {
+            font-size: 13px;
+        }
+        .button {
+            margin: 2px 0;
+            width: 90px;
+            &.auto {
+                width: auto;
+            }
+        }
+        .search-head {
+            color: $grey-dark-green;
+            text-align: left;
+            font-size: 20px;
+            position: relative;
+            padding-left: 70px !important;
+            color: $white-color;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 35px;
+                bottom: -10px;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+            span {
+                font-size: 13px;
+                display: block;
+                font-weight: normal;
+            }
+            i {
+                position: absolute;
+                left: 1px;
+                top: 3px;
+                color: $green-light3;
+                opacity: .3;
+                font-size: 50px;
+            }
+            &.green1 {
+                background: $green;
+                &:after {
+                    border-top: 10px solid $green;
+                }
+            }
+            &.green-leaf2 {
+                background: $green-leaf2;
+                &:after {
+                    border-top: 10px solid $green-leaf2;
+                }
+            }
+            &.blue-dark {
+                background: $blue-sea2;
+                &:after {
+                    border-top: 10px solid $blue-sea2;
+                }
+            }
+            &.blue-light {
+                background: $blue-sky4;
+                &:after {
+                    border-top: 10px solid $blue-sky4;
+                }
+            }
+            &.orange-brown {
+                background: $orange-rock3;
+                &:after {
+                    border-top: 10px solid $orange-rock3;
+                }
+            }
+        }
+    }
+    &-in {
+        padding: 0px 10px 15px;
+        .ui.form input:not([type]),
+        .ui.form input[type=text],
+        .ui.form input[type=email],
+        .ui.form input[type=search],
+        .ui.form input[type=password],
+        .ui.form input[type=date],
+        .ui.form input[type=datetime-local],
+        .ui.form input[type=tel],
+        .ui.form input[type=time],
+        .ui.form input[type=url],
+        .ui.form input[type=number] {
+            border: 2px solid $grey-light3;
+        }
+    }
+}

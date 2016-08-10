@@ -1,0 +1,584 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Modal -->
+        <div class="ui small modal" id="form_modal">
+          <i class="close icon"></i>
+          <div class="header">
+            <h3>Lorem Ipsum</h3>
+          </div>
+          <div class="content">
+              <form class="ui form" action="">
+                <div class="field">
+                  <label>First Name</label>
+                  <input type="text" name="first-name" placeholder="First Name">
+                </div>
+                <div class="field">
+                  <label>Last Name</label>
+                  <input type="text" name="last-name" placeholder="Last Name">
+                </div>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>I agree to the Terms and Conditions</label>
+                  </div>
+                </div>
+              </form>
+          </div>
+          <div class="actions">
+            <div class="ui deny small button">
+              Nope
+            </div>
+            <div class="ui blue right labeled icon small button">
+              Yep, that's me
+              <i class="checkmark icon"></i>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ui small modal" id="table_modal">
+          <i class="close icon"></i>
+          <div class="header">
+            <h3>Lorem Ipsum</h3>
+          </div>
+          <div class="content">
+              <table class="ui very basic selectable table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Status</th>
+                      <th>Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>John</td>
+                      <td>Approved</td>
+                      <td>None</td>
+                    </tr>
+                    <tr>
+                      <td>Jamie</td>
+                      <td>Approved</td>
+                      <td>Requires call</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Denied</td>
+                      <td>None</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+          <div class="actions">
+            <div class="ui deny small button">
+              Nope
+            </div>
+            <div class="ui blue right labeled icon small button">
+              Yep, that's me
+              <i class="checkmark icon"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui small modal" id="form_table_modal">
+          <i class="close icon"></i>
+          <div class="header">
+            <h3>Lorem Ipsum</h3>
+          </div>
+          <div class="content">
+              <form class="ui form inverted green segment" action="">
+                <div class="field">
+                  <label>First Name</label>
+                  <input type="text" name="first-name" placeholder="First Name">
+                </div>
+                <div class="field">
+                  <label>Last Name</label>
+                  <input type="text" name="last-name" placeholder="Last Name">
+                </div>
+              </form>
+              <div class="m-t-50"></div>
+              <table class="ui very basic selectable table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Status</th>
+                      <th>Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>John</td>
+                      <td>Approved</td>
+                      <td>None</td>
+                    </tr>
+                    <tr>
+                      <td>Jamie</td>
+                      <td>Approved</td>
+                      <td>Requires call</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Denied</td>
+                      <td>None</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+          <div class="actions">
+            <div class="ui deny small button">
+              Nope
+            </div>
+            <div class="ui blue right labeled icon small button">
+              Yep, that's me
+              <i class="checkmark icon"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui basic modal" id="alert">
+            <i class="close icon"></i>
+            <div class="ui icon header">
+                <i class="archive icon"></i>
+                Archive Old Messages
+            </div>
+            <div class="content">
+                <p class="text-center">Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+            </div>
+            <div class="actions">
+              <div class="ui red basic cancel inverted button">
+                <i class="remove icon"></i>
+                No
+              </div>
+              <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i>
+                Yes
+              </div>
+            </div>
+        </div>
+        <!-- END -->
+        <div class="main-content" id="container">
+            <section class="filter-top">
+                <div class="ui grid head-wrap">
+                    <div class="three wide column">
+                        <div class="head">
+                            <a href="#" class="back">&nbsp;</a>
+                            <img src="../img/akademik/akademik_logo.png" alt="logo" />
+                            Loremipsum
+                        </div>
+                    </div>
+                    <div class="thirteen wide column white-wrap">
+                        <section class="landing-menu">
+                            <header>
+                                <div class="ui grid">
+                                    <div class="row">
+                                        <nav class="thirteen wide column">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="cur"><i class="ifont-graduation-gat"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="ifont-people-add"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="ifont-teacher"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="icon ifont-clock"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="icon ifont-people"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="icon ifont-touch"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="ifont-passed-exam"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <!-- <li>
+                                                    <a href="#"><i class="ifont-upstair"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="ifont-runner"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="ifont-analytic-report"></i>Lorem Ipsum</a>
+                                                </li> -->
+                                                <li>
+                                                    <a href="#"><i class="ifont-settings-work-tool"></i>Lorem Ipsum</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+
+                                        <div class="three wide no-padding column">
+                                            <div class="user">
+                                                <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                                <figure>
+                                                    <img src="../img/user-default.png" alt="user" />
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </section>
+                    </div>
+                </div>
+                <div class="ui grid">
+                    <div class="three wide column navigator">
+                        <div class="ui small breadcrumb">
+                          <a class="section">Home</a>
+                          <i class="right angle icon divider"></i>
+                          <a class="section">Store</a>
+                          <i class="right angle icon divider"></i>
+                          <div class="active section">T-Shirt</div>
+                        </div>
+                        <div class="title">
+                            <h2>Lorem Ipsum</h2>
+                        </div>
+                    </div>
+                    <div class="nine wide column filter-field">
+                        <div class="ui form">
+                          <div class="fields">
+                            <div class="field ui icon input">
+                              <label>Start Date</label>
+                              <input type="text" id="start" placeholder="Start Date" />
+                              <i class="calendar icon"></i>
+                            </div>
+                            <div class="field ui icon input">
+                              <label>End Date</label>
+                              <input type="text" id="end" placeholder="End Date">
+                              <i class="calendar icon"></i>
+                            </div>
+                            <div class="field ui icon input">
+                              <label>Date</label>
+                              <input type="text" class="datepicker" placeholder="Date">
+                              <i class="calendar icon"></i>
+                            </div>
+                            <div class="field">
+                                <div class="m-t-5">
+                                    <div class="ui blue animated button">
+                                        <div class="visible content">Search</div>
+                                          <div class="hidden content">
+                                            <i class="search icon"></i>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section id="content" class="table-layout">
+                <div class="ui grid table-layout-cell">
+                    <div class="five wide column">
+                        <section class="filter-side panel">
+                            <div class="ui grid">
+                                <div class="sixteen wide column search-head green1">
+                                    <i class="search icon"></i>
+                                    Search Lorem Ipsum
+                                    <span>Duis ante turpis, tincidunt in hendrerit ut, egestas</span>
+                                </div>
+                                <div class="twelve wide column">
+                                    <div class="ui form">
+                                      <div class="inline field">
+                                        <label>First name</label>
+                                        <input type="text" placeholder="First Name">
+                                      </div>
+                                    </div>
+                                    <div class="ui form">
+                                      <div class="inline field">
+                                        <label>Middle name</label>
+                                        <input type="text" placeholder="Middle Name">
+                                      </div>
+                                    </div>
+                                    <div class="ui form">
+                                      <div class="inline field">
+                                        <label>Last name</label>
+                                        <input type="text" placeholder="Last Name">
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="four wide column">
+                                    <button class="mini ui button tooltiped" id="btn_form_modal" data-content="Elliot has been a member since July 2012" data-position="top center">
+                                      Tiny
+                                    </button>
+                                    <button class="mini ui button tooltiped" id="btn_table_modal" data-content="Elliot has been a member since July 2012" data-position="top right">
+                                      Medium
+                                    </button>
+                                    <button class="mini ui blue button tooltiped" id="btn_form_table_modal" data-content="Elliot has been a member since July 2012">
+                                      Large
+                                    </button>
+                                </div>
+
+                                <section class="sixteen wide column">
+                                    <table class="ui single line selectable table very basic">
+                                      <thead>
+                                        <tr>
+                                          <th>Name</th>
+                                          <th>Status</th>
+                                          <th>Notes</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>John</td>
+                                          <td>Approved</td>
+                                          <td>None</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Jamie</td>
+                                          <td>Approved</td>
+                                          <td>Requires call</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Jill</td>
+                                          <td>Denied</td>
+                                          <td>None</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </section>
+
+                            </div>
+                        </section>
+                    </div>
+                    <div class="eleven wide column panel">
+                        <section class="table-wrap">
+                            <div class="filter-in">
+                                <div class="ui grid">
+                                  <div class="ten wide column">
+                                      <div class="ui form">
+                                        <div class="fields">
+                                          <div class="field">
+                                            <input type="text" placeholder="First Name">
+                                          </div>
+                                          <div class="field">
+                                            <input type="text" placeholder="Middle Name">
+                                          </div>
+                                          <div class="field">
+                                            <input type="text" placeholder="Last Name">
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="four wide column">
+                                      <button class="ui blue mini button noty" data-type="error" data-message="No data found">
+                                        Search
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <table class="ui table single line teal striped very basic">
+                                  <thead>
+                                    <tr><th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                  </tr></thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        First
+                                      </td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        First
+                                      </td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        First
+                                      </td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        First
+                                      </td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        First
+                                      </td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                      <td>Cell</td>
+                                    </tr>
+                                  </tbody>
+                                  <tfoot>
+                                    <tr><th colspan="3">
+                                      <div class="ui right floated pagination menu">
+                                        <a class="icon item">
+                                          <i class="left chevron icon"></i>
+                                        </a>
+                                        <a class="item cur">1</a>
+                                        <a class="item">2</a>
+                                        <a class="item">3</a>
+                                        <a class="item">4</a>
+                                        <a class="icon item">
+                                          <i class="right chevron icon"></i>
+                                        </a>
+                                      </div>
+                                    </th>
+                                  </tr></tfoot>
+                                </table>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="floating-form">
+            <div class="header">
+                <i class="add icon"></i> Add New
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+              <div class="field">
+                <label>First Name</label>
+                <input type="text" name="first-name" placeholder="First Name">
+              </div>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+            <div class="field">
+                <label>First Name</label>
+                <input type="text" name="first-name" placeholder="First Name">
+              </div>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+                <div class="field">
+                <label>First Name</label>
+                <input type="text" name="first-name" placeholder="First Name">
+              </div>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+
+                <div class="field">
+                <label>First Name</label>
+                <input type="text" name="first-name" placeholder="First Name">
+              </div>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+
+                <div class="field">
+                <label>First Name</label>
+                <input type="text" name="first-name" placeholder="First Name">
+              </div>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input id="check" type="checkbox" tabindex="0" class="hidden">
+                  <label for="check">I agree to the Terms and Conditions</label>
+                </div>
+              </div>
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button blue noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+            </div>
+        </div>
+        <div class="popup-dim"></div>
+        <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+        <script src="../js/vendors/pikaday.js"></script>
+        <script src="../js/vendors/pikaday.jquery.js"></script>
+        <script src="../js/vendors/jquery.noty.packaged.js"></script>
+        <script src="../js/vendors/relax.js"></script>
+        <script src="../semantic/dist/semantic.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script>
+            $('#form_modal').modal('attach events', '#btn_form_modal', 'show');
+            $('#table_modal').modal('attach events', '#btn_table_modal', 'show');
+            $('#form_table_modal').modal('attach events', '#btn_form_table_modal', 'show');
+            $('#alert').modal('attach events', '#cancel_compose', 'show');
+        </script>
+    </body>
+</html>

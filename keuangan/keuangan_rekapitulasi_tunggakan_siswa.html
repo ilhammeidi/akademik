@@ -1,0 +1,818 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body class="green-leaf">
+    <!-- Modal -->
+    <div class="ui medium modal" id="add_siswa">
+        <i class="close icon"></i>
+        <div class="header">
+            <h3><i class="user icon"></i> Cari Siswa</h3>
+        </div>
+        <div class="content">
+            <div class="ui secondary pointing tabed menu">
+                <a class="item" data-tab="first">Cari Siswa</a>
+                <a class="active item" data-tab="second">Pilih Siswa</a>
+            </div>
+
+            <div class="ui bottom tab" data-tab="first">
+                <form class="ui form inverted green segment" action="">
+                    <div class="field">
+                        <label>Departemen</label>
+                        <select>
+                            <option>Semua Departemen </option>
+                            <option>SMA </option>
+                            <option>SMP </option>
+                            <option>SD </option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Siswa</label>
+                        <div class="fields">
+                            <div class="four wide field">
+                                <input type="text" placeholder="NIS">
+                            </div>
+                            <div class="twelve wide field">
+                                <input type="text" id="#" placeholder="Nama Siswa">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="ui right labeled icon mini teal basic button">
+                            <i class="search icon"></i> Cari
+                        </button>
+                    </div>
+                </form>
+                <div class="ui info message">
+                    <i class="close icon"></i>
+                    <p>
+                        Klik pada tombol "Cari" di atas untuk melihat data siswa sesuai dengan NIS atau Nama Siswa berdasarkan keyword yang dimasukkan
+                    </p>
+                </div>
+                <div class="m-t-50"></div>
+                <table class="ui very basic selectable table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>NIS</th>
+                            <th>Nama</th>
+                            <th>Dept.</th>
+                            <th>Kelas</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>01910</td>
+                            <td>Andi Prasetya</td>
+                            <td>SMA</td>
+                            <td>10A</td>
+                            <td>
+                                <div class="table-action">
+                                    <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>01910</td>
+                            <td>Andi Gemilang</td>
+                            <td>SMA</td>
+                            <td>10C</td>
+                            <td>
+                                <div class="table-action">
+                                    <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ui bottom active tab" data-tab="second">
+                <div class="ui form m-b-40">
+                    <div class="fields">
+                        <div class="eight wide field">
+                            <label>Departemen</label>
+                            <select>
+                                <option>Semua Departemen</option>
+                                <option>SMA</option>
+                                <option>SMP</option>
+                                <option>SD</option>
+                            </select>
+                        </div>
+                        <div class="eight wide field">
+                            <label>Tahun Ajaran</label>
+                            <select>
+                                <option>2016/2017 (Aktif)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="eight wide field">
+                            <label>Tingkat</label>
+                            <select>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </div>
+                        <div class="eight wide field">
+                            <label>Kelas</label>
+                            <select>
+                                <option>10 A</option>
+                                <option>10 B</option>
+                                <option>10 C</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <table class="ui very basic selectable table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>NIS</th>
+                            <th>Nama</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>01910</td>
+                            <td>Andi</td>
+                            <td>
+                                <div class="table-action">
+                                    <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>01910</td>
+                            <td>Andi</td>
+                            <td>
+                                <div class="table-action">
+                                    <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>01910</td>
+                            <td>Andi</td>
+                            <td>
+                                <div class="table-action">
+                                    <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>01910</td>
+                            <td>Andi</td>
+                            <td>
+                                <div class="table-action">
+                                    <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>01910</td>
+                            <td>Andi</td>
+                            <td>
+                                <div class="table-action">
+                                    <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="ui basic modal" id="alert">
+        <i class="close icon"></i>
+        <div class="ui icon header">
+            <i class="trash icon"></i> Hapus Data
+        </div>
+        <div class="content">
+            <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+        </div>
+        <div class="actions">
+            <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i> Tidak
+            </div>
+            <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i> Ya
+            </div>
+        </div>
+    </div>
+
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="three wide column">
+                    <div class="head">
+                        <a href="keuangan_landing_referensi.html" class="back">&nbsp;</a>
+                        <img src="../img/keuangan/keuangan_logo.png" alt="logo" /> Keuangan
+                    </div>
+                </div>
+                <div class="thirteen wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul id="" class="clearfix">
+                                            <li class="item">
+                                                <a href="keuangan_landing_referensi.html"><i class="ifont-hand-chart"></i>Referensi</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_penerimaan.html" class="cur"><i class="ifont-folder-download"></i>Penerimaan</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_pengeluaran.html"><i class="ifont-upload-folder"></i>Pengeluaran</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_jurnal_umum.html"><i class="icon ifont-private-journal"></i>Jurnal <br /> Umum</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_laporan_keuangan.html"><i class="icon ifont-analytic-report"></i>Laporan <br /> Keuangan</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_inventory.html"><i class="icon ifont-tool"></i>Inventory</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="four wide column navigator">
+                    <div class="ui small breadcrumb">
+                        <a class="section" href="#">Penerimaan</a>
+                        <i class="right angle icon divider"></i>
+                        <div class="active section">Rekapitulasi Tunggakan Siswa</div>
+                    </div>
+                    <div class="title small">
+                        <h2>
+                            <img src="../img/keuangan/penerimaan/laporan_pembayaran.png" alt="logo" />
+                            Rekapitulasi Tunggakan Siswa
+                        </h2>
+                    </div>
+                </div>
+                <div class="twelve wide column filter-field">
+                    <div class="ui form">
+                        <div class="fields">
+                            <div class="two wide field">
+                                <label>Departemen</label>
+                                <select>
+                                    <option>SMA</option>
+                                    <option>SMP</option>
+                                    <option>SD</option>
+                                </select>
+                            </div>
+
+                            <div class="two wide field">
+                                <label>Angkatan</label>
+                                <select>
+                                    <option>2011</option>
+                                    <option>2012</option>
+                                    <option>2013</option>
+                                </select>
+                            </div>
+
+                            <div class="two wide field">
+                                <label>Kelas</label>
+                                <select>
+                                    <option>(Semua)</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                            </div>
+                            <div class="two wide field">
+                                <label>&nbsp;</label>
+                                <select>
+                                    <option>(Semua)</option>
+                                    <option>10A</option>
+                                    <option>10B</option>
+                                    <option>10C</option>
+                                </select>
+                            </div>
+
+                            <div class="three wide field">
+                                <label>Tahun Buku</label>
+                                <select>
+                                    <option>2011-2012 (A)</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <div class="m-t-10">
+                                    <div class="ui green animated button">
+                                        <div class="visible content">Search</div>
+                                        <div class="hidden content">
+                                            <i class="search icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content" class="table-layout">
+            <div class="ui grid table-layout-cell">
+                <div class="sixteen wide column panel">
+                    <section class="table-wrap">
+                        <div class="filter-in">
+                            <div class="ui grid">
+                                <div class="nine wide column">
+                                    &nbsp;
+                                </div>
+                                <div class="seven wide column text-right">
+                                    <button class="ui mini button">
+                                        <i class="refresh icon"></i> Refresh
+                                    </button>
+                                    <button class="ui mini button">
+                                        <i class="file excel outline icon"></i> Cetak Excel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-overflow">
+                            <table class="ui single selectable striped structured celled table">
+                                <thead>
+                                    <tr class="center aligned">
+                                        <th rowspan="2">No</th>
+                                        <th rowspan="2">NIS</th>
+                                        <th rowspan="2">Nama</th>
+                                        <th rowspan="2">PIN</th>
+                                        <th rowspan="2">Tingkat</th>
+                                        <th rowspan="2">Kelas</th>
+                                        <th rowspan="2">Ayah</th>
+                                        <th rowspan="2">Ibu</th>
+                                        <th rowspan="2">Alamat</th>
+                                        <th rowspan="2">Kode Pos</th>
+                                        <th rowspan="2">Telepon Ortu</th>
+                                        <th rowspan="2">HP Ortu</th>
+                                        <th colspan="8" class="center aligned">SPP Bulanan</th>
+                                        <th colspan="8" class="center aligned">DSP</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Cicilan</th>
+                                        <th>Total</th>
+                                        <th>Pembayaran</th>
+                                        <th>Diskon</th>
+                                        <th>Sisa </th>
+                                        <th>Tgl.Akhir</th>
+                                        <th>Bay.Akhir</th>
+                                        <th>Ket.Akhir</th>
+
+                                        <th>Cicilan</th>
+                                        <th>Total</th>
+                                        <th>Pembayaran</th>
+                                        <th>Diskon</th>
+                                        <th>Sisa</th>
+                                        <th>Tgl.Akhir</th>
+                                        <th>Bay.Akhir</th>
+                                        <th>Ket.Akhir</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tbody>
+                                        <tr >
+                                            <td align="center">1</td>
+                                            <td align="center">SMA1012001</td>
+                                            <td align="left">AMELIA M</td>
+                                            <td align="center">87103</td>
+                                            <td align="center">10</td>
+                                            <td align="center">10 A</td>
+                                            <td align="left">Arman</td>
+                                            <td align="left">Wita</td>
+                                            <td align="left">Jl. Kopo Sayati 256 Bandung</td>
+                                            <td align="center">40153</td>
+                                            <td align="left">0225892154</td>
+                                            <td align="left">081321562156</td>
+                                            <td align="right">Rp 100.000</td>
+                                            <td align="right">Rp 1.200.000</td>
+                                            <td align="right">Rp 300.000</td>
+                                            <td align="right">Rp 20.000</td>
+                                            <td align="right">Rp 900.000</td>
+                                            <td align="center" >21-Peb-2012</td>
+                                            <td align="right" >Rp 100.000</td>
+                                            <td align="left" ></td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                        </tr>
+                                        <tr bgcolor="#EEE">
+                                            <td align="center">2</td>
+                                            <td align="center">SMA1012002</td>
+                                            <td align="left">APRIANSYAH B</td>
+                                            <td align="center">90130</td>
+                                            <td align="center">10</td>
+                                            <td align="center">10 A</td>
+                                            <td align="left">Hikmal A</td>
+                                            <td align="left">Wina K</td>
+                                            <td align="left">Jl. Anggrek 36 Bandung</td>
+                                            <td align="center">41578</td>
+                                            <td align="left">0227895874</td>
+                                            <td align="left">085721457896</td>
+                                            <td align="right">Rp 100.000</td>
+                                            <td align="right">Rp 1.200.000</td>
+                                            <td align="right">Rp 200.000</td>
+                                            <td align="right">Rp 20.000</td>
+                                            <td align="right">Rp 1.000.000</td>
+                                            <td align="center" >20-Jun-2011</td>
+                                            <td align="right" >Rp 80.000</td>
+                                            <td align="left" ></td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                        </tr>
+                                        <tr >
+                                            <td align="center">3</td>
+                                            <td align="center">SMA110001</td>
+                                            <td align="left">Bana Ferdiansyah</td>
+                                            <td align="center">33936</td>
+                                            <td align="center">10</td>
+                                            <td align="center">10 A</td>
+                                            <td align="left"></td>
+                                            <td align="left"></td>
+                                            <td align="left"></td>
+                                            <td align="center"></td>
+                                            <td align="left"></td>
+                                            <td align="left">081821653254</td>
+                                            <td align="right">Rp 100.000</td>
+                                            <td align="right">Rp 1.200.000</td>
+                                            <td align="right">Rp 200.000</td>
+                                            <td align="right">Rp 20.000</td>
+                                            <td align="right">Rp 1.000.000</td>
+                                            <td align="center" >11-Jul-2011</td>
+                                            <td align="right" >Rp 100.000</td>
+                                            <td align="left" ></td>
+                                            <td align="right">Rp 1.000.000</td>
+                                            <td align="right">Rp 5.000.000</td>
+                                            <td align="right">Rp 1.000.000</td>
+                                            <td align="right">Rp 200.000</td>
+                                            <td align="right">Rp 4.000.000</td>
+                                            <td align="center" >02-Peb-2012</td>
+                                            <td align="right" >Rp 800.000</td>
+                                            <td align="left" ></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td align="center">4</td>
+                                            <td align="center">SMA1012006</td>
+                                            <td align="left">MARCELLINUS</td>
+                                            <td align="center">81724</td>
+                                            <td align="center">10</td>
+                                            <td align="center">10 A</td>
+                                            <td align="left">Frans Hutapea</td>
+                                            <td align="left">Elisa Manurung</td>
+                                            <td align="left">Jl. Malabar 56 Bandung</td>
+                                            <td align="center">40256</td>
+                                            <td align="left"></td>
+                                            <td align="left">081321478965</td>
+                                            <td align="right">Rp 100.000</td>
+                                            <td align="right">Rp 1.200.000</td>
+                                            <td align="right">Rp 200.000</td>
+                                            <td align="right">Rp 20.000</td>
+                                            <td align="right">Rp 1.000.000</td>
+                                            <td align="center" >29-Jul-2011</td>
+                                            <td align="right" >Rp 100.000</td>
+                                            <td align="left" ></td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                        </tr>
+                                        <tr >
+                                            <td align="center">5</td>
+                                            <td align="center">SMA1012003</td>
+                                            <td align="left">RIA AJENG</td>
+                                            <td align="center">53689</td>
+                                            <td align="center">10</td>
+                                            <td align="center">10 A</td>
+                                            <td align="left">Mustafa M</td>
+                                            <td align="left">Mulyani R</td>
+                                            <td align="left">Jl. Sarimanis 39 Bandung</td>
+                                            <td align="center">40161</td>
+                                            <td align="left">02220305689</td>
+                                            <td align="left">085632145687</td>
+                                            <td align="right">Rp 100.000</td>
+                                            <td align="right">Rp 1.200.000</td>
+                                            <td align="right">Rp 200.000</td>
+                                            <td align="right">Rp 20.000</td>
+                                            <td align="right">Rp 1.000.000</td>
+                                            <td align="center" >20-Jun-2011</td>
+                                            <td align="right" >Rp 80.000</td>
+                                            <td align="left" ></td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">6</td>
+                                            <td align="center">SMA1012007</td>
+                                            <td align="left">SASKIA H</td>
+                                            <td align="center">24526</td>
+                                            <td align="center">10</td>
+                                            <td align="center">10 A</td>
+                                            <td align="left">Rahmat R</td>
+                                            <td align="left">Marina M</td>
+                                            <td align="left">Jl. Mutumanikam 219 Bandung</td>
+                                            <td align="center">41963</td>
+                                            <td align="left">0224362453</td>
+                                            <td align="left">081532587410</td>
+                                            <td align="right">Rp 100.000</td>
+                                            <td align="right">Rp 1.200.000</td>
+                                            <td align="right">Rp 200.000</td>
+                                            <td align="right">Rp 20.000</td>
+                                            <td align="right">Rp 1.000.000</td>
+                                            <td align="center" >20-Jun-2011</td>
+                                            <td align="right" >Rp 80.000</td>
+                                            <td align="left" ></td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                            <td >&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot class="total">
+                                        <tr>
+                                            <th colspan="12" class="center aligned"><strong>T O T A L</strong></th>
+                                            <th align="right" >Rp 600.000</th>
+                                            <th align="right" >Rp 7.200.000</th>
+                                            <th align="right" >Rp 1.300.000</th>
+                                            <th align="right" >Rp 120.000</th>
+                                            <th align="right" >Rp 5.900.000</th>
+                                            <th >&nbsp;</th>
+                                            <th >&nbsp;</th>
+                                            <td >&nbsp;</th>
+                                            <th align="right" >Rp 1.000.000</th>
+                                            <th align="right" >Rp 5.000.000</th>
+                                            <th align="right" >Rp 1.000.000</th>
+                                            <th align="right" >Rp 200.000</th>
+                                            <th align="right" >Rp 4.000.000</th>
+                                            <th >&nbsp;</th>
+                                            <th >&nbsp;</th>
+                                            <th >&nbsp;</th>
+                                        </tr>
+                                    </tfoot>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-form small" id="add">
+        <div class="header">
+            <i class="add icon"></i> Tambah Jenis Penerimaan
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Kategori</label>
+                <input type="text" value="Iuran Wajib Siswa" disabled="" />
+            </div>
+
+            <div class="field">
+                <label>Departemen</label>
+                <input type="text" value="SMA" disabled="" />
+            </div>
+
+            <div class="field">
+                <label>Nama</label>
+                <input type="text" value="" />
+            </div>
+
+            <div class="field">
+                <label>Rek. Kas</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" id="search_rek_kas" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Pendapatan</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" id="search_rek_pendapatan" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Piuang</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" id="search_rek_piutang" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Diskon</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" id="search_rek_diskon" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea></textarea>
+            </div>
+
+            <div class="ui checked checkbox">
+                <input type="checkbox">
+                <label>Kirim SMS Informasi Pembayaran</label>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form small" id="detail">
+        <div class="header">
+            <i class="edit icon"></i> Ubah Jenis Penerimaan
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="ui info message">
+                <i class="close icon"></i> * Kode rekening Jenis Penerimaan ini tidak dapat diubah karena telah digunakan dalam transaksi
+            </div>
+
+            <div class="field">
+                <label>Kategori</label>
+                <input type="text" value="Iuran Wajib Siswa" disabled="" />
+            </div>
+
+            <div class="field">
+                <label>Departemen</label>
+                <input type="text" value="SMA" disabled="" />
+            </div>
+
+            <div class="field">
+                <label>Nama</label>
+                <input type="text" value="Iuran Wajib Siswa" />
+            </div>
+
+            <div class="field">
+                <label>Rek. Kas *</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" value="111 Kas" id="search_rek_kas" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Pendapatan *</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" value="411 Pendapatan SPP" id="search_rek_pendapatan" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Piuang *</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" value="150 Piutang Siswa" id="search_rek_piutang" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Diskon *</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" value="421 Diskon SPP" id="search_rek_diskon" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea>Sekedar contoh. Menu ini mengatur setiap jenis penerimaan yang mungkin diterima sekolah. Anda harus menentukan rekening Kas, Pendapatan dan Piutang untuk setiap transaksi penerimaan.</textarea>
+            </div>
+
+            <div class="ui checked checkbox">
+                <input type="checkbox">
+                <label>Kirim SMS Informasi Pembayaran</label>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+        </div>
+    </div>
+
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#add_siswa').modal('attach events', '#search_siswa_input', 'show');
+        $('#alert').modal('attach events', '.table-action .delete', 'show');
+    </script>
+</body>
+
+</html>

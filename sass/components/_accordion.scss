@@ -1,0 +1,13 @@
+.ui.accordion{
+    .title{
+        font-weight: bold;
+        &.active, &:not(.ui).active{
+            color: $green;
+            font-size: 1em; 
+        }
+    }
+    .title:not(.ui){
+        font-family: 'regular';
+        color: $grey-dark2;
+    }
+}

@@ -1,0 +1,657 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body class="green-leaf">
+    <!-- Modal -->
+    <div class="ui medium modal" id="add_departemen">
+          <i class="close icon"></i>
+          <div class="header">
+            <h3><i class="users icon"></i> Daftar Pegawai</h3>
+          </div>
+          <div class="content">
+                <div class="ui secondary pointing tabed menu">
+                    <a class="item" data-tab="first">Daftar Pegawai</a>
+                    <a class="active item" data-tab="second">Cari Pegawai</a>
+                </div>
+                <div class="ui bottom tab" data-tab="first">
+                    <select>
+                      <option>
+                          Semua Bagian
+                      </option>
+                    </select>
+                    <table class="ui very basic selectable table">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>NIP</th>
+                            <th>Nama</th>
+                            <th>Bagian</th>
+                            <th>&nbsp;</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>01910</td>
+                            <td>Andi</td>
+                            <td>Akademik</td>
+                            <td>
+                                <div class="table-action">
+                                  <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>01910</td>
+                            <td>Andi</td>
+                            <td>Akademik</td>
+                            <td>
+                                <div class="table-action">
+                                  <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>01910</td>
+                            <td>Andi</td>
+                            <td>Akademik</td>
+                            <td>
+                                <div class="table-action">
+                                  <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>01910</td>
+                            <td>Andi</td>
+                            <td>Akademik</td>
+                            <td>
+                                <div class="table-action">
+                                  <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>01910</td>
+                            <td>Andi</td>
+                            <td>Akademik</td>
+                            <td>
+                                <div class="table-action">
+                                  <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="ui bottom active tab" data-tab="second">
+                    <form class="ui form inverted green segment" action="">
+                      <div class="field">
+                        <label>Bagian</label>
+                        <select>
+                            <option>
+                                Semua Bagian
+                            </option>
+                        </select>
+                      </div>
+                      <div class="field">
+                          <label>Pegawai</label>
+                          <div class="fields">
+                              <div class="four wide field">
+                                  <input type="text" placeholder="NIP">
+                              </div>
+                              <div class="twelve wide field">
+                                  <input type="text" id="search_kepsek_input" placeholder="Nama Pegawai">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="text-center">
+                          <button class="ui right labeled icon mini teal basic button">
+                            <i class="search icon"></i> Cari
+                        </button>
+                      </div>
+                    </form>
+                    <div class="ui success message">
+                        <i class="close icon"></i>
+                        <p>
+                            Klik pada tombol "Cari" di atas untuk melihat data pegawai
+      sesuai dengan NIP atau Nama Pegawai berdasarkan keyword yang dimasukkan
+                        </p>
+                      </div>
+                    <div class="m-t-50"></div>
+                    <table class="ui very basic selectable table">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Notes</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>John</td>
+                            <td>Approved</td>
+                            <td>None</td>
+                          </tr>
+                          <tr>
+                            <td>Jamie</td>
+                            <td>Approved</td>
+                            <td>Requires call</td>
+                          </tr>
+                          <tr>
+                            <td>Jill</td>
+                            <td>Denied</td>
+                            <td>None</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+          </div>
+        </div>
+    <div class="ui basic modal" id="alert">
+        <i class="close icon"></i>
+        <div class="ui icon header">
+            <i class="trash icon"></i> Hapus Data
+        </div>
+        <div class="content">
+            <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+        </div>
+        <div class="actions">
+            <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i> Tidak
+            </div>
+            <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i> Ya
+            </div>
+        </div>
+    </div>
+
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="three wide column">
+                    <div class="head">
+                        <a href="keuangan_landing_referensi.html" class="back">&nbsp;</a>
+                        <img src="../img/keuangan/keuangan_logo.png" alt="logo" /> Keuangan
+                    </div>
+                </div>
+                <div class="thirteen wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul id="" class="clearfix">
+                                            <li class="item">
+                                                <a href="keuangan_landing_referensi.html"><i class="ifont-hand-chart"></i>Referensi</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_penerimaan.html"><i class="ifont-folder-download"></i>Penerimaan</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_pengeluaran.html" class="cur"><i class="ifont-upload-folder"></i>Pengeluaran</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_jurnal_umum.html"><i class="icon ifont-private-journal"></i>Jurnal <br /> Umum</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_laporan_keuangan.html"><i class="icon ifont-analytic-report"></i>Laporan <br /> Keuangan</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_inventory.html"><i class="icon ifont-tool"></i>Inventory</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="four wide column navigator">
+                    <div class="ui small breadcrumb">
+                        <a class="section" href="keuangan_landing_pengeluaran.html">Pengeluaran</a>
+                        <i class="right angle icon divider"></i>
+                        <div class="active section">Transaksi Pengeluaran</div>
+                    </div>
+                    <div class="title">
+                        <h2>
+                            <img src="../img/keuangan/pengeluaran/transaksi_pengeluaran.png" alt="logo" />
+                            Transaksi Pengeluaran
+                        </h2>
+                    </div>
+                </div>
+                <div class="eleven wide column filter-field">
+                    &nbsp;
+                </div>
+            </div>
+        </section>
+        <section id="content" class="table-layout">
+            <div class="ui grid table-layout-cell">
+                <div class="five wide column">
+                    <section class="filter-side panel">
+                        <div class="ui grid">
+                            <div class="sixteen wide column search-head green-leaf2">
+                                <i class="file text outline icon"></i> Daftar Pengeluaran
+                                <span>Daftar pengeluaran sekolah</span>
+                            </div>
+
+                            <section class="sixteen wide column">
+                                <div class="ui form">
+                                    <div class="inline field">
+                                        <label>Departemen</label>
+                                        <select>
+                                            <option>SMA</option>
+                                            <option>SMP</option>
+                                            <option>SD</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <table class="ui single line selectable table very basic">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Pengeluaran</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Bayar Listrik</td>
+                                            <td>
+                                                <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Entertain Tamu</td>
+                                            <td>
+                                                <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Pembelian Kendaraan Operasional</td>
+                                            <td>
+                                                <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+                <div class="eleven wide column panel">
+                    <div class="table-wrap">
+                        <div class="ui grid">
+                            <section class="three wide column">&nbsp;</section>
+                            <section class="ten wide column">
+                                <h4 class="no-padding ui header">Bayar Listrik</h2>
+                                <div class="ui form m-l-10 p-t-20">
+                                    <div class="inline fields p-l-10 p-r-10">
+                                        <div class="five wide field">
+                                            <label class="bold">Tahun Buku</label>
+                                        </div>
+                                        <div class="eleven wide field">
+                                            <input type="text" value="2015-2016" disabled/>
+                                        </div>
+                                    </div>
+
+                                    <div class="inline fields p-l-10 p-r-10">
+                                        <div class="five wide field">
+                                            <label class="bold">Pembayaran</label>
+                                        </div>
+                                        <div class="eleven wide field">
+                                            <input type="text" value="Bayar Listrik" disabled/>
+                                        </div>
+                                    </div>
+
+                                    <div class="inline fields p-l-10 p-r-10">
+                                        <div class="five wide field">
+                                            <label class="bold">Rek.Kredit</label>
+                                        </div>
+                                        <div class="eleven wide field">
+                                            <select>
+                                                <option value="111" selected=""> 111 Kas</option>
+
+                                                <option value="112"> 112 Kas Bank</option>
+
+                                                <option value="113"> 113 Kas BOS</option>
+
+                                                <option value="114"> 114 Kas Industry</option>
+
+                                                <option value="115"> 115 Kas Kursus Inggris</option>
+
+                                                <option value="1156"> 1156 BCA</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="inline fields p-l-10 p-r-10">
+                                        <div class="five wide field">
+                                            <label>Rek.Debet</label>
+                                        </div>
+                                        <div class="eleven wide field">
+                                            <select>
+                                                <option value="500"> 500 Beban Transportasi</option>
+
+                                                <option value="501" selected=""> 501 Beban Listrik</option>
+
+                                                <option value="502"> 502 Beban Telpon</option>
+
+                                                <option value="503"> 503 Beban Internet</option>
+
+                                                <option value="504"> 504 Beban ATK</option>
+
+                                                <option value="505"> 505 Entertain tamu</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="inline fields p-l-10 p-r-10">
+                                        <div class="five wide field">
+                                            <label>Pemohon</label>
+                                        </div>
+                                        <div class="eleven wide field">
+                                            <div class="field">
+                                                <div class="ui radio checkbox">
+                                                    <input type="radio" name="pemohon" checked="checked">
+                                                    <label>Pegawai</label>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="ui radio checkbox">
+                                                    <input type="radio" name="pemohon">
+                                                    <label>Siswa</label>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="ui radio checkbox">
+                                                    <input type="radio" name="pemohon">
+                                                    <label>Lainnya</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="inline fields p-l-10 p-r-10">
+                                        <div class="five wide field">
+                                            <label>&nbsp;</label>
+                                        </div>
+                                        <div class="eleven wide field">
+                                            <div class="ui icon input">
+                                              <input type="text" id="search_guru_input" placeholder="Nama Pegawai">
+                                              <i class="search icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inline fields p-l-10 p-r-10">
+                                        <div class="five wide field">
+                                            <label>Penerima</label>
+                                        </div>
+                                        <div class="eleven wide field">
+                                            <input type="text" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inline fields p-l-10 p-r-10">
+                                        <div class="five wide field">
+                                            <label class="strong">Tanggal</label>
+                                        </div>
+                                        <div class="six wide field ui icon input">
+                                            <input type="text" placeholder="" value="22 Juni 2016" class="datepicker" />
+                                            <i class="calendar icon"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inline fields p-l-10 p-r-10">
+                                        <div class="five wide field">
+                                            <label>Jumlah</label>
+                                        </div>
+                                        <div class="six wide field">
+                                            <input type="text" value="Rp."/>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="field p-l-10 p-r-10">
+                                        <label class="strong">Keperluan</label>
+                                        <textarea></textarea>
+                                    </div>
+                                    
+                                    <div class="field p-l-10 p-r-10">
+                                        <label>Keterangan</label>
+                                        <textarea></textarea>
+                                    </div>
+
+                                    <div class="btn-area m-t-40 m-b-30">
+                                        <a id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" href="#">Simpan </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-form small" id="add">
+        <div class="header">
+            <i class="add icon"></i> Tambah Jenis Penerimaan
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Kategori</label>
+                <input type="text" value="Iuran Wajib Siswa" disabled="" />
+            </div>
+
+            <div class="field">
+                <label>Departemen</label>
+                <input type="text" value="SMA" disabled="" />
+            </div>
+
+            <div class="field">
+                <label>Nama</label>
+                <input type="text" value="" />
+            </div>
+
+            <div class="field">
+                <label>Rek. Kas</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" id="search_rek_kas" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Pendapatan</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" id="search_rek_pendapatan" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Piuang</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" id="search_rek_piutang" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Diskon</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" id="search_rek_diskon" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea></textarea>
+            </div>
+
+            <div class="ui checked checkbox">
+                <input type="checkbox">
+                <label>Kirim SMS Informasi Pembayaran</label>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form small" id="detail">
+        <div class="header">
+            <i class="edit icon"></i> Ubah Jenis Penerimaan
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="ui info message">
+                <i class="close icon"></i> * Kode rekening Jenis Penerimaan ini tidak dapat diubah karena telah digunakan dalam transaksi
+            </div>
+
+            <div class="field">
+                <label>Kategori</label>
+                <input type="text" value="Iuran Wajib Siswa" disabled="" />
+            </div>
+
+            <div class="field">
+                <label>Departemen</label>
+                <input type="text" value="SMA" disabled="" />
+            </div>
+
+            <div class="field">
+                <label>Nama</label>
+                <input type="text" value="Iuran Wajib Siswa" />
+            </div>
+
+            <div class="field">
+                <label>Rek. Kas *</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" value="111 Kas" id="search_rek_kas" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Pendapatan *</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" value="411 Pendapatan SPP" id="search_rek_pendapatan" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Piuang *</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" value="150 Piutang Siswa" id="search_rek_piutang" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Rek. Diskon *</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                        <input type="text" value="421 Diskon SPP" id="search_rek_diskon" />
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea>Sekedar contoh. Menu ini mengatur setiap jenis penerimaan yang mungkin diterima sekolah. Anda harus menentukan rekening Kas, Pendapatan dan Piutang untuk setiap transaksi penerimaan.</textarea>
+            </div>
+
+            <div class="ui checked checkbox">
+                <input type="checkbox">
+                <label>Kirim SMS Informasi Pembayaran</label>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+        </div>
+    </div>
+
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#add_departemen').modal('attach events', '#search_guru_input', 'show');
+        $('#alert').modal('attach events', '.table-action .delete', 'show');
+    </script>
+</body>
+
+</html>

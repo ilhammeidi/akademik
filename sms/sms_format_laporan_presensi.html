@@ -1,0 +1,269 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body class="green-leaf">
+        <!-- Modal -->
+        <div class="ui basic modal" id="alert">
+            <i class="close icon"></i>
+            <div class="ui icon header">
+                <i class="trash icon"></i>
+                Hapus Data
+            </div>
+            <div class="content">
+                <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+            </div>
+            <div class="actions">
+              <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i>
+                Tidak
+              </div>
+              <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i>
+                Ya
+              </div>
+            </div>
+        </div>
+
+        <!-- END -->
+        <div class="main-content" id="container">
+            <section class="filter-top">
+                <div class="ui grid head-wrap">
+                    <div class="three wide column">
+                        <div class="head">
+                            <a href="#" class="back">&nbsp;</a>
+                            <img src="../img/sms_logo.png" alt="logo" />
+                            SMS Gateway
+                        </div>
+                    </div>
+                    <div class="thirteen wide column white-wrap">
+                        <section class="landing-menu">
+                            <header>
+                                <div class="ui grid">
+                                    <div class="row">
+                                        <nav class="thirteen wide column">
+                                            <ul id="" class="clearfix">
+                                                <li class="item">
+                                                    <a href="sms_kotak_masuk.html"><i class="ifont-email"></i>Kotak <br />Masuk</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="sms_landing_presensi.html" class="cur"><i class="ifont-fingerprint-scan"></i>Presensi</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="sms_landing_penilaian.html"><i class="ifont-passed-exam"></i>Penilaian</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="sms_landing_pengumuman.html"><i class="icon ifont-amplifier"></i>Pengumuman</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="sms_saran.html"><i class="icon ifont-callout"></i>Kritik &amp; <br />Saran</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="sms_phonebook.html"><i class="icon ifont-phonebook"></i>Phone <br />Book</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="sms_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+
+                                        <div class="three wide no-padding column">
+                                            <div class="user">
+                                                <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                                <figure>
+                                                    <img src="../img/user-default.png" alt="user" />
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </section>
+                    </div>
+                </div>
+                <div class="ui centered grid">
+                    <div class="twelve wide column navigator">
+                        <div class="ui small breadcrumb">
+                          <a class="section" href="akademik_landing_kesiswaan.html">SMS Gateway</a>
+                          <i class="right angle icon divider"></i>
+                          <div class="active section">Format Laporan Presensi</div>
+                        </div>
+                        <div class="title">
+                            <h2>
+                                <img src="../img/sms/format_pesan_presensi.png" alt="logo" />
+                                Format Laporan Presensi
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="ten wide column filter-field">
+                        &nbsp;
+                    </div>
+                </div>
+            </section>
+             <section id="content" class="table-layout">
+                <div class="ui centered grid">
+                    <div class="twelve wide column panel">
+                        <section class="table-wrap p-l-10 p-r-10">
+                            <div class="ui form">
+                                <div class="ui grid">
+                                    <div class="eight wide column">
+                                        <div class="header-form">Format Pesan</div>
+                                        <div class="field p-t-10">
+                                            <textarea disabled="" id="sms_format">Kami informasikan presensi [SISWA] tanggal [TANGGAL1]/[BULAN1] s/d [TANGGAL2]/[BULAN2] hadir [HADIR] absen [ABSEN]. [PENGIRIM]</textarea>
+                                       </div>
+                                       <div class="btn-area">
+                                           <button class="ui tiny button green" type="button" onclick="$('#sms_format').removeAttr('disabled').focus()"><i class="edit icon"></i> Ubah Format SMS</button>
+                                       </div>
+                                    </div>
+                                    <div class="eight wide column">
+                                        <div class="header-form">Ket.</div>
+                                        <div class="ui positive message">
+                                          <ul class="list ui two column grid">
+                                            <li class="column"> <strong>[SISWA]</strong>: Siswa</li>
+                                            <li class="column"> <strong>[TANGGAL1]</strong>: Tanggal 1</li>
+                          					<li class="column"> <strong>[BULAN1]</strong>: Bulan 1</li>
+                                            <li class="column"> <strong>[TANGGAL2]</strong>: Tanggal 2</li>
+                          					<li class="column"> <strong>[BULAN2]</strong>: Bulan 2</li>
+                                            <li class="column"> <strong>[PENGIRIM]</strong>: Pengirim</li>
+                          					<li class="column"> <strong>[HADIR]</strong>: Jumlah Data Kehadiran Siswa</li>
+                          					<li class="column"> <strong>[ABSEN]</strong>:Jumlah Data Absensi Siswa</li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="divider" />
+                                <div class="ui info message">
+                                    <div class="header p-b-20">
+                                        <i class="info circle icon"></i> KETERANGAN FORMAT PESAN LAPORAN PRESENSI
+                                    </div>
+                                    <p>
+                                        jika mengirimkan informasi dengan format di bawah ini: <br />
+                                        <em class="bold">
+                                            Informasi presensi [SISWA] antara tanggal [TANGGAL1]/[BULAN1] s/d [TANGGAL2]/[BULAN2].
+                                            Kehadiran [HADIR]. Absen [ABSEN]. Pengirim [PENGIRIM]
+                                        </em>
+                                    </p>
+                                    <p>
+                                        maka informasi yang diterima oleh siswa:<br />
+                                        <em class="bold">
+                                            Informasi presensi Jafar Ashiddiq antara tanggal 1/2 s/d 28/2. Kehadiran 22. Absen 2. Pengirim Bag.Akademik
+                                        </em>
+                                    </p>
+                                </div>
+                            </div>
+                       </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="floating-form" id="add">
+            <div class="header">
+                <i class="add icon"></i> Tambah Rekening Perkiraan
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+                 <div class="field">
+                       <label>Kategori</label>
+                       <input type="text" value="HARTA" disabled="" />
+                 </div>
+
+                 <div class="field required">
+                       <label class="strong">Kode</label>
+                       <div class="fields">
+                           <div class="three wide field">
+                               <input type="text" placeholder="" class="tooltiped-input" data-content="Kode tidak boleh lebih dari 10 karakter" data-position="right center">
+                           </div>
+                       </div>
+                 </div>
+
+                 <div class="field required">
+                      <label class="strong">Nama</label>
+                      <input type="text" placeholder="">
+                </div>
+
+                 <div class="field">
+                        <label class="strong">Keterangan</label>
+                       <textarea></textarea>
+                 </div>
+
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+            </div>
+        </div>
+
+        <div class="floating-form small" id="detail">
+            <div class="header">
+                <i class="edit icon"></i> Ubah Rekening Perkiraan
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+                 <div class="field">
+                       <label>Kategori</label>
+                       <input type="text" value="HARTA" disabled="" />
+                 </div>
+
+                 <div class="field required">
+                       <label class="strong">Kode</label>
+                       <div class="fields">
+                           <div class="three wide field">
+                       <input type="text" placeholder="" value="12345" class="tooltiped-input" data-content="Kode tidak boleh lebih dari 10 karakter" data-position="right center">
+                            </div>
+                        </div>
+                 </div>
+
+                 <div class="field required">
+                      <label class="strong">Nama</label>
+                      <input type="text"  value="Kas BOS" placeholder="">
+                </div>
+
+                 <div class="field">
+                        <label class="strong">Keterangan</label>
+                       <textarea>Kas yang diterima dari sumbangan Bantuan Operasional Sekolah</textarea>
+                 </div>
+
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+            </div>
+        </div>
+
+        <div class="popup-dim"></div>
+        <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+<script src="../js/vendors/owl.carousel.js"></script>
+        <script src="../js/vendors/pikaday.js"></script>
+        <script src="../js/vendors/pikaday.jquery.js"></script>
+        <script src="../js/vendors/jquery.noty.packaged.js"></script>
+        <script src="../js/vendors/relax.js"></script>
+        <script src="../semantic/dist/semantic.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script>
+            $('#detail_calon_siswa').modal('attach events', '.detail-siswa', 'show');
+            $('#alert').modal('attach events', '.table-action .delete', 'show');
+        </script>
+    </body>
+</html>

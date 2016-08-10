@@ -1,0 +1,604 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="ui medium modal" id="add_guru">
+      <i class="close icon"></i>
+      <div class="header">
+        <h3><i class="users icon"></i> Daftar Guru</h3>
+      </div>
+      <div class="content">
+            <div class="ui secondary pointing tabed menu">
+                <a class="item" data-tab="first">Daftar Guru</a>
+                <a class="active item" data-tab="second">Cari Guru</a>
+            </div>
+            <div class="ui bottom tab" data-tab="first">
+                <select>
+                  <option>
+                      Semua Bagian
+                  </option>
+                </select>
+                <table class="ui very basic selectable table">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>NIP</th>
+                        <th>Nama</th>
+                        <th>Bagian</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>01910</td>
+                        <td>Andi</td>
+                        <td>Akademik</td>
+                        <td>
+                            <div class="table-action">
+                              <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>01910</td>
+                        <td>Andi</td>
+                        <td>Akademik</td>
+                        <td>
+                            <div class="table-action">
+                              <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>01910</td>
+                        <td>Andi</td>
+                        <td>Akademik</td>
+                        <td>
+                            <div class="table-action">
+                              <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>01910</td>
+                        <td>Andi</td>
+                        <td>Akademik</td>
+                        <td>
+                            <div class="table-action">
+                              <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>01910</td>
+                        <td>Andi</td>
+                        <td>Akademik</td>
+                        <td>
+                            <div class="table-action">
+                              <a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="ui bottom active tab" data-tab="second">
+                <form class="ui form inverted green segment" action="">
+                  <div class="field">
+                    <label>Bagian</label>
+                    <select>
+                        <option>
+                            Semua Bagian
+                        </option>
+                    </select>
+                  </div>
+                  <div class="field">
+                      <label>Guru</label>
+                      <div class="fields">
+                          <div class="four wide field">
+                              <input type="text" placeholder="NIP">
+                          </div>
+                          <div class="twelve wide field">
+                              <input type="text" id="search_kepsek_input" placeholder="Nama Guru">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="text-center">
+                      <button class="ui right labeled icon mini teal basic button">
+                        <i class="search icon"></i> Cari
+                    </button>
+                  </div>
+                </form>
+                <div class="ui info message">
+                    <i class="close icon"></i>
+                    <p>
+                        Klik pada tombol "Cari" di atas untuk melihat data pegawai
+  sesuai dengan NIP atau Nama Pegawai berdasarkan keyword yang dimasukkan
+                    </p>
+                  </div>
+                <div class="m-t-50"></div>
+                <table class="ui very basic selectable table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td>None</td>
+                      </tr>
+                      <tr>
+                        <td>Jamie</td>
+                        <td>Approved</td>
+                        <td>Requires call</td>
+                      </tr>
+                      <tr>
+                        <td>Jill</td>
+                        <td>Denied</td>
+                        <td>None</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+      </div>
+    </div>
+
+    <div class="ui basic modal" id="alert">
+        <i class="close icon"></i>
+        <div class="ui icon header">
+            <i class="trash icon"></i> Hapus Data
+        </div>
+        <div class="content">
+            <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+        </div>
+        <div class="actions">
+            <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i> Tidak
+            </div>
+            <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i> Ya
+            </div>
+        </div>
+    </div>
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="three wide column">
+                    <div class="head">
+                        <a href="akademik_landing_referensi.html" class="back">&nbsp;</a>
+                        <img src="../img/akademik/akademik_logo.png" alt="logo" /> Akademik
+                    </div>
+                </div>
+                <div class="thirteen wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul>
+                                            <li>
+                                                <a href="akademik_landing_referensi.html"><i class="ifont-graduation-gat"></i>Referensi</a>
+                                            </li>
+                                            <li>
+                                                <a href="akademik_landing_psb.html"><i class="ifont-people-add"></i>PSB</a>
+                                            </li>
+                                            <li>
+                                                <a href="akademik_landing_guru.html"><i class="ifont-teacher"></i>Guru &amp; <br />Pelajaran</a>
+                                            </li>
+                                            <li>
+                                                <a href="akademik_landing_jadwal.html"><i class="icon ifont-clock"></i>Jadwal &amp; <br />Kalender</a>
+                                            </li>
+                                            <li>
+                                                <a href="akademik_landing_kesiswaan.html"><i class="icon ifont-people"></i>Kesiswaan</a>
+                                            </li>
+                                            <li>
+                                                <a href="akademik_landing_presensi.html" class="cur"><i class="icon ifont-touch"></i>Presensi</a>
+                                            </li>
+                                            <!--
+                                                <li>
+                                                    <a href="#"><i class="ifont-top-grades"></i>Penilaian</a>
+                                                </li>
+                                                 <li>
+                                                    <a href="#"><i class="ifont-upstair"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="ifont-runner"></i>Lorem Ipsum</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="ifont-analytic-report"></i>Lorem Ipsum</a>
+                                                </li> -->
+                                            <li>
+                                                <a href="#"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="four wide column navigator">
+                    <div class="ui small breadcrumb">
+                        <a class="section" href="akademik_landing_presensi.html">Presensi</a>
+                        <i class="right angle icon divider"></i>
+                        <div class="active section">Laporan Refleksi Mengajar</div>
+                    </div>
+                    <div class="title small">
+                        <h2><img src="../img/akademik/presensi/laporan_presensi_harian_siswa.png" alt="logo" />Laporan Refleksi Mengajar</h2>
+                    </div>
+                </div>
+                <div class="twelve wide column filter-field">
+                    <div class="ui form">
+                        <div class="fields">
+                            <div class="two wide field">
+                                <label>Guru</label>
+                                <input type="text" placeholder="NIP">
+                            </div>
+
+                            <div class="four wide field">
+                                <label>&nbsp;</label>
+                                <div class="ui icon input">
+                                    <input type="text" id="search_guru_input" placeholder="Nama">
+                                    <i class="search icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="three wide field">
+                                <label>Departemen</label>
+                                <select>
+                                    <option>SMA</option>
+                                    <option>SMP</option>
+                                    <option>SD</option>
+                                </select>
+                            </div>
+                            <div class="three wide field">
+                                <label>Tahun Ajaran</label>
+                                <select>
+                                    <option>2015/2016(Aktif)</option>
+                                    <option>2016/2017</option>
+                                </select>
+                            </div>
+
+                            <div class="two wide field">
+                                <label>Tingkat</label>
+                                <select>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                            </div>
+
+                            <div class="two wide field">
+                                <label>Kelas</label>
+                                <select>
+                                    <option>10 A</option>
+                                    <option>10 B</option>
+                                    <option>10 C</option>
+                                </select>
+                            </div>
+
+                            <div class="three wide field">
+                                <label>Semester</label>
+                                <select>
+                                    <option>Smt 1 (Aktif)</option>
+                                    <option>Smt 2</option>
+                                </select>
+                            </div>
+
+                            <div class="three wide field">
+                                <label>Pelajaran</label>
+                                <select>
+                                    <option value="-1">(Semua pelajaran)</option>
+                   		            <option value="47">Agama</option>
+
+                    	            <option value="48">Bahasa Indonesia</option>
+
+                    	            <option value="49">Bahasa Inggris</option>
+
+                    	            <option value="45">Fisika</option>
+
+                    	            <option value="46">Matematika</option>
+
+                    	            <option value="50">Muatan Lokal</option>
+
+                    	            <option value="51">Pendidikan Kewarganegaraan</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <div class="m-t-10">
+                                    <div class="ui blue animated button">
+                                        <div class="visible content">Search</div>
+                                          <div class="hidden content">
+                                            <i class="search icon"></i>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content" class="table-layout">
+            <div class="ui grid table-layout-cell">
+                <div class="sixteen wide column panel">
+                    <section class="table-wrap">
+                        <div class="filter-in">
+                            <div class="ui grid">
+                                <div class="eleven wide column">
+                                    <div class="ui form">
+                                        <div class="fields">
+                                            <div class="one wide field">
+                                                &nbsp;
+                                            </div>
+                                            <div class="two wide field">
+                                                <label class="strong p-t-5">Tanggal</label>
+                                            </div>
+
+                                            <div class="four wide field required ui icon input">
+                                                <input type="text" placeholder="" value="22 May 2016" class="datepicker" />
+                                                <i class="calendar icon"></i>
+                                            </div>
+
+                                            <div class="one wide field">
+                                                s/d
+                                            </div>
+
+                                            <div class="four wide field ui icon input">
+                                                <input type="text" placeholder="" value="22 Juni 2016" class="datepicker" />
+                                                <i class="calendar icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column text-right">
+                                    <button class="ui mini button">
+                                        <i class="refresh icon"></i> Refresh
+                                    </button>
+                                    <button class="ui mini button">
+                                        <i class="file excel outline icon"></i> Cetak Excel
+                                    </button>
+                                    <button class="ui mini button">
+                                        <i class="print icon"></i> Print
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table class="ui table teal selectable striped very basic">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" width="5%">No</th>
+                                    <th class="text-center" width="20%">Tanggal</th>
+                                    <th class="text-center" width="10%">Semester</th>
+                                    <th class="text-center" width="5%">Hadir</th>
+                                    <th class="text-center" width="5%">Ijin</th>
+                                    <th class="text-center" width="5%">Sakit</th>
+                                    <th class="text-center" width="5%">Alpa</th>
+                                    <th class="text-center" width="5%">Cuti</th>
+                                    <th>Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1 Jun 2011 - 30 Jun 2011</td>
+                                    <td class="text-center">Semester I	</td>
+                                    <td class="text-center">28</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center">0</td>
+                                    <td>Lorem ipsum</td>
+                                </tr>
+                            </tbody>
+                            <tfoot class="total">
+                                <tr>
+                                    <th colspan="4" class="text-right :">Jumlah :</th>
+                                    <th class="text-center">28</th>
+                                    <th class="text-center">2</th>
+                                    <th class="text-center">0</th>
+                                    <th class="text-center">0</th>
+                                    <th class="text-center">&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-form small" id="add">
+        <div class="header">
+            <i class="add icon"></i> Tambah Pelajaran
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field required">
+                <label class="strong">Departemen</label>
+                <select disabled="">
+                    <option>
+                        SMA
+                    </option>
+                    <option>
+                        SMP
+                    </option>
+                    <option>
+                        SD
+                    </option>
+                </select>
+            </div>
+
+            <div class="field required">
+                <label class="strong">Nama</label>
+                <input type="text" placeholder="" class="tooltiped-input" data-content="Nama Pelajaran tidak boleh lebih dari 50 karakter" data-position="right center" />
+            </div>
+
+            <div class="field required">
+                <label class="strong">Singkatan</label>
+                <div class="fields">
+                    <div class="four wide field">
+                        <input type="text" placeholder="" class="tooltiped-input" data-content="Nama Singkatan tidak boleh lebih dari 4 karakter" data-position="right center" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="field required">
+                <label class="strong">Sifat</label>
+                <div class="fields">
+                    <div class="twelve wide field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="sf" checked="" tabindex="0" class="hidden">
+                            <label>Wajib</label>
+                        </div>
+
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="sf" tabindex="0" class="hidden">
+                            <label>Tambahan</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Keterangan</label>
+                <textarea></textarea>
+            </div>
+
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button blue noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Simpan</button>
+        </div>
+    </div>
+
+    <div class="floating-form" id="detail">
+        <div class="header">
+            <i class="edit icon"></i> Ubah Semester
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field required">
+                <label class="strong">Departemen</label>
+                <select disabled="">
+                    <option>
+                        SMA
+                    </option>
+                    <option>
+                        SMP
+                    </option>
+                    <option>
+                        SD
+                    </option>
+                </select>
+            </div>
+
+            <div class="field required">
+                <label class="strong">Nama</label>
+                <input type="text" placeholder="" value="Bahasa Indonesia" class="tooltiped-input" data-content="Nama Pelajaran tidak boleh lebih dari 50 karakter" data-position="right center" />
+            </div>
+
+            <div class="field required">
+                <label class="strong">Singkatan</label>
+                <div class="fields">
+                    <div class="four wide field">
+                        <input type="text" placeholder="" value="INA" class="tooltiped-input" data-content="Nama Singkatan tidak boleh lebih dari 4 karakter" data-position="right center" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="field required">
+                <label class="strong">Sifat</label>
+                <div class="fields">
+                    <div class="twelve wide field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="sf" checked="" tabindex="0" class="hidden">
+                            <label>Wajib</label>
+                        </div>
+
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="sf" tabindex="0" class="hidden">
+                            <label>Tambahan</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Keterangan</label>
+                <textarea>Sekedar contoh. Menu ini mengatur nama dan kode pelajaran yang diajarkan di sekolah. Ubah atau tambahkan data ini sesuai dengan pelajaran-pelajaran yang ada di sekolah.</textarea>
+            </div>
+
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button blue noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+        </div>
+    </div>
+
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+<script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#add_guru').modal('attach events', '#search_guru_input', 'show');
+        $('#alert').modal('attach events', '.table-action .delete', 'show');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+.dashboard{
+    .panel > *{
+        background: none;
+        box-shadow: none;
+    }
+    &-panel{
+        .ui.card{
+            border-radius: 0;
+            border: none;
+            box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.3);
+        }
+        .ui.card>:first-child, .ui.cards>.card>:first-child{
+            border-radius: 0 !important;
+        }
+    }
+    &-table{
+        margin-left: 20px;
+        margin-top: 30px;
+        padding-top: 10px;
+        background: $white-color;
+        box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.3);
+    }
+
+    &-sidebar{
+        margin-top: -80px;
+        padding-right: 20px !important;
+        .card .header:after{
+            content: "";
+            border-bottom: 15px solid rgba(0, 0, 0, 0);
+            border-left: 15px solid rgba(0, 0, 0, 0);
+            border-right: 15px solid rgba(255, 255, 255, 0.1);
+            position: absolute;
+            right: 3px;
+            top: 3px;
+        }
+
+        .ui.card>.content, .ui.cards>.card>.content{
+            background: #fffbe7;
+        }
+
+        .ui.feed>.event>.content .summary{
+            font-size: 13px;
+        }
+        .ui.feed>.event>.content .extra.text{
+            font-size: 14px;
+        }
+    }
+}
+
+.filter-side .search-head.no-caption:after{
+    display: none;
+}
+
+.ui.inverted.segment{
+    &.blue-dark{
+        background: #2d76ad;
+    }
+    &.blue-dark2{
+        background: #5ba7e0;
+    }
+    &.blue-light{
+        background: #5fc6ff;
+    }
+}

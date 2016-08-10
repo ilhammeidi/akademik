@@ -1,0 +1,509 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body>
+    <!-- Modal -->
+
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="three wide column">
+                    <div class="head">
+                        <a href="#" class="back">&nbsp;</a>
+                        <img src="../img/siswa_logo.png" alt="logo" /> Info Siswa
+                    </div>
+                </div>
+                <div class="thirteen wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul id="owl" class="clearfix">
+                                            <li class="item">
+                                                <a href="siswa_dashboard.html"><i class="ifont-home-interface"></i>Beranda</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="siswa_buletin.html"><i class="ifont-print"></i>Daftar Buletin</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="siswa_kalender_akademik.html"><i class="icon ifont-clock"></i>Kalender <br />Akademik</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="siswa_pustaka.html" class="cur"><i class="ifont-book-2"></i>Katalog <br />Pustaka</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="#"><i class="ifont-share-document"></i>File <br />Sharing</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="#" onclick="floatForm('add')" class="setting"><i class="ifont-callout"></i>Chatting</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="six wide column navigator">
+                    <div class="ui small breadcrumb">
+                        <a class="section" href="#">Info Siswa</a>
+                        <i class="right angle icon divider"></i>
+                        <div class="active section">Katalog Pustaka </div>
+                    </div>
+                    <div class="title">
+                        <h2><img src="../img/perpustakaan/pustaka/daftar_pustaka.png" alt="logo"> Katalog Pustaka</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content" class="table-layout">
+            <div class="ui grid table-layout-cell">
+                <div class="five wide column">
+                    <section class="filter-side panel">
+                        <div class="ui grid">
+                            <div class="sixteen wide column search-head green1">
+                                <i class="book icon"></i> Katalog
+                                <span>Menampilkan katalog pustaka</span>
+                            </div>
+                            <div class="sixteen wide column">
+                                <table class="ui striped selectable table very basic">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Katalog</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>001</td>
+                                            <td>Karya Umum</td>
+                                            <td><a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>002</td>
+                                            <td>Bibliografi</td>
+                                            <td><a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>003</td>
+                                            <td>Perpustakaan dan Informasi Sains</td>
+                                            <td><a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>004</td>
+                                            <td>Ensiklopedia dan Buku Pintar</td>
+                                            <td><a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>005</td>
+                                            <td>Kutipan</td>
+                                            <td><a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>006</td>
+                                            <td>Filsafat</td>
+                                            <td><a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>007</td>
+                                            <td>Filsafat Aliran Pemikiran</td>
+                                            <td><a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>008</td>
+                                            <td>Agama</td>
+                                            <td><a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>009</td>
+                                            <td>Politik</td>
+                                            <td><a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>010</td>
+                                            <td>Administrasi Umum dan Ilmu Militer</td>
+                                            <td><a href="#" class="ui basic green mini button">PILIH &nbsp;&nbsp;<i class="forward mail icon"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="eleven wide column panel">
+                    <section class="table-wrap">
+                        <div class="filter-in">
+                            <div class="ui grid">
+                                <div class="eight wide column">
+                                    <h4 class="ui header">Daftar Buku</h4>
+                                </div>
+                                <div class="eight wide column text-right">
+                                    <div class="ui form p-l-30">
+                                        <div class="field required ui icon input">
+                                            <input type="text" placeholder="Cari">
+                                            <i class="search icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table class="ui table teal selectable striped very basic">
+                            <thead>
+                                <tr>
+                                    <th width="5%">No</th>
+                                    <th>Judul</th>
+                                    <th width="20%">Penulis</th>
+                                    <th width="20%">Penerbit</th>
+                                    <th width="15%">Jumlah</th>
+                                    <th width="15%">Tersedia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Komputer</td>
+                                    <td>SJ - Setyawan Jani</td>
+                                    <td>Graha Multi Karya</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Matematika</td>
+                                    <td>JS - Jacob Sein</td>
+                                    <td>Pandora Dilematika</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Komputer</td>
+                                    <td>EWS - Erick Winter Edinson</td>
+                                    <td>SJK</td>
+                                    <td>30</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>B.Indonesia</td>
+                                    <td>ST - Sulaiman Thohir</td>
+                                    <td>SJK</td>
+                                    <td>50</td>
+                                    <td>40</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Kebudayaan dan Sejarah Sunda</td>
+                                    <td>AES - Asep Erlan Suherlan</td>
+                                    <td>Bandung Lautan Api</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="7">
+                                        <div class="ui right floated pagination menu">
+                                            <a class="icon item">
+                                                <i class="left chevron icon"></i>
+                                            </a>
+                                            <a class="item cur">1</a>
+                                            <a class="item">2</a>
+                                            <a class="item">3</a>
+                                            <a class="item">4</a>
+                                            <a class="icon item">
+                                                <i class="right chevron icon"></i>
+                                            </a>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="floating-form small" id="add">
+        <div class="header clearfix">
+           <h4 class="ui white header no-margin float-left">
+              <i class="talk icon"></i>
+              <div class="content">
+               Chat
+                <div class="ui inline dropdown">
+                  <div class="text">Olahraga</div>
+                  <i class="dropdown icon"></i>
+                  <div class="menu">
+                    <div class="header">Pilih Topik</div>
+                    <div class="active item" data-text="Olahraga">Olahraga</div>
+                    <div class="item" data-text="Musik">Musik</div>
+                    <div class="item" data-text="Keagamaan">Keagamaan</div>
+                  </div>
+                </div>
+              </div>
+            </h4>
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <div class="ui form">
+            <div class="ui minimal comments">
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/elliot.jpg" />
+                    </a>
+                    <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                            <span class="date">Today at 5:42PM</span>
+                        </div>
+                        <div class="text">
+                            How artistic! <i class="thumbs up blue icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/jenny.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Joe Henderson</a>
+                        <div class="metadata">
+                            <span class="date">5 days ago</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much <i class="heart pink icon"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/joe.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                            <span class="date">Today at 5:42PM</span>
+                        </div>
+                        <div class="text">
+                            How artistic!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/helen.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Joe Henderson</a>
+                        <div class="metadata">
+                            <span class="date">5 days ago</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much <i class="thumbs up blue icon"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/christian.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                            <span class="date">Today at 5:42PM</span>
+                        </div>
+                        <div class="text">
+                            How artistic!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/matt.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Joe Henderson</a>
+                        <div class="metadata">
+                            <span class="date">5 days ago</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/elliot.jpg" />
+                    </a>
+                    <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                            <span class="date">Today at 5:42PM</span>
+                        </div>
+                        <div class="text">
+                            How artistic!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/jenny.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Joe Henderson</a>
+                        <div class="metadata">
+                            <span class="date">5 days ago</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much <i class="smile yellow icon"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/joe.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                            <span class="date">Today at 5:42PM</span>
+                        </div>
+                        <div class="text">
+                            How artistic! <i class="star yellow icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/helen.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Joe Henderson</a>
+                        <div class="metadata">
+                            <span class="date">5 days ago</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/daniel.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                            <span class="date">Today at 5:42PM</span>
+                        </div>
+                        <div class="text">
+                            How artistic!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../img/dummy/tom.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Joe Henderson</a>
+                        <div class="metadata">
+                            <span class="date">5 days ago</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="btn-area">
+            <form class="ui form">
+                <div class="ui action fluid input">
+                    <div class="ui floating icon dropdown yellow button">
+                        <i class="smile icon"></i>
+                        <div class="menu">
+                            <div class="header">
+                                Pilih Emoji
+                            </div>
+                            <div class="divider"></div>
+                            <div class="item emot">
+                                <a href="#"><i class="heart pink icon"></i></a>
+                                <a href="#"><i class="star yellow icon"></i></a>
+                                <a href="#"><i class="meh yellow icon"></i></a>
+                                <a href="#"><i class="smile yellow icon"></i></a>
+                                <a href="#"><i class="frown yellow icon"></i></a>
+                                <a href="#"><i class="thumbs up blue icon"></i></a>
+                                <a href="#"><i class="thumbs down blue icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" class="chat" placeholder="Tulis Pesan">
+                    <button type="button" class="ui blue button"><i class="send icon"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#detail_calon_siswa').modal('attach events', '.detail-siswa', 'show');
+        $('#alert').modal('attach events', '.table-action .delete', 'show');
+    </script>
+</body>
+
+</html>

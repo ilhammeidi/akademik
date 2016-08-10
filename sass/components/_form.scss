@@ -1,0 +1,307 @@
+.ui.form{
+    .field, .fields.inline{
+        margin-bottom: 2em;
+        label{
+            font-size: 11px !important;
+            color: $grey-dark3 !important;
+            text-transform: uppercase !important;
+            text-align: left;
+        }
+        .clockpicker{
+            background-image: url(../img/clock.png) !important;
+            background-repeat: no-repeat !important;
+            background-position: 99% center !important;
+        }
+    }
+    .oneline{
+        label{
+            padding-top: 10px;
+        }
+    }
+    .input_print{
+        display: block;
+        border-bottom: 2px solid $grey-light5;
+        height: 20px;
+        &:before{
+            content: ":";
+            position: relative;
+            left: -10px;
+        }
+    }
+    .header-form{
+        color: $grey-dark3;
+        margin: 10px 0px 10px;
+        text-align: left;
+        background: $grey-light;
+        padding: 5px 5px 5px 20px;
+        border-left: 3px solid $green;
+        font-size: 18px;
+        a, button{
+            float: right;
+        }
+        &.landing{
+            margin: 0 60px 0 40px;
+        }
+    }
+    &.detail .field{
+        border-bottom: 1px solid $grey-light3;
+    }
+
+    textarea{
+        border-radius: 0;
+        font-size: 14px;
+        color: $grey-dark;
+        &:focus{
+            border-radius: 0;
+            border-color: $green;
+            background: $grey-light;
+        }
+        &:not([rows]){
+            height: 2em;
+        }
+    }
+    
+    input:not([type]), input[type=text], input[type=email], input[type=search], input[type=password], input[type=date], input[type=datetime-local], input[type=tel], input[type=time], input[type=url], input[type=number], select{
+        font-family: 'semi-light', Arial, sans-serif;
+        border-radius: 0;
+        padding: 6px 8px;
+        color: $grey-dark;
+        border: 0;
+        border-bottom: 2px solid $grey-light5;
+        font-size: 14px;
+        &:focus{
+            border-radius: 0;
+            border-color: $green;
+            background: $grey-light2;
+        }
+        &[disabled]{
+            background: $grey-light3;
+        }
+        &.chat{
+            border-bottom: 0;
+        }
+    }
+}
+
+td{
+    .ui.form input:not([type]), .ui.form input[type=text], .ui.form input[type=email], .ui.form input[type=search], .ui.form input[type=password], .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=tel], .ui.form input[type=time], .ui.form input[type=url], .ui.form input[type=number], .ui.form select{
+        border: 1px solid $grey-light5;
+    }
+}
+
+.ui.form select{
+    padding: 3px 8px 4px;
+}
+
+.ui.icon.input{
+    display: inline-block;
+    > i.icon{
+        bottom: 0;
+        height: 30px;
+        color: $orange;
+    }
+}
+
+
+
+.ui.button{
+    font-family: 'semi-light', Arial, sans-serif;
+    border-radius: 0;
+    text-transform: uppercase;
+    background-color: $grey-light3;
+    color: $grey-dark2;
+    &.basic{
+        border-radius: 0;
+    }
+    &.primary{
+        background-color: $green;
+        &:hover{
+            background-color: $green2;
+        }
+    }
+    &.blue{
+        background-color: $blue;
+        &:hover{
+            background-color: $blue2;
+        }
+    }
+    &.blue.sea{
+        background-color: $blue-sea3;
+        &:hover{
+            background-color: $blue-sea2;
+        }
+    }
+    &.green{
+        background-color: $green-leaf2;
+    }
+}
+
+.floating-form{
+    background: $white-color;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    width: 600px;
+    min-height: 500px;
+    z-index: 100;
+    border: 3px solid $green3;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+    &.small{
+        width: 500px;
+    }
+    &.large{
+        width: 800px;
+    }
+    &.popup{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 600px;
+        overflow: hidden;
+        .form{
+            max-height: 500px;
+        }
+    }
+    &.collapsed{
+        min-height: 0;
+        width: auto;
+    }
+    > .header{
+        background: $green3;
+        color: #FFF;
+        padding: 10px 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+        cursor: pointer;
+        .option{
+            float: right;
+            margin-left: 90px;
+            a{
+                color: $white-color;
+                &.remove{
+                    background: $grey-dark2;
+                    padding: 0 1px;
+                    i{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    > .form{
+        padding: 20px 30px;
+        overflow: auto;
+        max-height: 520px;
+        margin-bottom: 60px;
+    }
+    .btn-area{
+        background: $grey-light3;
+        border-top: 1px solid #EAEAEA;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        .button{
+            margin: 0 10px;
+        }
+        a{
+            color: $grey-dark;
+        }
+    }
+}
+
+.btn-area{
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.ui.checkbox label{
+    font-size: 13px;
+    padding-top: 0 !important;
+    padding-right: 10px;
+    em{
+        color: $grey-dark3;
+        font-size: 12px;
+    }
+}
+
+.popup-dim{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+}
+
+.is-startrange .pika-button{
+    background: $green;
+}
+
+.pika-button:hover{
+    background: $yellow;
+    color: #8a7c6d;
+}
+
+.ui.inverted.segment{
+    border-radius: 0;
+    &.green{
+        background: $green-light3 !important;
+        color: $grey-dark3 !important;
+    }
+}
+
+
+//Semantic Input Overide
+.ui.form .wide.field .ui.input input{
+    width: 100%;
+}
+
+.ui.link.card:hover, .ui.link.cards .card:hover, a.ui.card:hover{
+    transform: none;
+}
+
+.ui.cards{
+    a.card:hover{
+        transform: none;
+    }
+    >.card>.content>.description,
+    >.card>.extra{
+        font-size: 14px;
+    }
+}
+
+/* Print Button */
+.print-big{
+    margin-top: 5px;
+    .button{
+        width: 40%;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        height: 187px;
+        text-align: center;
+        display: block;
+        float: left;
+        font-size: 20px;
+        font-family: 'light';
+        .icon{
+            display: inline-block;
+            font-size: 42px;
+        }
+        span{
+            font-size: 18px;
+            display: block;
+            text-transform: none;
+        }
+    }
+}
+/* END */
+
+
+// list massage
+.message .list.ui.grid li.column:not(.row){
+    padding-top: 0;
+    padding-bottom: 10px;
+}

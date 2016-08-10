@@ -1,0 +1,414 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+
+        <!-- Froala WYSWYG Editor -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/froala_editor.css">
+        <link rel="stylesheet" href="../css/froala_style.css">
+        <link rel="stylesheet" href="../css/plugins/code_view.css">
+        <link rel="stylesheet" href="../css/plugins/image_manager.css">
+        <link rel="stylesheet" href="../css/plugins/image.css">
+        <link rel="stylesheet" href="../css/plugins/table.css">
+        <link rel="stylesheet" href="../css/plugins/video.css">
+        <link rel="stylesheet" href="../css/plugins/colors.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+        <!-- END -->
+
+        <link rel="stylesheet" href="../css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Modal -->
+
+        <div class="ui basic modal" id="alert">
+            <i class="close icon"></i>
+            <div class="ui icon header">
+                <i class="trash icon"></i>
+                Hapus Data
+            </div>
+            <div class="content">
+                <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+            </div>
+            <div class="actions">
+              <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i>
+                Tidak
+              </div>
+              <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i>
+                Ya
+              </div>
+            </div>
+        </div>
+        <!-- END -->
+        <div class="main-content" id="container">
+            <section class="filter-top">
+                <div class="ui grid head-wrap">
+                    <div class="three wide column">
+                        <div class="head">
+                            <a href="akademik_landing_referensi.html" class="back">&nbsp;</a>
+                            <img src="../img/akademik/akademik_logo.png" alt="logo" />
+                            Akademik
+                        </div>
+                    </div>
+                    <div class="thirteen wide column white-wrap">
+                        <section class="landing-menu">
+                            <header>
+                                <div class="ui grid">
+                                    <div class="row">
+                                        <nav class="fourteen wide column">
+                                            <ul id="owl" class="clearfix">
+                                                <li class="item">
+                                                    <a href="akademik_landing_referensi.html"><i class="ifont-graduation-gat"></i>Referensi</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="akademik_landing_psb.html"><i class="ifont-people-add"></i>PSB</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="akademik_landing_guru.html"><i class="ifont-teacher"></i>Guru &amp; <br />Pelajaran</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="akademik_landing_jadwal.html"><i class="icon ifont-clock"></i>Jadwal &amp; <br />Kalender</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="akademik_landing_kesiswaan.html"><i class="icon ifont-people"></i>Kesiswaan</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="akademik_landing_presensi.html"><i class="icon ifont-touch"></i>Presensi</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="akademik_landing_penilaian.html"><i class="ifont-top-grades"></i>Penilaian</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="akademik_landing_kenaikan.html"><i class="ifont-upstair"></i>Kenaikan /Kelulusan</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="akademik_landing_mutasi.html"><i class="ifont-runner"></i>Mutasi</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="akademik_landing_laporan.html" class="cur"><i class="ifont-analytic-report"></i>Laporan</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="akademik_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+
+                                        <div class="two wide no-padding column">
+                                            <div class="user">
+                                                <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                                <figure>
+                                                    <img src="../img/user-default.png" alt="user" />
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </section>
+                    </div>
+                </div>
+                <div class="ui grid">
+                    <div class="three wide column navigator">
+                        <div class="ui small breadcrumb">
+                          <a class="section" href="akademik_landing_laporan.html">Laporan</a>
+                          <i class="right angle icon divider"></i>
+                          <div class="active section">Lampiran Surat</div>
+                        </div>
+                        <div class="title">
+                            <h2><img src="../img/akademik/laporan/pelampiran_surat.png" alt="logo" />Lampiran Surat</h2>
+                        </div>
+                    </div>
+                    <div class="nine wide column filter-field">
+                        &nbsp;
+                    </div>
+                </div>
+            </section>
+             <section id="content" class="table-layout">
+                <div class="ui grid table-layout-cell">
+                    <div class="sixteen wide column panel">
+                        <section class="table-wrap">
+                            <div class="filter-in">
+                                <div class="ui grid">
+                                  <div class="eleven wide column">
+                                      <div class="ui form p-l-30">
+                                        <div class="inline fields">
+                                              <label>Departement</label>
+                                              <div class="field">
+                                                <select>
+                                                    <option>SMA</option>
+                                                    <option>SMP</option>
+                                                    <option>SD</option>
+                                                </select>
+                                              </div>
+
+                                              <label class="p-l-30">Status</label>
+                                              <div class="field">
+                                                  <select>
+                                                      <option>Semua</option>
+                                                      <option>Aktif</option>
+                                                      <option>Non Aktif</option>
+                                                  </select>
+                                              </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="five wide column text-right">
+                                      <button class="ui mini button">
+                                        <i class="refresh icon"></i> Refresh
+                                      </button>
+                                      <button class="ui blue mini button" onclick="floatForm('add')">
+                                        <i class="add icon"></i> Tambah
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <table class="ui table teal selectable striped very basic">
+                                  <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th width="30%">Tanggal/Petugas</th>
+                                        <th width="50%">Judul/Pengantar Surat</th>
+                                        <th>Aktif</th>
+                                        <th width="20%">&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>1/5/2016 <br /> John Doe</td>
+                                      <td>Lorem Ipusm Dolor</td>
+                                      <td>	<i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                                      <td>
+                                          <div class="table-action">
+                                              <a href="#"><i class="edit icon tooltiped" data-content="Ubah Pengantar Surat" onclick="floatForm('detail')"></i></a>
+                                              <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pengantar Surat"></i></a>
+                                          </div>
+                                      </td>
+                                    </tr>
+
+                                  </tbody>
+                                  <tfoot>
+                                    <tr><th colspan="7">
+                                      <div class="ui right floated pagination menu">
+                                        <a class="icon item">
+                                          <i class="left chevron icon"></i>
+                                        </a>
+                                        <a class="item cur">1</a>
+                                        <a class="item">2</a>
+                                        <a class="item">3</a>
+                                        <a class="item">4</a>
+                                        <a class="icon item">
+                                          <i class="right chevron icon"></i>
+                                        </a>
+                                      </div>
+                                    </th>
+                                  </tr></tfoot>
+                                </table>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="floating-form large" id="add">
+            <div class="header">
+                <i class="add icon"></i> Tambah Pengantar Surat
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+                 <div class="field required">
+                       <label class="strong">Departemen</label>
+                       <select disabled="">
+                           <option>
+                               SMA
+                           </option>
+                           <option>
+                               SMP
+                           </option>
+                           <option>
+                               SD
+                           </option>
+                       </select>
+                 </div>
+
+                 <div class="field required">
+                       <label class="strong">Judul</label>
+                       <input type="text" placeholder=""  />
+                 </div>
+
+                 <div class="ui info message">
+                  <i class="close icon"></i>
+                  <div class="header">
+                    Auto Format
+                  </div>
+                  <ul class="list ui three column grid">
+                    <li class="column"> <strong>{NIS}</strong>: Nomor Induk Siswa</li>
+  					<li class="column"> <strong>{NAMA}</strong>: Nama Siswa</li>
+  					<li class="column"> <strong>{PIN}</strong>: PIN Siswa</li>
+  					<li class="column"> <strong>{KELAS}</strong>: Kelas Siswa</li>
+  					<li class="column"> <strong>{DEPARTEMEN}</strong>: Departemen Siswa</li>
+  					<li class="column"> <strong>{TANGGAL}</strong>: Tanggal Sekarang</li>
+  					<li class="column"> <strong>{BULAN}</strong>: Bulan Sekarang</li>
+  					<li class="column"> <strong>{TAHUN}</strong>: Tahun Sekarang</li>
+                  </ul>
+                </div>
+
+                 <div class="field">
+                        <label class="strong">Pengantar Surat</label>
+                       <textarea id="add_desc_surat"></textarea>
+                 </div>
+
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button blue noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Simpan</button>
+            </div>
+        </div>
+
+        <div class="floating-form large" id="detail">
+            <div class="header">
+                <i class="edit icon"></i> Ubah Pengantar Surat
+                <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+            </div>
+            <form class="ui form">
+                 <div class="field required">
+                       <label class="strong">Departemen</label>
+                       <select disabled="">
+                           <option>
+                               SMA
+                           </option>
+                           <option>
+                               SMP
+                           </option>
+                           <option>
+                               SD
+                           </option>
+                       </select>
+                 </div>
+
+                 <div class="field required">
+                       <label class="strong">Judul</label>
+                       <input type="text" placeholder=""  value="Lorem Ipusm Dolor"/>
+                 </div>
+
+                 <div class="ui info message">
+                  <i class="close icon"></i>
+                  <div class="header">
+                    Auto Format
+                  </div>
+                  <ul class="list ui three column grid">
+                    <li class="column"> <strong>{NIS}</strong>: Nomor Induk Siswa</li>
+  					<li class="column"> <strong>{NAMA}</strong>: Nama Siswa</li>
+  					<li class="column"> <strong>{PIN}</strong>: PIN Siswa</li>
+  					<li class="column"> <strong>{KELAS}</strong>: Kelas Siswa</li>
+  					<li class="column"> <strong>{DEPARTEMEN}</strong>: Departemen Siswa</li>
+  					<li class="column"> <strong>{TANGGAL}</strong>: Tanggal Sekarang</li>
+  					<li class="column"> <strong>{BULAN}</strong>: Bulan Sekarang</li>
+  					<li class="column"> <strong>{TAHUN}</strong>: Tahun Sekarang</li>
+                  </ul>
+                </div>
+
+                 <div class="field">
+                        <label class="strong">Pengantar Surat</label>
+                       <textarea id="edit_desc_surat">
+                           <h1>Custom Color Picker</h1>
+
+                           <p>Using the <code>colors.min.js</code> plugin you can add in the WYSIWYG HTML editor the color picker feature.</p>
+
+                           <p>There are 4 options that can be used to customize the color picker:</p>
+                           <ul>
+                               <li><a href="https://www.froala.com/wysiwyg-editor/v2.0/docs/options#colorsBackground" title="colorsBackground option" target="_blank">colorsBackground</a> - An array of colors used in the colors popup for background.</li>
+                               <li><a href="https://www.froala.com/wysiwyg-editor/v2.0/docs/options#colorsDefaultTab" title="colorsDefaultTab option" target="_blank">colorsDefaultTab</a> - Specifies the default color tab from the colors popup.</li>
+                               <li><a href="https://www.froala.com/wysiwyg-editor/v2.0/docs/options#colorsStep" title="colorsStep option" target="_blank">colorsStep</a> - The number of colors displayed on a line in the colors popup.</li>
+                               <li><a href="https://www.froala.com/wysiwyg-editor/v2.0/docs/options#colorsText" title="colorsText option" target="_blank">colorsText</a> - An array of colors used in the colors popup for text.</li>
+                           </ul>
+                       </textarea>
+                 </div>
+
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button blue noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+            </div>
+        </div>
+
+        <div class="popup-dim"></div>
+        <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+<script src="../js/vendors/owl.carousel.js"></script>
+        <script src="../js/vendors/pikaday.js"></script>
+        <script src="../js/vendors/pikaday.jquery.js"></script>
+        <script src="../js/vendors/jquery.noty.packaged.js"></script>
+        <script src="../js/vendors/relax.js"></script>
+        <script src="../semantic/dist/semantic.min.js"></script>
+
+        <!-- Froala WYSWYG Editor -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/froala_editor.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/align.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/code_beautifier.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/code_view.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/draggable.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/image.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/image_manager.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/link.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/lists.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/paragraph_format.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/paragraph_style.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/table.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/video.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/url.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/entities.min.js"></script>
+        <script type="text/javascript" src="../js/vendors/plugins/colors.min.js"></script>
+        <!-- END -->
+
+        <script src="../js/main.js"></script>
+        <script>
+            $('#detail_pegawai').modal('attach events', '.detai-pegawai', 'show');
+            $('#alert').modal('attach events', '.table-action .delete', 'show');
+            $(function(){
+                var owl = $(".owl-carousel").data('owlCarousel');
+                owl.jumpTo(4);
+
+                //Text Editor
+                $('#add_desc_surat, #edit_desc_surat').froalaEditor({
+                    enter: $.FroalaEditor.ENTER_P,
+                    height: 350,
+                    toolbarBottom: true,
+                    colorsBackground: [
+              '#15E67F', '#E3DE8C', '#D8A076', '#D83762', '#76B6D8', 'REMOVE',
+              '#1C7A90', '#249CB8', '#4ABED9', '#FBD75B', '#FBE571', '#FFFFFF'
+            ],
+                    colorsDefaultTab: 'background',
+                    colorsStep: 6,
+                    colorsText: [
+              '#15E67F', '#E3DE8C', '#D8A076', '#D83762', '#76B6D8', 'REMOVE',
+              '#1C7A90', '#249CB8', '#4ABED9', '#FBD75B', '#FBE571', '#FFFFFF'
+            ]
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+.ui.popup{
+    background: $yellow;
+    border: 1px solid $yellow;
+    border: none;
+    color: #8a7c6d;
+    padding: 10px;
+    font-size: 13px;
+    text-align: center;
+    &:before{
+        background: $yellow !important;
+        box-shadow: 3px 3px 7px -3px #b3af9c !important;
+    }
+}

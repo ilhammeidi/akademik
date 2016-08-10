@@ -1,0 +1,26 @@
+.ui.steps{
+    &.green{
+        .step{
+            font-family: 'light';
+            color: $grey-dark3;
+           &.active{
+                background: $green-leaf2;
+                color: $white-color;
+                &:before, .title{
+                    color: $white-color;
+                }
+                &:after{
+                    background: $green-leaf2;
+                }
+                .icon{
+                    color: $white-color;
+                }
+            }   
+        }   
+    }
+    &.mini{
+        .step{
+            font-size: .78571429rem;   
+        }
+    }
+} 

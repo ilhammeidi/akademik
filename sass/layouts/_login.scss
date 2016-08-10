@@ -1,0 +1,202 @@
+.login-wrap{
+    background: url(../img/bg_login.jpg) repeat-x $green;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    a{
+        color: $green;
+        text-decoration: none;
+        &.back{
+            margin: 20px 30px;
+            background: url(../img/back_white.png) no-repeat 5px 0;
+            color: $white-color !important;
+            font-size: 18px;
+            padding: 10px 60px;
+            position: absolute;
+            transition: background-position .4s ease-out;
+            &:hover{
+                background-position: 0 0;
+            }
+        }
+    }
+    &.siswa{
+        background: url(../img/bg_login_siswa.jpg) repeat-x $green;
+    }
+    &.finance, &.sms{
+        .login-form .form{
+            input[type="text"], input[type="password"]{
+                &:focus{
+                    border-color: $green-leaf;
+                }
+            }
+        }
+        a{
+            color: $green-leaf;
+        }
+    }
+    &.finance{
+        background: url(../img/bg_login_finance.jpg) repeat-x $green-leaf;
+    }
+    &.sms{
+        background: url(../img/bg_login_sms.jpg) repeat-x $green-leaf;
+    }
+    &.hr, &.guru{        
+        .login-form .form{
+            input[type="text"], input[type="password"]{
+                &:focus{
+                    border-color: $blue-sea;
+                }
+            }
+        }
+        a{
+            color: $blue-sea;
+        }
+    }
+    &.hr{
+        background: url(../img/bg_login_hr.jpg) repeat-x $blue-sea;
+    }
+    &.guru{
+        background: url(../img/bg_login_guru.jpg) repeat-x $blue-sea;
+    }
+    &.lib{
+        background: url(../img/bg_login_lib.jpg) repeat-x $orange-rock;
+        .login-form .form{
+            input[type="text"], input[type="password"]{
+                &:focus{
+                    border-color: $orange-rock;
+                }
+            }
+        }
+        a{
+            color: $orange-rock;
+        }
+    }
+    &.report{
+        background: url(../img/bg_login_report.jpg) repeat-x $blue-sky;
+        .login-form .form{
+            input[type="text"], input[type="password"]{
+                &:focus{
+                    border-color: $blue-sky;
+                }
+            }
+        }
+        a{
+            color: $blue-sky;
+        }
+    }
+    .title{
+        position: absolute;
+        color: $white-color;
+        top: 200px;
+        left: 100px;
+        h1{
+            font-size: 60px;
+            font-family: 'light';
+            text-align: left;
+            strong{
+                display: block;
+                font-family: 'regular'
+            }
+            &:after{
+                content: "";
+                border: 2px solid $white-color;
+                width: 100px;
+                position: absolute;
+                bottom: -20px;
+                left: 100px;
+            }
+        }
+    }
+
+    .login-form{
+        background: white;
+        padding: 30px 50px;
+        box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.6);
+        height: 100%;
+        float: right;
+        color: $grey-dark;
+        width: 500px;
+        position: relative;
+        box-sizing: border-box;
+        h3{
+            display: block;
+            font-size: 28px;
+            strong{
+                font-family: 'regular';
+            }
+            img{
+                height: 30px;
+                margin-right: 10px;
+            }
+        }
+        .form{
+            margin-top: 30px;
+            p{
+                font-size: 14px;
+            }
+            input[type="text"], input[type="password"]{
+                padding: 8px 10px;
+                background: $grey-light3;
+                border: 2px solid transparent;
+                width: 100%;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                &:focus{
+                    border-color: $green;
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+            label{
+                display: block;
+                margin-bottom: 40px;
+                cursor: pointer;
+            }
+            .btn{
+                display: inline-block;
+                border: none;
+                color: $white-color;
+                text-transform: uppercase;
+                padding: 10px 25px;
+                cursor: pointer;
+                font-size: 16px;
+                text-decoration: none;
+                &.green{
+                    background: $green;
+                }
+                &.green-leaf{
+                    background: $green-leaf;
+                    &:hover{
+                        background: $green-leaf2;
+                    }
+                }
+                &.blue.sea{
+                    background: $blue-sea;
+                    &:hover{
+                        background: $blue-sea2;
+                    }
+                }
+                &.brown{
+                    background: $orange-rock;
+                    &:hover{
+                        background: $orange-rock3;
+                    }
+                }
+                &:hover{
+                    background: $green2;
+                }
+            }
+            .cant{
+                margin-top: 60px;
+                display: block;
+            }
+        }
+        .copy{
+            position: absolute;
+            bottom: 30px;
+            left:50px;
+            font-size: 14px;
+            color: $grey-dark-green;
+        }
+    }
+}

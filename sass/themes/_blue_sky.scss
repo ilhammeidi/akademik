@@ -1,0 +1,114 @@
+/*
+    Set Up Variables Theme
+*/
+
+$body-color: $grey-light-blue4;
+$text-color : $blue-sky;
+$text-color2 : $blue-sky2;
+$text-color3 : $blue-sky3;
+$text-menu-color : $grey-dark-blue;
+$decoration-color : $blue-sky2;
+//Table hover
+$decoartion-color2 : $grey-light-blue2;
+//Table Strip
+$decoartion-color3 : $grey-light-blue3;
+
+.blue-sky{
+    .main-content .title h2{
+        color: $grey-dark6;
+    }
+    a{
+        color: $text-color2;
+    }
+    .landing-menu-flow nav .icon-menu:hover{
+        box-shadow: inset 0 0 0 -10px #FFFFFF, 0 0 0 15px #bbe8f9, 0 0 25px 5px #000;
+        color: $text-color3;
+    }
+    .main-content{
+        background: $body-color;
+    }
+    .head, .filter-top .navigator .breadcrumb a{
+        color: $text-color2;
+    }
+    .landing-menu header nav ul li a{
+        color: $text-menu-color;
+        i{
+            color: $text-menu-color;
+        }
+        &.cur{
+            color: $text-color;
+            border-bottom-color: $text-color;
+            i{
+                color: $text-color;
+            }
+        }
+    }
+    .ui.form input:not([type]), .ui.form input[type=text], .ui.form input[type=email], .ui.form input[type=search], .ui.form input[type=password], .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=tel], .ui.form input[type=time], .ui.form input[type=url], .ui.form input[type=number], .ui.form select, .ui.form  textarea{
+        &:focus{
+            border-color: $decoration-color;
+        }
+    }
+
+    .table-wrap{
+        border-top-color: $text-color;
+    }
+
+    .ui.menu.pagination .item.cur{
+        color: $text-color;
+        border-bottom-color: $text-color;
+    }
+
+    .ui.selectable.table tbody tr:hover, .ui.selectable.striped.table tbody tr:hover, .ui.table tbody tr td.selectable:hover{
+        background: $decoartion-color2 !important;
+    }
+
+    .ui.striped.table tbody tr:nth-child(2n){
+        background-color: $decoartion-color3 !important;
+    }
+
+    .ui.selectable.table tbody tr:hover, .ui.table tbody tr td.selectable:hover, .ui.striped.table tbody tr:nth-child(2n):hover{
+        background-color: $decoartion-color2 !important;
+    }
+
+    .ui.modal > .header h3{
+        border-top-color: $decoration-color;
+        i{
+            color: $text-color2;
+        }
+    }
+    .ui.accordion .title.active, .ui.accordion .title:not(.ui).active{
+        color: $text-color2;
+    }
+    .ui.card > .content > .header:not(.ui), .ui.cards > .card > .content > .header:not(.ui){
+        color: $text-color2;
+    }
+
+    .floating-form{
+        border-color: $text-color2;
+        > .header{
+            background: $text-color2;
+        }
+    }
+
+    .ui.form .header-form{
+        border-left-color: $decoration-color;
+    }
+
+    .ui.menu.secondary.pointing .active.item, .ui.menu.secondary.pointing .active.item:hover{
+        color: $text-color2;
+        border-color: $text-color2;
+    }
+    .ui.inverted.segment.green{
+        background: $decoartion-color3 !important;
+    }
+
+    .landing-menu-flow nav .icon-menu ul li a:hover{
+        color: $text-color;
+        border-bottom-color: $text-color;
+    }
+
+    .title-in-table{
+        border-left-color: $decoration-color;
+        color: $decoration-color;
+    }
+}

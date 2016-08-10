@@ -1,0 +1,718 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body class="green-leaf">
+    <!-- Modal -->
+    <div class="ui basic modal" id="alert">
+        <i class="close icon"></i>
+        <div class="ui icon header">
+            <i class="trash icon"></i> Hapus Data
+        </div>
+        <div class="content">
+            <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+        </div>
+        <div class="actions">
+            <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i> Tidak
+            </div>
+            <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i> Ya
+            </div>
+        </div>
+    </div>
+
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="three wide column">
+                    <div class="head">
+                        <a href="kepegawaian_landing_referensi.html" class="back">&nbsp;</a>
+                        <img src="../img/keuangan/keuangan_logo.png" alt="logo" /> Keuangan
+                    </div>
+                </div>
+                <div class="thirteen wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul id="" class="clearfix">
+                                            <li class="item">
+                                                <a href="keuangan_landing_referensi.html"><i class="ifont-hand-chart"></i>Referensi</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_penerimaan.html"><i class="ifont-folder-download"></i>Penerimaan</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_pengeluaran.html"><i class="ifont-upload-folder"></i>Pengeluaran</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_jurnal_umum.html"><i class="icon ifont-private-journal"></i>Jurnal <br /> Umum</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_laporan_keuangan.html"><i class="icon ifont-analytic-report"></i>Laporan <br /> Keuangan</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_inventory.html" class="cur"><i class="icon ifont-tool"></i>Inventory</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="five wide column navigator">
+                    <div class="title">
+                        <h2>
+                            <img src="../img/keuangan/inventory.png" alt="logo" />
+                            Inventory
+                        </h2>
+                    </div>
+                </div>
+                <div class="eleven wide column filter-field">
+                    &nbsp;
+                </div>
+            </div>
+        </section>
+        <section id="content" class="table-layout">
+            <div class="ui grid table-layout-cell">
+                <div class="four wide column">
+                    <section class="filter-side panel">
+                        <div class="ui grid">
+                            <div class="sixteen wide column search-head green-leaf2">
+                                <i class="grid layout icon"></i> Group Barang
+                                <span>Pengelompokan barang-barang inventory</span>
+                            </div>
+                            <section class="sixteen wide column">
+                                    <div class="text-center">
+                                        <a class="ui basic auto mini green button" onclick="floatForm('add_group')"><i class="add icon"></i> Tambah Group</a>
+                                    </div>
+                                    <table id="tree_table" class="ui very basic selectable table">
+                                        <tbody>
+                                            <tr data-tt-id="1">
+                                                <td><i class="icon yellow folder"></i> ATK</td>
+                                                <td>
+                                                    <div class="table-action">
+                                                      <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                      <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('edit_group')"></i></a>
+                                                      <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                  </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-tt-id="1_1" data-tt-parent-id="1">
+                                                <td><a href="#"><i class="icon grey cube"></i> Printer</a></td>
+                                                <td>
+                                                    <div class="table-action">
+                                                      <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                      <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                  </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-tt-id="1_2" data-tt-parent-id="1">
+                                                <td><a href="#"><i class="icon grey cube"></i> PC</a></td>
+                                                <td>
+                                                    <div class="table-action">
+                                                      <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                      <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                  </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-tt-id="1_3" data-tt-parent-id="1">
+                                                <td><a href="#"><i class="icon grey cube"></i> Laptop</a></td>
+                                                <td>
+                                                    <div class="table-action">
+                                                      <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                      <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                  </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr data-tt-id="2">
+                                                <td><i class="icon yellow folder"></i> Barang</td>
+                                                <td>
+                                                    <div class="table-action">
+                                                        <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                        <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('edit_group')"></i></a>
+                                                        <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                  </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-tt-id="2_1" data-tt-parent-id="2">
+                                                <td><a href="#"><i class="icon grey cube"></i> Bangku Kelas</a></td>
+                                                <td>
+                                                    <div class="table-action">
+                                                      <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                      <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                  </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-tt-id="2_2" data-tt-parent-id="2">
+                                                <td><a href="#"><i class="icon grey cube"></i> Kursi Guru</a></td>
+                                                <td>
+                                                    <div class="table-action">
+                                                      <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                      <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                  </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr data-tt-id="3">
+                                                <td><i class="icon yellow folder"></i> Aksesoris</td>
+                                                <td>
+                                                    <div class="table-action">
+                                                        <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                        <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('edit_group')"></i></a>
+                                                        <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                  </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-tt-id="3_1" data-tt-parent-id="3">
+                                                <td><a href="#"><i class="icon grey cube"></i> Bendera</a></td>
+                                                <td>
+                                                    <div class="table-action">
+                                                      <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                      <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                  </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                            </section>
+                        </div>
+                    </section>
+                </div>
+                <div class="twelve wide column panel">
+                    <div class="table-wrap">
+                        <div class="filter-in">
+                            <div class="ui grid">
+                                <div class="nine wide column">
+                                    <h4 class="ui header">
+                                        Semua Barang
+                                    </h4>
+                                </div>
+                                <div class="seven wide column text-right">
+                                    <button class="ui green mini button" onclick="floatForm('add')">
+                                        <i class="add icon"></i> Tambah Barang
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-l-10 p-r-10">
+                            <section class="ui four stackable cards p-b-30">
+                                <div class="ui card">
+                                    <div class="image">
+                                        <img src="../img/dummy/printer.png" alt="inventory">
+                                    </div>
+                                    <div class="content">
+                                        <a class="header"><span>P01</span>Printer Laser</a>
+                                        <div class="meta">
+                                            <span class="date">Tgl Perolehan: 02-02-2012</span>
+                                        </div>
+                                        <div class="description">
+                                            <ul class="no-padding m-l-20">
+                                                <li>
+                                                    <strong>Jumlah	:</strong> 3 unit
+                                                </li>
+                                                <li>
+                                                    <strong>Kondisi	:</strong> Baik
+                                                </li>
+                                                <li>
+                                                    <strong>Keterangan	:</strong> Lipsum
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                      <div class="ui two buttons">
+                                        <a class="ui basic tiny green button" onclick="floatForm('detail')">Edit</a>
+                                        <a class="ui basic tiny red button">Delete</a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="ui card">
+                                    <div class="image">
+                                        <img src="../img/dummy/laptop.jpg" alt="inventory">
+                                    </div>
+                                    <div class="content">
+                                        <a class="header"><span>P02</span>Laptop</a>
+                                        <div class="meta">
+                                            <span class="date">Tgl Perolehan: 02-02-2012</span>
+                                        </div>
+                                        <div class="description">
+                                            <ul class="no-padding m-l-20">
+                                                <li>
+                                                    <strong>Jumlah	:</strong> 3 unit
+                                                </li>
+                                                <li>
+                                                    <strong>Kondisi	:</strong> Baik
+                                                </li>
+                                                <li>
+                                                    <strong>Keterangan	:</strong> Lipsum
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                      <div class="ui two buttons">
+                                        <a class="ui basic tiny green button" onclick="floatForm('detail')">Edit</a>
+                                        <a class="ui basic tiny red button">Delete</a>
+                                      </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="ui card">
+                                    <div class="image">
+                                        <img src="../img/dummy/pc.jpg" alt="inventory">
+                                    </div>
+                                    <div class="content">
+                                        <a class="header"><span>P03</span>Computer</a>
+                                        <div class="meta">
+                                            <span class="date">Tgl Perolehan: 02-02-2012</span>
+                                        </div>
+                                        <div class="description">
+                                            <ul class="no-padding m-l-20">
+                                                <li>
+                                                    <strong>Jumlah	:</strong> 3 unit
+                                                </li>
+                                                <li>
+                                                    <strong>Kondisi	:</strong> Baik
+                                                </li>
+                                                <li>
+                                                    <strong>Keterangan	:</strong> Lipsum
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                      <div class="ui two buttons">
+                                        <a class="ui basic tiny green button" onclick="floatForm('detail')">Edit</a>
+                                        <a class="ui basic tiny red button">Delete</a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="ui card">
+                                    <div class="image">
+                                        <img src="../img/dummy/table.jpg" alt="inventory">
+                                    </div>
+                                    <div class="content">
+                                        <a class="header"><span>P04</span>Meja Belajar</a>
+                                        <div class="meta">
+                                            <span class="date">Tgl Perolehan: 02-02-2012</span>
+                                        </div>
+                                        <div class="description">
+                                            <ul class="no-padding m-l-20">
+                                                <li>
+                                                    <strong>Jumlah	:</strong> 3 unit
+                                                </li>
+                                                <li>
+                                                    <strong>Kondisi	:</strong> Baik
+                                                </li>
+                                                <li>
+                                                    <strong>Keterangan	:</strong> Lipsum
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                      <div class="ui two buttons">
+                                        <a class="ui basic tiny green button" onclick="floatForm('detail')">Edit</a>
+                                        <a class="ui basic tiny red button">Delete</a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="ui card">
+                                    <div class="image">
+                                        <img src="../img/dummy/chair.jpg" alt="inventory">
+                                    </div>
+                                    <div class="content">
+                                        <a class="header"><span>P04</span>Kursi Guru</a>
+                                        <div class="meta">
+                                            <span class="date">Tgl Perolehan: 02-02-2012</span>
+                                        </div>
+                                        <div class="description">
+                                            <ul class="no-padding m-l-20">
+                                                <li>
+                                                    <strong>Jumlah	:</strong> 3 unit
+                                                </li>
+                                                <li>
+                                                    <strong>Kondisi	:</strong> Baik
+                                                </li>
+                                                <li>
+                                                    <strong>Keterangan	:</strong> Lipsum
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                      <div class="ui two buttons">
+                                        <a class="ui basic tiny green button" onclick="floatForm('detail')">Edit</a>
+                                        <a class="ui basic tiny red button">Delete</a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="ui card">
+                                    <div class="image">
+                                        <img src="../img/dummy/flag.jpg" alt="inventory">
+                                    </div>
+                                    <div class="content">
+                                        <a class="header"><span>P04</span>Bendera</a>
+                                        <div class="meta">
+                                            <span class="date">Tgl Perolehan: 02-02-2012</span>
+                                        </div>
+                                        <div class="description">
+                                            <ul class="no-padding m-l-20">
+                                                <li>
+                                                    <strong>Jumlah	:</strong> 3 unit
+                                                </li>
+                                                <li>
+                                                    <strong>Kondisi	:</strong> Baik
+                                                </li>
+                                                <li>
+                                                    <strong>Keterangan	:</strong> Lipsum
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                      <div class="ui two buttons">
+                                        <a class="ui basic tiny green button" onclick="floatForm('detail')">Edit</a>
+                                        <a class="ui basic tiny red button">Delete</a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="ui card">
+                                    <div class="image">
+                                        <img src="../img/dummy/printer.png" alt="inventory">
+                                    </div>
+                                    <div class="content">
+                                        <a class="header"><span>P01</span>Printer Laser</a>
+                                        <div class="meta">
+                                            <span class="date">Tgl Perolehan: 02-02-2012</span>
+                                        </div>
+                                        <div class="description">
+                                            <ul class="no-padding m-l-20">
+                                                <li>
+                                                    <strong>Jumlah	:</strong> 3 unit
+                                                </li>
+                                                <li>
+                                                    <strong>Kondisi	:</strong> Baik
+                                                </li>
+                                                <li>
+                                                    <strong>Keterangan	:</strong> Lipsum
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                      <div class="ui two buttons">
+                                        <a class="ui basic tiny green button" onclick="floatForm('detail')">Edit</a>
+                                        <a class="ui basic tiny red button">Delete</a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="ui card">
+                                    <div class="image">
+                                        <img src="../img/dummy/laptop.jpg" alt="inventory">
+                                    </div>
+                                    <div class="content">
+                                        <a class="header"><span>P02</span>Laptop</a>
+                                        <div class="meta">
+                                            <span class="date">Tgl Perolehan: 02-02-2012</span>
+                                        </div>
+                                        <div class="description">
+                                            <ul class="no-padding m-l-20">
+                                                <li>
+                                                    <strong>Jumlah	:</strong> 3 unit
+                                                </li>
+                                                <li>
+                                                    <strong>Kondisi	:</strong> Baik
+                                                </li>
+                                                <li>
+                                                    <strong>Keterangan	:</strong> Lipsum
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                      <div class="ui two buttons">
+                                        <a class="ui basic tiny green button" onclick="floatForm('detail')">Edit</a>
+                                        <a class="ui basic tiny red button">Delete</a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="floating-form small" id="add_group">
+        <div class="header">
+            <i class="add icon"></i> Tambah Group
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Nama Group</label>
+                <input type="text" value="" />
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea></textarea>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form small" id="edit_group">
+        <div class="header">
+            <i class="add icon"></i> Tambah Group
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Nama Group</label>
+                <input type="text" value="ATK" />
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea>Lorem Ipsum</textarea>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form small" id="add">
+        <div class="header">
+            <i class="add icon"></i> Tambah Barang
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="fields oneline">
+                <div class="four wide field">
+                    <label>Kode Barang</label>
+                </div>
+                <div class="six wide field">
+                    <input type="text" value=""  />
+                </div>
+            </div>
+
+            <div class="fields oneline">
+                <div class="four wide field">
+                    <label>Nama Barang</label>
+                </div>
+                <div class="twelve wide field">
+                    <input type="text" value=""  />
+                </div>
+            </div>
+
+            <div class="fields oneline">
+                <div class="four wide field">
+                    <label>Jumlah Barang</label>
+                </div>
+                <div class="four wide field">
+                    <input type="number" placeholder="Jumlah">
+                </div>
+                <div class="four wide field">
+                    <input type="text" value="unit" placeholder="Satuan">
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Kondisi</label>
+                <textarea></textarea>
+            </div>
+
+            <div class="fields online">
+                <div class="four wide field">
+                    <label>Tgl. Perolehan</label>
+                </div>
+                <div class="six wide field ui icon input">
+                       <input type="text" placeholder="" value="" class="datepicker" />
+                       <i class="calendar icon"></i>
+                 </div>
+            </div>
+
+            <div class="fields online">
+                <div class="four wide field">
+                    <label>Foto</label>
+                </div>
+                <div class="six wide field">
+                    <input type="file" />
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Keterangan</label>
+                <textarea></textarea>
+            </div>
+
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form small" id="detail">
+        <div class="header">
+            <i class="edit icon"></i> Ubah Barang
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="fields oneline">
+                <div class="four wide field">
+                    <label>Kode Barang</label>
+                </div>
+                <div class="six wide field">
+                    <input type="text" value="P01"  />
+                </div>
+            </div>
+
+            <div class="fields oneline">
+                <div class="four wide field">
+                    <label>Nama Barang</label>
+                </div>
+                <div class="twelve wide field">
+                    <input type="text" value="Printer Laser"  />
+                </div>
+            </div>
+
+            <div class="fields oneline">
+                <div class="four wide field">
+                    <label>Jumlah Barang</label>
+                </div>
+                <div class="four wide field">
+                    <input type="number" value="1" placeholder="Jumlah">
+                </div>
+                <div class="four wide field">
+                    <input type="text" value="Unit" placeholder="Satuan">
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Kondisi</label>
+                <textarea>Bagus, mulus, tidak cacat</textarea>
+            </div>
+
+            <div class="fields online">
+                <div class="four wide field">
+                    <label>Tgl. Perolehan</label>
+                </div>
+                <div class="six wide field ui icon input">
+                       <input type="text" placeholder="" value="11 Jul 2016" class="datepicker" />
+                       <i class="calendar icon"></i>
+                 </div>
+            </div>
+
+            <div class="fields online">
+                <div class="four wide field">
+                    <label>Foto</label>
+                </div>
+                <div class="six wide field">
+                    <img src="../img/dummy/printer.png" alt="inventory" height="100px"/>
+                    <input type="file" />
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Keterangan</label>
+                <textarea>Lorep Ipsum dolor sit amet!</textarea>
+            </div>
+
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+        </div>
+    </div>
+
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../js/vendors/jquery.treetable.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#detail_calon_siswa').modal('attach events', '.detail-siswa', 'show');
+        $('#alert').modal('attach events', '.table-action .delete', 'show');
+        $(document).ready(function(){
+            $("#tree_table").treetable({expandable: true, clickableNodeNames: true});
+        });
+    </script>
+</body>
+
+</html>

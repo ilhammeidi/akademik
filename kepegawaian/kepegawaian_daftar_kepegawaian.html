@@ -1,0 +1,816 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body class="blue-sea">
+    <!-- Modal -->
+    <div class="ui basic modal" id="alert">
+        <i class="close icon"></i>
+        <div class="ui icon header">
+            <i class="trash icon"></i> Hapus Data
+        </div>
+        <div class="content">
+            <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+        </div>
+        <div class="actions">
+            <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i> Tidak
+            </div>
+            <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i> Ya
+            </div>
+        </div>
+    </div>
+
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="four wide column">
+                    <div class="head">
+                        <a href="keuangan_landing_referensi.html" class="back">&nbsp;</a>
+                        <img src="../img/kepegawaian/kepegawaian_logo.png" alt="logo" /> Kepegawaian
+                    </div>
+                </div>
+                <div class="twelve wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul id="" class="clearfix">
+                                            <li class="item">
+                                                <a href="kepegawaian_landing_referensi.html"><i class="ifont-networking"></i>Referensi</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="kepegawaian_landing_kepegawaian.html" class="cur"><i class="ifont-people-manage"></i>Kepegawaian</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="kepegawaian_landing_presensi.html"><i class="ifont-touch"></i>Presensi</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="kepegawaian_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="five wide column navigator">
+                    <div class="ui small breadcrumb">
+                        <a class="section" href="akademik_landing_kesiswaan.html">Kepegawaian</a>
+                        <i class="right angle icon divider"></i>
+                        <div class="active section">Daftar Kepegawaian</div>
+                    </div>
+                    <div class="title">
+                        <h2>
+                                <img src="../img/kepegawaian/kepegawaian/daftar_kepegawaian.png" alt="logo" />
+                                Daftar Kepegawaian
+                            </h2>
+                    </div>
+                </div>
+                <div class="eleven wide column filter-field">
+                    &nbsp;
+                </div>
+            </div>
+        </section>
+        <section id="content" class="table-layout">
+            <div class="ui grid table-layout-cell">
+                <div class="five wide column">
+                    <section class="filter-side panel">
+                        <div class="ui grid">
+                            <div class="sixteen wide column search-head blue-dark">
+                                <i class="users icon"></i> Cari Pegawai
+                                <span>Tampilkan daftar pegawai berdasarkan: </span>
+                            </div>
+                            <div class="eleven wide column">
+                                <div class="ui form">
+                                    <div class="fields">
+                                        <div class="three wide column inline field">
+                                            <label>Nama</label>
+                                        </div>
+                                        <div class="six wide column inline field">
+                                            <input type="text" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fields">
+                                        <div class="three wide column inline field">
+                                            <label>NIP</label>
+                                        </div>
+                                        <div class="six wide column inline field">
+                                            <input type="text" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="three wide column">
+                                <button class="mini ui button tooltiped" data-content="Tampilkan daftar siswa berdasarkan pencarian" data-position="top center">
+                                    Cari
+                                </button>
+                                <button class="mini ui blue sea button tooltiped" data-content="Tampilkan calon siswa berdasarkan kelas" data-position="top center">
+                                    Semua
+                                </button>
+                            </div>
+
+                            <section class="sixteen wide column">
+                                <table class="ui single line selectable table very basic">
+                                    <thead>
+                                        <tr>
+                                            <th width="10%">No</th>
+                                            <th width="35%">NIP</th>
+                                            <th>Nama</th>
+                                            <th width="10%">&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="top aligned">
+                                            <td>1</td>
+                                            <td>00011</td>
+                                            <td>Andi</td>
+                                            <td>
+                                                <div class="table-action">
+                                                    <a href="#" class="ui basic blue mini auto button"><i class="forward mail icon"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="top aligned">
+                                            <td>2</td>
+                                            <td>132 456 745</td>
+                                            <td>Bonar Sitepu</td>
+                                            <td>
+                                                <div class="table-action">
+                                                    <a href="#" class="ui basic blue mini auto button"><i class="forward mail icon"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="top aligned">
+                                            <td>3</td>
+                                            <td>10197002</td>
+                                            <td>Dini</td>
+                                            <td>
+                                                <div class="table-action">
+                                                    <a href="#" class="ui basic blue mini auto button"><i class="forward mail icon"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="top aligned">
+                                            <td>4</td>
+                                            <td>131 924 825</td>
+                                            <td>Eka Mustika</td>
+                                            <td>
+                                                <div class="table-action">
+                                                    <a href="#" class="ui basic blue mini auto button"><i class="forward mail icon"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="top aligned">
+                                            <td>5</td>
+                                            <td>10191003</td>
+                                            <td>Leo</td>
+                                            <td>
+                                                <div class="table-action">
+                                                    <a href="#" class="ui basic blue mini auto button"><i class="forward mail icon"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="top aligned">
+                                            <td>6</td>
+                                            <td>130 935 026</td>
+                                            <td>M. Achmadi</td>
+                                            <td>
+                                                <div class="table-action">
+                                                    <a href="#" class="ui basic blue mini auto button"><i class="forward mail icon"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="top aligned">
+                                            <td>7</td>
+                                            <td>10191002</td>
+                                            <td>Nugy</td>
+                                            <td>
+                                                <div class="table-action">
+                                                    <a href="#" class="ui basic blue mini auto button"><i class="forward mail icon"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="top aligned">
+                                            <td>8</td>
+                                            <td>10191014</td>
+                                            <td>Nurlambang</td>
+                                            <td>
+                                                <div class="table-action">
+                                                    <a href="#" class="ui basic blue mini auto button"><i class="forward mail icon"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="top aligned">
+                                            <td>9</td>
+                                            <td>10197001</td>
+                                            <td>Pipit</td>
+                                            <td>
+                                                <div class="table-action">
+                                                    <a href="#" class="ui basic blue mini auto button"><i class="forward mail icon"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="top aligned">
+                                            <td>10</td>
+                                            <td>131 654 123</td>
+                                            <td>Samilin</td>
+                                            <td>
+                                                <div class="table-action">
+                                                    <a href="#" class="ui basic blue mini auto button"><i class="forward mail icon"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+
+                        </div>
+                    </section>
+                </div>
+
+                <div class="eleven wide column panel">
+                    <div class="table-wrap">
+                        <section class="ui grid">
+                            <div class="eleven wide column">
+                                <h4 class="ui header">
+                                        John Doe
+                                        <span class="sub header">NIP:  1012006 </span>
+                                    </h4>
+                            </div>
+                            <div class="four wide column text-right">
+                                <button class="ui mini button">
+                                    <i class="refresh icon"></i> Refresh
+                                </button>
+                                <button class="ui mini button">
+                                    <i class="print icon"></i> Print
+                                </button>
+                            </div>
+                        </section>
+
+                        <div class="ui pointing secondary tabed-parent small menu">
+                            <a class="item" data-tab="first">Pribadi</a>
+                            <a class="item" data-tab="second">Golongan</a>
+                            <a class="item" data-tab="third">Jabatan</a>
+                            <a class="item" data-tab="fourth">Pensiun</a>
+                            <a class="item" data-tab="fifth">Gaji</a>
+                            <a class="item" data-tab="sixth">Diklat</a>
+                            <a class="item" data-tab="seventh">Sekolah</a>
+                            <a class="item" data-tab="eight">Sertifikasi</a>
+                            <a class="item" data-tab="ninth">Kerja</a>
+                            <a class="item" data-tab="tenth">Keluarga</a>
+                            <a class="item" data-tab="eleventh">Presensi</a>
+                            <a class="item bold active" data-tab="twelveth">SEMUA</a>
+                        </div>
+                        <div class="ui tab m-t-30" data-tab="first"></div>
+                        <div class="ui tab m-t-30" data-tab="second"></div>
+
+                        <div class="ui form detail m-r-10 m-l-10">
+                            <div class="header-form">Data Pribadi</div>
+
+                            <div class="ui grid">
+                                <div class="ten wide column">
+                                    <div class="fields p-l-10 p-r-10">
+                                        <div class="seven wide field">
+                                            <label class="bold">1. Status</label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : Pegawai
+                                        </div>
+                                    </div>
+                                    <div class="fields p-l-10 p-r-10">
+                                        <div class="seven wide field">
+                                            <label class="bold">2. Bagian</label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : Akademik
+                                        </div>
+                                    </div>
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label class="bold">3. Nama</label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : John Doe
+                                        </div>
+                                    </div>
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label class="bold">4. NIP</label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : 1012006
+                                        </div>
+                                    </div>
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>5. NUPTK</label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            :
+                                        </div>
+                                    </div>
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>6. NRP</label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            :
+                                        </div>
+                                    </div>
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label class="bold">7. Tempat, Tgl Lahir</label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : Tapanuli, 20 Maret 1960
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>8. Agama </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : Katolik
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>9. Suku </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : Batak
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>10. Alamat </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            :
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>11. HP </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : 087821459874
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>12. Telepon </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : 021-2149874
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>13. Email </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : john.doe@mail.com
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>14. Facebook </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : john.doe
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>15. twitter </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : john_doe
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>16. Website </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            :
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label class="bold">17. Mulai Kerja </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            : 11/3/2017
+                                        </div>
+                                    </div>
+
+                                    <div class="fields p-l-10 p-r-10 oneline">
+                                        <div class="seven wide field">
+                                            <label>18. Keterangan </label>
+                                        </div>
+                                        <div class="nine wide field">
+                                            :
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="six wide column no-padding">
+                                    <section class="m-r-10">
+                                        <div class="ui link cards no-margin">
+                                            <div class="card">
+                                                <div class="image">
+                                                    <img src="../img/steve.jpg" alt="profile">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="header">John Doe</div>
+                                                    <div class="meta">
+                                                        120005
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui form m-t-40 m-r-10 m-l-10">
+                            <div class="header-form">Pensiun</div>
+                            <table class="ui table teal selectable striped very basic">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Jadwal Pensiun</th>
+                                        <th>Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3">
+                                            <div class="no-data m-t-50">
+                                                <h3 class="ui header text-center no-padding">
+                                                          <i class="table icon"></i>
+                                                          <div class="content">
+                                                            Tidak Ditemukan Data
+                                                          </div>
+                                                        </h3>
+                                                <p>
+                                                    Klik <a href="#" onclick="floatForm('add')">di sini</a> untuk mengisi.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <div class="ui form m-t-40 m-r-10 m-l-10">
+                            <div class="header-form">Riwayat Golongan</div>
+                            <table class="ui table teal selectable striped very basic">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Golongan</th>
+                                        <th>TMT</th>
+                                        <th>SK</th>
+                                        <th>Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5">
+                                            <div class="no-data m-t-50">
+                                                <h3 class="ui header text-center no-padding">
+                                                              <i class="table icon"></i>
+                                                              <div class="content">
+                                                                Tidak Ditemukan Data
+                                                              </div>
+                                                            </h3>
+                                                <p>
+                                                    Klik <a href="#" onclick="floatForm('add')">di sini</a> untuk mengisi.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="ui form m-t-40 m-r-10 m-l-10">
+                            <div class="header-form">Riwayat Jabatan</div>
+                            <table class="ui table teal selectable striped very basic">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Jabatan</th>
+                                        <th>TMT</th>
+                                        <th>SK</th>
+                                        <th>Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5">
+                                            <div class="no-data m-t-50">
+                                                <h3 class="ui header text-center no-padding">
+                                                                  <i class="table icon"></i>
+                                                                  <div class="content">
+                                                                    Tidak Ditemukan Data
+                                                                  </div>
+                                                                </h3>
+                                                <p>
+                                                    Klik <a href="#" onclick="floatForm('add')">di sini</a> untuk mengisi.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="ui form m-t-40 m-r-10 m-l-10">
+                            <div class="header-form">Riwayat Diklat</div>
+                            <table class="ui table teal selectable striped very basic">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Diklat</th>
+                                        <th>Tahun</th>
+                                        <th>SK</th>
+                                        <th>Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5">
+                                            <div class="no-data m-t-50">
+                                                <h3 class="ui header text-center no-padding">
+                                                                      <i class="table icon"></i>
+                                                                      <div class="content">
+                                                                        Tidak Ditemukan Data
+                                                                      </div>
+                                                                    </h3>
+                                                <p>
+                                                    Klik <a href="#" onclick="floatForm('add')">di sini</a> untuk mengisi.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="ui form m-t-40 m-r-10 m-l-10">
+                            <div class="header-form">Riwayat Sekolah</div>
+                            <table class="ui table teal selectable striped very basic">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Tingkat</th>
+                                        <th>Sekolah</th>
+                                        <th>Lulus</th>
+                                        <th>SK</th>
+                                        <th>Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="6">
+                                            <div class="no-data m-t-50">
+                                                <h3 class="ui header text-center no-padding">
+                                                                          <i class="table icon"></i>
+                                                                          <div class="content">
+                                                                            Tidak Ditemukan Data
+                                                                          </div>
+                                                                        </h3>
+                                                <p>
+                                                    Klik <a href="#" onclick="floatForm('add')">di sini</a> untuk mengisi.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="ui form m-t-40 m-r-10 m-l-10">
+                            <div class="header-form">Riwayat Sertifikasi</div>
+                            <table class="ui table teal selectable striped very basic">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Sertifikasi</th>
+                                        <th>Lembaga</th>
+                                        <th>Tahun</th>
+                                        <th>Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5">
+                                            <div class="no-data m-t-50">
+                                                <h3 class="ui header text-center no-padding">
+                                                                              <i class="table icon"></i>
+                                                                              <div class="content">
+                                                                                Tidak Ditemukan Data
+                                                                              </div>
+                                                                            </h3>
+                                                <p>
+                                                    Klik <a href="#" onclick="floatForm('add')">di sini</a> untuk mengisi.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="ui form m-t-40 m-r-10 m-l-10">
+                            <div class="header-form">Riwayat Pekerjaan</div>
+                            <table class="ui table teal selectable striped very basic">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Tahun Awal</th>
+                                        <th>Tahun Akhir</th>
+                                        <th>Tempat</th>
+                                        <th>Jabatan</th>
+                                        <th>Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="6">
+                                            <div class="no-data m-t-50">
+                                                <h3 class="ui header text-center no-padding">
+                                                  <i class="table icon"></i>
+                                                  <div class="content">
+                                                    Tidak Ditemukan Data
+                                                  </div>
+                                                </h3>
+                                                <p>
+                                                    Klik <a href="#" onclick="floatForm('add')">di sini</a> untuk mengisi.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-form small" id="add">
+        <div class="header">
+            <i class="add icon"></i> Tambah Riwayat Sekolah
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label class="strong">Sekolah</label>
+                <div class="fields">
+                    <div class="three wide field">
+                        <select>
+                            <<option value="S3">S3</option>
+
+                                <option value="S2">S2</option>
+
+                                <option value="S1">S1</option>
+
+                                <option value="D3">D3</option>
+
+                                <option value="D1">D1</option>
+
+                                <option value="SMA">SMA</option>
+
+                                <option value="SMP">SMP</option>
+
+                                <option value="SD">SD</option>
+                        </select>
+                    </div>
+                    <div class="ten wide field">
+                        <input type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="strong">Lulus</label>
+                <div class="five column wide field">
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="field">
+                <label class="strong">SK</label>
+                <input type="text" />
+            </div>
+            <div class="field">
+                <label>Keterangan</label>
+                <textarea></textarea>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button blue sea noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form" id="detail">
+        <div class="header">
+            <i class="edit icon"></i> Ubah Jenis Jabatan
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label class="strong">Jenis Jabatan</label>
+                <input type="text" value="KEPALA" />
+            </div>
+            <div class="field">
+                <label class="strong">Urutan</label>
+                <div class="five column wide field">
+                    <input type="number" value="1" />
+                </div>
+            </div>
+            <div class="field">
+                <label>Keterangan</label>
+                <textarea>Lorem ipsum dolor sit amet</textarea>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button blue sea noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+        </div>
+    </div>
+
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#detail_calon_siswa').modal('attach events', '.detail-siswa', 'show');
+        $('#alert').modal('attach events', '.table-action .delete', 'show');
+    </script>
+</body>
+
+</html>

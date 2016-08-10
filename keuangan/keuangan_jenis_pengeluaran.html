@@ -1,0 +1,364 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body class="green-leaf">
+    <!-- Modal -->
+    <div class="ui basic modal" id="alert">
+        <i class="close icon"></i>
+        <div class="ui icon header">
+            <i class="trash icon"></i> Hapus Data
+        </div>
+        <div class="content">
+            <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+        </div>
+        <div class="actions">
+            <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i> Tidak
+            </div>
+            <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i> Ya
+            </div>
+        </div>
+    </div>
+
+    <!-- END -->
+    <div class="main-content" id="container">
+        <section class="filter-top">
+            <div class="ui grid head-wrap">
+                <div class="three wide column">
+                    <div class="head">
+                        <a href="keuangan_landing_referensi.html" class="back">&nbsp;</a>
+                        <img src="../img/keuangan/keuangan_logo.png" alt="logo" /> Keuangan
+                    </div>
+                </div>
+                <div class="thirteen wide column white-wrap">
+                    <section class="landing-menu">
+                        <header>
+                            <div class="ui grid">
+                                <div class="row">
+                                    <nav class="thirteen wide column">
+                                        <ul id="" class="clearfix">
+                                            <li class="item">
+                                                <a href="keuangan_landing_referensi.html"><i class="ifont-hand-chart"></i>Referensi</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_penerimaan.html"><i class="ifont-folder-download"></i>Penerimaan</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_pengeluaran.html" class="cur"><i class="ifont-upload-folder"></i>Pengeluaran</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_jurnal_umum.html"><i class="icon ifont-private-journal"></i>Jurnal <br /> Umum</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_laporan_keuangan.html"><i class="icon ifont-analytic-report"></i>Laporan <br /> Keuangan</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_inventory.html"><i class="icon ifont-tool"></i>Inventory</a>
+                                            </li>
+                                            <li class="item">
+                                                <a href="keuangan_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="three wide no-padding column">
+                                        <div class="user">
+                                            <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                            <figure>
+                                                <img src="../img/user-default.png" alt="user" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="five wide column navigator">
+                    <div class="ui small breadcrumb">
+                        <a class="section" href="keuangan_landing_pengeluaran.html">Pengeluaran</a>
+                        <i class="right angle icon divider"></i>
+                        <div class="active section">Jenis Pengeluaran</div>
+                    </div>
+                    <div class="title">
+                        <h2>
+                            <img src="../img/keuangan/pengeluaran/jenis_pengeluaran.png" alt="logo" />
+                            Jenis Pengeluaran
+                        </h2>
+                    </div>
+                </div>
+                <div class="eleven wide column filter-field">
+                    &nbsp;
+                </div>
+            </div>
+        </section>
+        <section id="content" class="table-layout">
+            <div class="ui grid table-layout-cell">
+                <div class="sixteen wide column panel">
+                    <section class="table-wrap">
+                        <div class="filter-in">
+                            <div class="ui grid">
+                                <div class="nine wide column">
+                                    <div class="ui form p-l-30">
+                                        <div class="inline fields">
+                                            <label class="p-l-30">Departemen</label>
+                                            <div class="field">
+                                                <select>
+                                                    <option value="SMA" selected="">
+                                                        SMA </option>
+                                                    <option value="SMP">
+                                                        SMP </option>
+                                                    <option value="SD">
+                                                        SD </option>
+                                                    <option value="SMK">
+                                                        SMK </option>
+                                                    <option value="Bimbel">
+                                                        Bimbel </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="seven wide column text-right">
+                                <button class="ui mini button">
+                                    <i class="refresh icon"></i> Refresh
+                                </button>
+                                <button class="ui mini button">
+                                    <i class="print icon"></i> Print
+                                </button>
+                                <button class="ui green mini button" onclick="floatForm('add')">
+                                    <i class="add icon"></i> Tambah Jenis Pengeluran    
+                                </button>
+                            </div>
+                        </div>
+                </div>
+
+                <table class="ui table selectable striped very basic">
+                    <thead>
+                        <tr>
+                            <th width="5%">No</th>
+                            <th width="20%">Nama</th>
+                            <th width="20%">Kode Rekening</th>
+                            <th width="35%">Keterangan</th>
+                            <th width="10%">Status</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Bayar Listrik</td>
+                            <td>
+                                <ul>
+                                    <li><strong>Rek. Kas : </strong> 111 Kas</li>
+                                    <li><strong>Rek. Beban : </strong> 501 Beban Listrik</li>
+                                </ul>
+                            </td>
+                            <td>Sekedar contoh. Menu ini mengatur setiap jenis pengeluaran yang mungkin dikeluarkan sekolah. Anda harus menentukan rekening Kas dan Beban untuk setiap transaksi pengeluaran.</td>
+                            <td><i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                            <td>
+                                <div class="table-action">
+                                    <a href="#"><i class="edit icon tooltiped" onclick="floatForm('detail')" data-content="Ubah Pengeluaran"></i></a>
+                                    <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pengeluaran"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Pembelian Kendaraan Operasional</td>
+                            <td>
+                                <ul>
+                                    <li><strong>Rek. Kas : </strong> 112 Kas Bank</li>
+                                    <li><strong>Rek. Beban : </strong> 612 Kendaraan</li>
+                                </ul>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td><i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                            <td>
+                                <div class="table-action">
+                                    <a href="#"><i class="edit icon tooltiped" onclick="floatForm('detail')" data-content="Ubah Pengeluaran"></i></a>
+                                    <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pengeluaran"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Entertain Tamu</td>
+                            <td>
+                                <ul>
+                                    <li><strong>Rek. Kas : </strong> 111 Kas</li>
+                                    <li><strong>Rek. Beban : </strong> 505 Entertain Tamu</li>
+                                </ul>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td><i class="smile icon big yellow tooltiped" data-content="Status: Aktif"></i></td>
+                            <td>
+                                <div class="table-action">
+                                    <a href="#"><i class="edit icon tooltiped" onclick="floatForm('detail')" data-content="Ubah Pengeluaran"></i></a>
+                                    <a href="#"><i class="delete icon tooltiped" data-content="Hapus Pengeluaran"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="13">
+                                <div class="ui right floated pagination menu">
+                                    <a class="icon item">
+                                        <i class="left chevron icon"></i>
+                                    </a>
+                                    <a class="item cur">1</a>
+                                    <a class="item">2</a>
+                                    <a class="item">3</a>
+                                    <a class="item">4</a>
+                                    <a class="icon item">
+                                        <i class="right chevron icon"></i>
+                                    </a>
+                                </div>
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+                </section>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <div class="floating-form small" id="add">
+        <div class="header">
+            <i class="add icon"></i> Tambah Jenis Pengeluaran
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Departemen</label>
+                <input type="text" value="SMA" disabled="" />
+            </div>
+            
+            <div class="field">
+                <label>Nama</label>
+                <input type="text" value="" />
+            </div>
+            
+             <div class="field">
+                <label>Rek. Kas</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                      <input type="text" id="search_rek_kas" />
+                      <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="field">
+                <label>Rek. Beban</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                      <input type="text" id="search_rek_pendapatan" />
+                      <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea></textarea>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+        </div>
+    </div>
+
+    <div class="floating-form small" id="detail">
+        <div class="header">
+            <i class="edit icon"></i> Ubah Jenis Pengeluaran
+            <span class="option">
+                    <a href="#" class="expand"><i class="expand icon"></i></a>
+                    <a href="#" class="minus"><i class="minus icon"></i></a>
+                    <a href="#" class="remove"><i class="remove icon"></i></a>
+                </span>
+        </div>
+        <form class="ui form">
+            <div class="field">
+                <label>Departemen</label>
+                <input type="text" value="SMA" disabled="" />
+            </div>
+            
+            <div class="field">
+                <label>Nama</label>
+                <input type="text" value="Bayar Listrik" />
+            </div>
+            
+             <div class="field">
+                <label>Rek. Kas</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                      <input type="text" id="search_rek_kas" value="111 Kas"/>
+                      <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="field">
+                <label>Rek. Beban</label>
+                <div class="sixteen wide field">
+                    <div class="ui icon input">
+                      <input type="text" id="search_rek_pendapatan" value="501 Beban Listrik"/>
+                      <i class="search icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="strong">Keterangan</label>
+                <textarea>Sekedar contoh. Menu ini mengatur setiap jenis pengeluaran yang mungkin dikeluarkan sekolah. Anda harus menentukan rekening Kas dan Beban untuk setiap transaksi pengeluaran.</textarea>
+            </div>
+        </form>
+        <div class="btn-area">
+            <a href="#" id="cancel_compose">Cancel</a>
+            <button id="submit_compose" class="ui tiny button green noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Update</button>
+        </div>
+    </div>
+
+    <div class="popup-dim"></div>
+    <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/vendors/pikaday.js"></script>
+    <script src="../js/vendors/pikaday.jquery.js"></script>
+    <script src="../js/vendors/jquery.noty.packaged.js"></script>
+    <script src="../js/vendors/relax.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $('#detail_calon_siswa').modal('attach events', '.detail-siswa', 'show');
+        $('#alert').modal('attach events', '.table-action .delete', 'show');
+    </script>
+</body>
+
+</html>

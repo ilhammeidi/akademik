@@ -1,0 +1,422 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body class="blue-sea">
+        <!-- Modal -->
+        <div class="ui basic modal" id="alert">
+            <i class="close icon"></i>
+            <div class="ui icon header">
+                <i class="trash icon"></i>
+                Hapus Data
+            </div>
+            <div class="content">
+                <h5 class="text-center">Apakah Anda yakin untuk manghapus data ini?</h5>
+            </div>
+            <div class="actions">
+              <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i>
+                Tidak
+              </div>
+              <div class="ui blue ok inverted button">
+                <i class="checkmark icon"></i>
+                Ya
+              </div>
+            </div>
+        </div>
+
+        <!-- END -->
+        <div class="main-content" id="container">
+            <section class="filter-top">
+                <div class="ui grid head-wrap">
+                    <div class="four wide column">
+                        <div class="head">
+                            <a href="keuangan_landing_referensi.html" class="back">&nbsp;</a>
+                            <img src="../img/kepegawaian/kepegawaian_logo.png" alt="logo" />
+                            Kepegawaian
+                        </div>
+                    </div>
+                    <div class="twelve wide column white-wrap">
+                        <section class="landing-menu">
+                            <header>
+                                <div class="ui grid">
+                                    <div class="row">
+                                        <nav class="thirteen wide column">
+                                            <ul id="" class="clearfix">
+                                                <li class="item">
+                                                    <a href="kepegawaian_landing_referensi.html" class="cur"><i class="ifont-networking"></i>Referensi</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="kepegawaian_landing_kepegawaian.html"><i class="ifont-people-manage"></i>Kepegawaian</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="kepegawaian_landing_presensi.html"><i class="ifont-touch"></i>Presensi</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="kepegawaian_landing_pengaturan.html" class="setting"><i class="ifont-settings-work-tool"></i>Pengaturan</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+
+                                        <div class="three wide no-padding column">
+                                            <div class="user">
+                                                <span class="user-name">Your Name <a href="#">Logout</a></span>
+                                                <figure>
+                                                    <img src="../img/user-default.png" alt="user" />
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </section>
+                    </div>
+                </div>
+                <div class="ui centered grid">
+                    <div class="eight wide column navigator">
+                        <div class="ui small breadcrumb">
+                          <a class="section" href="akademik_landing_kesiswaan.html">Referensi</a>
+                          <i class="right angle icon divider"></i>
+                          <div class="active section">Struktur Jabatan</div>
+                        </div>
+                        <div class="title">
+                            <h2><img src="../img/kepegawaian/referensi/struktur_jabatan.png" alt="logo" /> Struktur Jabatan</h2>
+                        </div>
+                    </div>
+                    <div class="eleven wide column filter-field">
+                        &nbsp;
+                    </div>
+                </div>
+            </section>
+            <section id="content" class="table-layout">
+                <div class="ui centered grid">
+                    <div class="eight wide column">
+                        <section class="filter-side panel">
+                            <div class="ui grid">
+                                <div class="sixteen wide column search-head blue-dark">
+                                    <i class="university icon"></i> Struktur Organisasi
+                                    <span>Daftar Struktur Organisasi Sekolah</span>
+                                </div>
+                                <section class="sixteen wide column">
+                                        <table id="tree_table" class="ui very basic selectable table">
+                                            <tbody>
+                                                <tr data-tt-id="1">
+                                                    <td><i class="icon brown university"></i> STRUKTUR ORGANISASI SEKOLAH </td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1" data-tt-parent-id="1">
+                                                    <td><i class="icon grey user"></i> SEKOLAH</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1" data-tt-parent-id="1_1">
+                                                    <td><i class="icon grey user"></i> KEPSEK</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_1" data-tt-parent-id="1_1_1">
+                                                    <td><i class="icon grey user"></i> KEPTU</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_2" data-tt-parent-id="1_1_1">
+                                                    <td><i class="icon grey user"></i> WK.KURIKULUM</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_3" data-tt-parent-id="1_1_1">
+                                                    <td><i class="icon grey user"></i> WK.KESISWAAN</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_3_1" data-tt-parent-id="1_1_1_3">
+                                                    <td><i class="icon grey user"></i> PB.OSIS</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_3_2" data-tt-parent-id="1_1_1_3">
+                                                    <td><i class="icon grey user"></i> PB.EKSTRA</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_4" data-tt-parent-id="1_1_1">
+                                                    <td><i class="icon grey user"></i> WK.HUMAS</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_4_1" data-tt-parent-id="1_1_1_4">
+                                                    <td><i class="icon grey user"></i> KO.RT</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_5" data-tt-parent-id="1_1_1">
+                                                    <td><i class="icon grey user"></i> WK.SARANA</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_6" data-tt-parent-id="1_1_1">
+                                                    <td><i class="icon grey user"></i>KO.BP</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_7" data-tt-parent-id="1_1_1">
+                                                    <td><i class="icon grey user"></i>KO.IT</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_8" data-tt-parent-id="1_1_1">
+                                                    <td><i class="icon grey user"></i>KO.GURU</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_1_8_1" data-tt-parent-id="1_1_1_8">
+                                                    <td><i class="icon grey user"></i>GURU</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_1_2" data-tt-parent-id="1_1">
+                                                    <td><i class="icon grey user"></i> K.KOMITE</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-tt-id="1_2" data-tt-parent-id="1">
+                                                    <td><i class="icon grey user"></i> KOMSEK</td>
+                                                    <td>
+                                                        <div class="table-action">
+                                                          <a href="#"><i class="add circle green icon tooltiped" data-content="Tambah Group" onclick="floatForm('add_group')"></i></a>
+                                                          <a href="#"><i class="edit icon tooltiped" data-content="Ubah Group" onclick="floatForm('detail')"></i></a>
+                                                          <a href="#"><i class="delete icon tooltiped" data-content="Hapus Group"></i></a>
+                                                      </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </section>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="floating-form small" id="add_group">
+            <div class="header">
+                <i class="add icon"></i> Tambah Jabatan
+                <span class="option">
+                        <a href="#" class="expand"><i class="expand icon"></i></a>
+                        <a href="#" class="minus"><i class="minus icon"></i></a>
+                        <a href="#" class="remove"><i class="remove icon"></i></a>
+                    </span>
+            </div>
+            <form class="ui form">
+                <div class="field">
+                    <label>Jabatan</label>
+                    <input type="text" value="WK.HUMAS" disabled="" />
+                </div>
+                <div class="field">
+                    <label>Sub Jabatan</label>
+                    <input type="text" />
+                </div>
+                <div class="field">
+                    <label>Singkatan</label>
+                    <input type="text" />
+                </div>
+                <div class="field">
+                    <label>Eselon</label>
+                    <select>
+                        <option>Eselon1</option>
+                        <option>Eselon2</option>
+                        <option>Eselon3</option>
+                        <option>Eselon4</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Satuan Kerja</label>
+                    <select>
+                        <option value="(Tidak Ada)">Tidak Ada Satuan Kerja</option>
+
+                     	<option value="GURU">Pengajar</option>
+
+                     	<option value="KOPERASI">Koperasi</option>
+
+                     	<option value="MANAJEMEN">Manajemen Sekolah</option>
+
+                     	<option value="TATA USAHA">Tata Usaha Sekolah</option>
+
+                     	<option value="YAYASAN">Pengurus Yayasan</option>
+                    </select>
+                </div>
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button blue sea noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+            </div>
+        </div>
+
+        <div class="floating-form small" id="detail">
+            <div class="header">
+                <i class="add icon"></i> Edit Jabatan
+                <span class="option">
+                        <a href="#" class="expand"><i class="expand icon"></i></a>
+                        <a href="#" class="minus"><i class="minus icon"></i></a>
+                        <a href="#" class="remove"><i class="remove icon"></i></a>
+                    </span>
+            </div>
+            <form class="ui form">
+                <div class="field">
+                    <label>Jabatan</label>
+                    <input type="text" value="WK.HUMAS" disabled="" />
+                </div>
+                <div class="field">
+                    <label>Sub Jabatan</label>
+                    <input type="text" value="PB.EKSTRA"/>
+                </div>
+                <div class="field">
+                    <label>Singkatan</label>
+                    <input type="text" value="PBE"/>
+                </div>
+                <div class="field">
+                    <label>Eselon</label>
+                    <select>
+                        <option>Eselon1</option>
+                        <option>Eselon2</option>
+                        <option selected="">Eselon3</option>
+                        <option>Eselon4</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Satuan Kerja</label>
+                    <select>
+                        <option value="(Tidak Ada)">Tidak Ada Satuan Kerja</option>
+
+                     	<option value="GURU">Pengajar</option>
+
+                     	<option value="KOPERASI">Koperasi</option>
+
+                     	<option selected value="MANAJEMEN">Manajemen Sekolah</option>
+
+                     	<option value="TATA USAHA">Tata Usaha Sekolah</option>
+
+                     	<option value="YAYASAN">Pengurus Yayasan</option>
+                    </select>
+                </div>
+            </form>
+            <div class="btn-area">
+                <a href="#" id="cancel_compose">Cancel</a>
+                <button id="submit_compose" class="ui tiny button blue sea noty" data-type="success" data-message="New data has been added" type="submit"><i class="check icon"></i> Submit</button>
+            </div>
+        </div>
+
+        <div class="popup-dim"></div>
+        <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+        <script src="../js/vendors/owl.carousel.js"></script>
+        <!-- owl -->
+        <script src="../js/vendors/pikaday.js"></script>
+        <script src="../js/vendors/pikaday.jquery.js"></script>
+        <script src="../js/vendors/jquery.noty.packaged.js"></script>
+        <script src="../js/vendors/relax.js"></script>
+        <script src="../js/vendors/jquery.treetable.js"></script>
+        <script src="../semantic/dist/semantic.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script>
+            $('#detail_calon_siswa').modal('attach events', '.detail-siswa', 'show');
+            $('#alert').modal('attach events', '.table-action .delete', 'show');
+            $(document).ready(function(){
+                $("#tree_table").treetable({expandable: true, clickableNodeNames: true});
+                $("#tree_table").treetable('expandAll');
+            });
+        </script>
+    </body>
+</html>

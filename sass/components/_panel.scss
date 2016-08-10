@@ -1,0 +1,8 @@
+.panel{
+    > *{
+        margin: 5px 10px !important;
+        background: $white-color;
+        //border-bottom: 3px solid $grey-light3;
+        box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.3);
+    }
+}

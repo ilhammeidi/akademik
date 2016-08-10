@@ -1,0 +1,26 @@
+.pika-single{
+    z-index: 999;
+}
+
+.filter-side .is-today .pika-button{
+    background: #ffc107;
+    color: white;
+}
+
+.date-legend{
+    strong{
+        display: block;
+        margin: 10px 0;
+    }
+    div{
+        display: inline-block;
+        width: 20px;
+        height: 10px;
+        &.mark{
+            background: #33aaff;
+        }
+        &.now{
+            background: #ffc107;
+        }
+    }
+}

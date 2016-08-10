@@ -1,0 +1,166 @@
+.main-header{
+    background: $green;
+    font-family: 'semi-light';
+    font-size: 18px;
+    .content{
+        width: 1080px;
+        margin: auto;
+        text-align: center;
+        color: $white-color;
+        .logo{
+            float: left;
+            padding: 10px 0;
+            img{
+                display: block;
+            }
+        }
+        nav{
+            float: right;
+            ul{
+                padding: 0;
+                margin: 0;
+            }
+            li{
+                list-style: none;
+                float: left;
+                padding: 0 10px;
+                margin: 0 5px;
+                a{
+                    display: block;
+                    border-bottom: 2px solid transparent;
+                    margin-bottom: 8px;
+                    color: $white-color;
+                    text-decoration: none !important;
+                    padding: 13px 10px 5px;
+                    font-size: 15px;
+                    &:hover{
+                        border-bottom: 2px solid $white-color;
+                    }
+                    &.special{
+                        text-transform: uppercase;
+                        margin-bottom: 0;
+                        background: $blue;
+                        border: none !important;
+                        padding-bottom: 16px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-content{
+    display: block;
+    position: relative;
+    background: url(../img/menu_bg.png) no-repeat center -80px $white-color;
+    .content-menu{
+        width: 1080px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 16px;
+        h1{
+            font-size: 24px;
+            color: $grey-dark;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+        }
+        p{
+            font-style: italic;
+            color: $grey-dark;
+            margin-bottom: 10px;
+            padding: 0;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        nav{
+            display: block;
+            position: relative;
+            margin-top: 30px;
+        }
+        .row{
+            display: inline-block;
+            margin: auto;
+        }
+        .icon-menu{
+            color: $grey-dark-green;
+            text-align: center;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 10px 20px;
+            transition: all 0.3s ease-in-out;
+            border-radius: 50%;
+            box-shadow: none;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: inset 0 0 0 80px #FFFFFF;
+            text-decoration: none !important;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-family: 'regular';
+            img{
+                display: block;
+                height: 48px;
+                margin: auto;
+                margin-top: 0px;
+                margin-bottom: 5px;
+            }
+            &:hover{
+                box-shadow: inset 0 0 0 -10px #FFFFFF, 0 0 0 15px #8BF2A5, 0 0 25px 5px #000;
+                background: $grey-light;
+                color: $green;
+            }
+        }
+    }
+}
+
+.notif{
+    background: #626862;
+    padding: 10px 20px;
+    color: #ffffff;
+    position: absolute;
+    top: 15px;
+    left: 30%;
+    a{
+        color: $green4;
+        font-size: 14px;
+        text-decoration: none;
+    }
+}
+
+footer{
+    border-top: 1px solid $grey-light5;
+    padding: 25px 0;
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    color: $grey-dark;
+    width: 1080px;
+    margin: 20px auto 0;
+    .info{
+        float: left;
+        color: green;
+        padding-left: 20px;
+        background: url(../img/info-footer.png) no-repeat transparent 0px 2px;
+        a{
+            text-decoration: none;
+        }
+    }
+    .copy{
+        float: right;
+        width: 340px;
+        text-align: right;
+        p{
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+    }
+    a{
+        color: $green;
+    }
+}

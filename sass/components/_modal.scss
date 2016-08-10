@@ -1,0 +1,113 @@
+.ui.modal{
+    &.small{
+        width: 480px;
+        margin: 0 0 0 -240px;
+    }
+    &.medium{
+        width: 540px;
+        margin: 0 0 0 -270px;
+    }
+    > .header, >:last-child{
+        border-radius: 0 !important;
+    }
+
+    > .header{
+        font-family: 'semi-light';
+        border: none;
+        padding-bottom: 0;
+        .button{
+            position: absolute;
+            right: 10px;
+            top:20px;
+        }
+        &.bordered{
+            border-bottom: 1px solid $grey-light5;
+            padding-bottom: 20px;
+        }
+        h3{
+            display: inline-block;
+            border-top: 6px solid $green2;
+            color: $grey-dark;
+            position: relative;
+            margin-top: -20px;
+            padding-top: 20px;
+            i{
+                color: $green2;
+            }
+        }
+        p{
+            font-size: 14px;
+            color: $grey-dark3;
+        }
+        img{
+            display: inline-block;
+            height: 50px;
+        }
+    }
+
+    .content{
+        font-size: 14px;
+        .ui.header{
+            font-size: 14px;
+        }
+    }
+
+    > .actions{
+        text-align: center;
+    }
+}
+
+.ui.dimmer{
+    background-color: rgba(56, 62, 52, 0.8);
+}
+
+.ui.card>.content>.header:not(.ui), .ui.cards>.card>.content>.header:not(.ui){
+    color: #28ada8;
+    span{
+        font-size: 13px;
+        color: $grey-dark3;
+        margin-right: 10px;
+        display: inline-block;
+    }
+}
+
+
+.event.list{
+    padding: 10px 0;
+    h3{
+        text-align: left;
+        padding-left: 20px;
+        text-transform: uppercase;
+        font-family: 'regular';
+        font-size: 16px;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            list-style: none;
+            a{
+                color: $grey-dark;
+                display: block;
+                padding: 10px 0 10px 20px;
+                border-left: 2px solid transparent;
+                font-size: 18px;
+                border-top: 3px solid white;
+                background: $grey-light3;
+                &.cur{
+                    border-left: 2px solid $green;
+                    color: $green;
+                    font-size: 18px;
+                    background: $yellow;
+                }
+                &:hover{
+                    opacity: .8;
+                }
+                span{
+                    font-size: 14px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
