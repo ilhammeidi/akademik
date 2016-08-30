@@ -1,0 +1,33 @@
+.error-wrap {
+    position: relative;
+    display: block;
+    text-align: center;
+    background: #fcfcfc;
+    padding-bottom: 90px;
+    z-index: 9;
+    &.not-found{
+        background: url(../img/sign.svg) no-repeat right bottom #fcfcfc;
+        background-size: 200px 200px;
+    }
+    &.internal-error{
+        background: url(../img/bug.svg) no-repeat left bottom #fcfcfc;
+        background-size: 200px 200px;
+    }
+    h2 {
+        color: #499186;
+        font-size: 48px;
+        font-family: 'light';
+        padding: 16px;
+        display: inline-block;
+        margin-top: 170px !important;
+    }
+    p {
+        margin: 0 auto 75px;
+        color: #797979;
+        font-size: 18px;
+    }
+    .button {
+        font-size: 18px;
+        width: 150px;
+    }
+}

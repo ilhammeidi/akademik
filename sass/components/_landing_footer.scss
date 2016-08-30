@@ -1,0 +1,49 @@
+.landing-wrap, .forum-wrap {
+    footer {
+        width: 100%;
+        background: url(../img/footer.jpg) repeat 0 -120px #0f433b;
+        margin: 0;
+        .ui.celled.grid>.column:not(.row),
+        .ui.celled.grid>.row>.column {
+            box-shadow: -1px 0 0 0 #315d56;
+        }
+        .ui.celled.grid>.column:first-child,
+        .ui.celled.grid>.row>.column:first-child {
+            box-shadow: none;
+        }
+        .celled > .column {
+            ul {
+                li {
+                    list-style: none;
+                    color: $white-color;
+                    &:first-child {
+                        font-family: 'semi-bold';
+                        text-transform: uppercase;
+                        margin-bottom: 15px;
+                    }
+                    a {
+                        font-family: 'light';
+                        color: #92d6cd;
+                        text-decoration: none !important;
+                        margin-bottom: 5px;
+                        display: block;
+                        padding-left: 10px;
+                        &.socmed {
+                            display: inline-block;
+                            padding-right: 10px;
+                            &.tw:hover {color: #1cc1d6}
+                            &.fb:hover {color: #3f6cd0}
+                            &.in:hover {color: #3e9bd4}
+                        }
+                    }
+                }
+            }
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #698883;
+        }
+    }
+}

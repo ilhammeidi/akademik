@@ -1,0 +1,168 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/forum.css">
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="forum-wrap">
+        <header>
+            <div class="ui main text container">
+                <div class="ui grid">
+                    <div class="eleven wide column">
+                        <h1 class="ui header"><img src="../img/forum_logo.png" alt="logo" class="logo"/><span>Forum</span> Diskusi</h1>
+                    </div>
+                    <div class="five wide column text-right">
+                        <div class="ui right aligned category search">
+                            <div class="ui icon input">
+                                <input class="prompt" type="text" placeholder="Search...">
+                                <i class="search icon"></i>
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui borderless main menu">
+                <div class="ui container">
+                    <a href="index.html" class="item"><i class="home icon"></i> Halaman Index</a>
+                    <div class="right menu">
+                        <a href="#" class="ui dropdown item">
+                            <i class="search icon"></i>Cari <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item">Lihat topik yang aktif</div>
+                                <div class="item">Lihat post yang belum terjawab</div>
+                                <div class="item">Lihat post yang belum terbaca</div>
+                                <div class="item">Lihat post baru</div>
+                                <div class="item">Pencarian lanjutan</div>
+                            </div>
+                        </a>
+                        <a href="register.html" class="item active"><i class="add user icon"></i> Daftar</a>
+                        <a href="login.html" class="item"><i class="sign in icon"></i> Masuk</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="ui middle aligned center aligned grid">
+            <div class="ten wide login column m-b-20">
+                <section class="login">
+                    <form class="ui large form">
+                        <div class="ui stacked segment">
+                            <h2 class="ui teal header">
+                                <i class="circular add user teal icon"></i>
+                              <div class="content">
+                                Daftar FORUM
+                              </div>
+                            </h2>
+                            <div class="ui info message">
+                                <ul class="list">
+                                    <li><i class="check green icon"></i> Gunakan <strong>User Id Yang Jelas</strong> atau <strong>Nama Yang Sebenarnya (tidak perlu mencantumkan gelar)</strong></li>
+                                    <li><i class="check green icon"></i> User Id atau Nama yang kurang jelas aka kami anggap sebagai <strong>SPAMMER</strong></li>
+                                    <li><i class="check green icon"></i> <strong>Mohon tunggu beberapa saat</strong> karena kami harus melakukan validasi semua registrasi yang masuk</li>
+                                </ul>
+                            </div>
+                            <div class="row m-t-30 m-b-40">
+                                <div class="ui eight wide field">
+                                    <label>Nama Pengguna</label>
+                                    <input type="text" name="" class="tooltiped-input" data-content="Nama Penguna diantara 3 sampai 50 karakter" data-position="right center" />
+                                </div>
+                            </div>
+
+                            <div class="row ui fields m-b-40">
+                                <div class="ui eight wide field">
+                                    <label>Email</label>
+                                    <input type="email" name="" />
+                                </div>
+                                <div class="ui eight wide field">
+                                    <label>Konfirmasi Email</label>
+                                    <input type="email" name="" />
+                                </div>
+                            </div>
+
+                            <div class="row ui fields m-b-40">
+                                <div class="ui eight wide field">
+                                    <label>Password</label>
+                                    <input type="password" name="" class="tooltiped-input" data-content="Password diantara 6 sampai 100 karakter" data-position="top center" />
+                                </div>
+                                <div class="ui eight wide field">
+                                    <label>Konfirmasi Password</label>
+                                    <input type="password" name="" class="tooltiped-input" data-content="Password diantara 6 sampai 100 karakter" data-position="top center" />
+                                </div>
+                            </div>
+
+                            <section class="ui secondary segment">
+                                <div class="row fields m-b-40">
+                                    <div class="ui eight wide field">
+                                        <label>Bahasa</label>
+                                        <select>
+                                            <option>Bahasa Indonesia</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="ui eight wide field">
+                                        <label>Zona Waktu</label>
+                                        <select>
+                                            <option>[UTC+7]</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <div class="ui medium teal submit button">Register</div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <div class="ui container">
+                <div class="ui centered internally celled grid">
+                    <div class="four wide column">
+                        <ul>
+                            <li>About</li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Visi &amp; Misi</a></li>
+                            <li><a href="#">Read Map</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="four wide column">
+                        <ul>
+                            <li>Kontak</li>
+                            <li><a href="#">Hubungi Kami</a></li>
+                        </ul>
+                    </div>
+                    <div class="four wide column">
+                        <ul>
+                            <li>Folow US</li>
+                            <li><a href="#" class="socmed tw"><i class="twitter icon"></i></a> <a href="#" class="socmed fb"><i class="facebook icon"></i></a> <a href="#" class="socmed in"><i class="linkedin icon"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">Hak cipta &copy; 2016 Your company</div>
+        </footer>
+    </div>
+
+
+</body>
+<script type="text/javascript" src="../js/vendors/jquery-1.11.2.min.js"></script>
+<script src="../semantic/dist/semantic.min.js"></script>
+<script type="text/javascript" src="../js/forum.js"></script>
+
+</html>

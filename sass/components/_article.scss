@@ -1,0 +1,109 @@
+.landing-wrap .article.banner {
+    background: #f5f5f5;
+    height: 450px;
+    position: relative;
+    padding-top: 150px;
+    h2 {
+        color: #499186;
+        font-size: 32px;
+        font-family: 'light';
+        padding: 10px;
+        margin: 0;
+        figure {
+            background: $white-color;
+            border-radius: 50%;
+            padding: 10px;
+            border: 10px solid $white-color;
+            box-sizing: content-box;
+            width: 64px;
+            height: 64px;
+            margin: 0px auto 20px;
+            text-align: center;
+            line-height: 64px;
+            overflow: hidden;
+            box-shadow: 0 0 20px 0px #e0e0e0;
+            img {
+                width: 100%;
+                margin: 0 auto;
+                display: inline-block;
+            }
+        }
+    }
+}
+.article-wrap {
+    background: $white-color;
+    margin-top: 20px;
+    color: $grey-dark4;
+    .article-section{
+        padding: 40px 0;
+    }
+    h2 {
+        font-size: 36px;
+        text-align: left;
+        &.bordered {
+            position: relative;
+            display: inline-block;
+            color: #848484;
+            margin-bottom: 70px;
+            &:after {
+                content: '';
+                border-bottom: 4px solid $green;
+                position: absolute;
+                width: 50%;
+                left: 25%;
+                bottom: -30px;
+            }
+        }
+    }
+    p ,li{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    li{
+        margin-bottom: 20px;
+    }
+    img {
+        margin: 10px;
+    }
+    .screenshoot {
+        position: relative;
+        text-align: center;
+        margin-bottom: 60px;
+        img {
+            position: relative;
+            width: 100%;
+        }
+        .deco {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(109, 216, 234, 0.3);
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            &.right {
+                right: 20px;
+            }
+            &.left {
+                left: -50px;
+            }
+            &.top {
+                top: 20px;
+            }
+            &.bottom {
+                bottom: -10px;
+            }
+            &.orange{
+                background: rgba(255, 218, 203, 0.3);
+            }
+            &.yellow{
+                background: rgba(255, 254, 148, 0.3);
+            }
+            &.violet{
+                background: rgba(255, 203, 254, 0.3);
+            }
+            &.green{
+                background: rgba(161, 255, 186, 0.3)
+            }
+        }
+    }
+}

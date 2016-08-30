@@ -1,0 +1,548 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/forum.css">
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="js/vendors/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="forum-wrap">
+        <header>
+            <div class="ui main text container">
+                <div class="ui grid">
+                    <div class="eleven wide column">
+                        <h1 class="ui header"><img src="../img/forum_logo.png" alt="logo" class="logo"/><span>Forum</span> Diskusi</h1>
+                    </div>
+                    <div class="five wide column text-right">
+                        <div class="ui right aligned category search">
+                            <div class="ui icon input">
+                                <input class="prompt" type="text" placeholder="Search...">
+                                <i class="search icon"></i>
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui borderless main menu">
+                <div class="ui container">
+                    <a href="#" class="item active"><i class="home icon"></i> Halaman Index</a>
+                    <div class="right menu">
+                        <a href="#" class="ui dropdown item">
+                            <i class="search icon"></i>Cari <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item">Lihat topik yang aktif</div>
+                                <div class="item">Lihat post yang belum terjawab</div>
+                                <div class="item">Lihat post yang belum terbaca</div>
+                                <div class="item">Lihat post baru</div>
+                                <div class="item">Pencarian lanjutan</div>
+                            </div>
+                        </a>
+                        <a href="register.html" class="item"><i class="add user icon"></i> Daftar</a>
+                        <a href="login.html" class="item"><i class="sign in icon"></i> Masuk</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="forum-content">
+            <div class="ui container">
+                <div class="forum-list">
+                    <div class="forum-header">
+                        <i class="comments icon"></i> SISFO Sekolah
+                    </div>
+                    <div class="inner">
+                        <table class="ui very basic table">
+                            <tbody>
+                                <tr>
+                                    <td width="50%">
+                                        <div class="ui feed">
+                                            <div class="event">
+                                                <div class="label m-t-10 m-l-20">
+                                                    <img src="../img/akademik/gupel/aspek_penilaian.png" alt="icon">
+                                                </div>
+                                                <section class="content">
+                                                    <div class="summary">
+                                                        <a class="user" href="list_topic.html">Maintenace</a>
+                                                    </div>
+                                                    <div class="meta strong">
+                                                        Membahas berbagai masalah, kendala, solusi serta petunjuk penggunaan
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui items p-l-20">
+                                            <div class="item">
+                                                <div class="content">
+                                                    <div class="summary">
+                                                        Post terkahir oleh <a>Jenny Hess</a> <a><i class="external icon"></i></a>.
+                                                    </div>
+                                                    <div class="extra">
+                                                        <i class="calendar icon"></i> Sel, 23-Agt-2016 10:22
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="talk yellow icon"></i> 5
+                                            </div>
+                                            <div class="label">
+                                                Topik
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="blue announcement icon"></i> 20
+                                            </div>
+                                            <div class="label">
+                                                Post
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <div class="ui feed">
+                                            <div class="event">
+                                                <div class="label m-t-10 m-l-20">
+                                                    <img src="../img/akademik/gupel/rencana_program_pembelajaran.png" alt="icon">
+                                                </div>
+                                                <section class="content">
+                                                    <div class="summary">
+                                                        <a class="user" href="list_topic.html">General</a>
+                                                    </div>
+                                                    <div class="meta strong">
+                                                        Membahas berbagai masalah, kendala, solusi serta petunjuk penggunaan
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui items p-l-20">
+                                            <div class="item">
+                                                <div class="content">
+                                                    <div class="summary">
+                                                        Post terkahir oleh <a>Jenny Hess</a> <a><i class="external icon"></i></a>.
+                                                    </div>
+                                                    <div class="extra">
+                                                        <i class="calendar icon"></i> Sel, 23-Agt-2016 10:22
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="talk yellow icon"></i> 5
+                                            </div>
+                                            <div class="label">
+                                                Topik
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="blue announcement icon"></i> 20
+                                            </div>
+                                            <div class="label">
+                                                Post
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td width="50%">
+                                        <div class="ui feed">
+                                            <div class="event">
+                                                <div class="label m-t-10 m-l-20">
+                                                    <img src="../img/forum_logo.png" alt="icon">
+                                                </div>
+                                                <section class="content">
+                                                    <div class="summary">
+                                                        <a class="user" href="list_topic.html">F.A.Q</a>
+                                                    </div>
+                                                    <div class="meta strong">
+                                                        Membahas berbagai masalah, kendala, solusi serta petunjuk penggunaan
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui items p-l-20">
+                                            <div class="item">
+                                                <div class="content">
+                                                    <div class="summary">
+                                                        Post terkahir oleh <a>Jenny Hess</a> <a><i class="external icon"></i></a>.
+                                                    </div>
+                                                    <div class="extra">
+                                                        <i class="calendar icon"></i> Sel, 23-Agt-2016 10:22
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="talk yellow icon"></i> 5
+                                            </div>
+                                            <div class="label">
+                                                Topik
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="blue announcement icon"></i> 20
+                                            </div>
+                                            <div class="label">
+                                                Post
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td width="50%">
+                                        <div class="ui feed">
+                                            <div class="event">
+                                                <div class="label m-t-10 m-l-20">
+                                                    <img src="../img/perpustakaan/setting/header_cetak.png" alt="icon">
+                                                </div>
+                                                <section class="content">
+                                                    <div class="summary">
+                                                        <a class="user" href="list_topic.html">Links</a>
+                                                    </div>
+                                                    <div class="meta strong">
+                                                        Membahas berbagai masalah, kendala, solusi serta petunjuk penggunaan
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui items p-l-20">
+                                            <div class="item">
+                                                <div class="content">
+                                                    <div class="summary">
+                                                        Post terkahir oleh <a>Jenny Hess</a> <a><i class="external icon"></i></a>.
+                                                    </div>
+                                                    <div class="extra">
+                                                        <i class="calendar icon"></i> Sel, 23-Agt-2016 10:22
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="talk yellow icon"></i> 5
+                                            </div>
+                                            <div class="label">
+                                                Topik
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="blue announcement icon"></i> 20
+                                            </div>
+                                            <div class="label">
+                                                Post
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td width="50%">
+                                        <div class="ui feed">
+                                            <div class="event">
+                                                <div class="label m-t-10 m-l-20">
+                                                    <img src="../img/perpustakaan/pustaka/pustaka_baru.png" alt="icon">
+                                                </div>
+                                                <section class="content">
+                                                    <div class="summary">
+                                                        <a class="user" href="list_topic.html">Tutorial</a>
+                                                    </div>
+                                                    <div class="meta strong">
+                                                        Membahas berbagai masalah, kendala, solusi serta petunjuk penggunaan
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui items p-l-20">
+                                            <div class="item">
+                                                <div class="content">
+                                                    <div class="summary">
+                                                        Post terkahir oleh <a>Jenny Hess</a> <a><i class="external icon"></i></a>.
+                                                    </div>
+                                                    <div class="extra">
+                                                        <i class="calendar icon"></i> Sel, 23-Agt-2016 10:22
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="talk yellow icon"></i> 5
+                                            </div>
+                                            <div class="label">
+                                                Topik
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="blue announcement icon"></i> 20
+                                            </div>
+                                            <div class="label">
+                                                Post
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td width="50%">
+                                        <div class="ui feed">
+                                            <div class="event">
+                                                <div class="label m-t-10 m-l-20">
+                                                    <img src="../img/anjungan_logo.png" alt="icon">
+                                                </div>
+                                                <section class="content">
+                                                    <div class="summary">
+                                                        <a class="user" href="list_topic.html">Software</a>
+                                                    </div>
+                                                    <div class="meta strong">
+                                                        Membahas berbagai masalah, kendala, solusi serta petunjuk penggunaan
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui items p-l-20">
+                                            <div class="item">
+                                                <div class="content">
+                                                    <div class="summary">
+                                                        Post terkahir oleh <a>Jenny Hess</a> <a><i class="external icon"></i></a>.
+                                                    </div>
+                                                    <div class="extra">
+                                                        <i class="calendar icon"></i> Sel, 23-Agt-2016 10:22
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="talk yellow icon"></i> 5
+                                            </div>
+                                            <div class="label">
+                                                Topik
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="ui mini statistic">
+                                            <div class="value">
+                                                <i class="blue announcement icon"></i> 20
+                                            </div>
+                                            <div class="label">
+                                                Post
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="ui centered grid">
+                    <div class="five wide column">
+                        <div class="ui text menu p-l-10">
+                          <a class="item">
+                            Team
+                          </a>
+                          <a class="item">
+                            Hapus Cookie Halaman
+                          </a>
+                          <a class="item">
+                            Bantuan
+                          </a>
+                        </div>
+                        <p class="text-center text-grey p-b-30">Sekarang ini Sel, 23-Agt-2016 13:55</p>
+                    </div>
+                </div>
+                <div class="forum-list">
+                    <div class="forum-header">
+                        <i class="comments icon"></i> Informasi
+                    </div>
+                    <div class="inner">
+                        <table class="ui very basic table">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="ui form p-l-30">
+                                            <div class="field">
+                                                <h3 class="bold">Login</h3>
+                                                <div class="fields">
+                                                    <div class="six wide field">
+                                                        <div class="ui left icon input">
+                                                            <i class="user icon"></i>
+                                                            <input type="text" placeholder="Nama Pengguna">
+                                                        </div>
+                                                    </div>
+                                                    <div class="six wide field">
+                                                        <div class="ui left icon input">
+                                                            <i class="lock icon"></i>
+                                                            <input type="text" placeholder="Password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="six wide field">
+                                                        <button class="ui tiny teal button">Login</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" class="text-center">
+                                        <div class="ui feed">
+                                            <div class="event">
+                                                <div class="label m-t-10 m-l-40">
+                                                    <img src="../img/akademik/kenaikan/daftar_alumni.png" alt="icon">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui items">
+                                            <div class="item">
+                                                <div class="content">
+                                                    <div class="extra">
+                                                        Total <strong>7</strong> pengguna yang online :: 1 terdaftar, 0 tersembunyi dan 6 tamu 
+                                                    </div>
+                                                    <div class="extra">
+                                                        Pengguna terdaftar: <strong>Majestic-12 [Bot]</strong>
+                                                    </div>
+                                                    <div class="ui divider"></div>
+                                                    <div class="summary bold">
+                                                        Daftar Grup: <a href="#">Administrator</a>, <a href="#">Global Moderators</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td width="10%" class="text-center">
+                                        <div class="ui feed">
+                                            <div class="event">
+                                                <div class="label m-t-10 m-l-40">
+                                                    <img src="../img/akademik/mutasi/statistik_mutasi_siswa.png" alt="icon">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui items">
+                                            <div class="item">
+                                                <div class="content">
+                                                    <div class="extra">
+                                                        Total <strong>7</strong> pengguna yang online :: 1 terdaftar, 0 tersembunyi dan 6 tamu 
+                                                    </div>
+                                                    <div class="extra">
+                                                        Pengguna terdaftar: <strong>Majestic-12 [Bot]</strong>
+                                                    </div>
+                                                    <div class="ui divider"></div>
+                                                    <div class="summary">
+                                                        Total post <strong>5406</strong> • Total topik <strong>1300</strong> • Total anggota <strong>2086</strong> • Anggota terbaru: <a href="#">Reza Habibie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+
+         <footer>
+            <div class="ui container">
+                <div class="ui centered internally celled grid">
+                    <div class="four wide column">
+                        <ul>
+                            <li>About</li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Visi &amp; Misi</a></li>
+                            <li><a href="#">Read Map</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="four wide column">
+                        <ul>
+                            <li>Kontak</li>
+                            <li><a href="#">Hubungi Kami</a></li>
+                        </ul>
+                    </div>
+                    <div class="four wide column">
+                        <ul>
+                            <li>Folow US</li>
+                            <li><a href="#" class="socmed tw"><i class="twitter icon"></i></a> <a href="#" class="socmed fb"><i class="facebook icon"></i></a> <a href="#" class="socmed in"><i class="linkedin icon"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">Hak cipta &copy; 2016 Your company</div>
+        </footer>
+    </div>
+
+
+</body>
+<script type="text/javascript" src="../js/vendors/jquery-1.11.2.min.js"></script>
+<script src="../semantic/dist/semantic.min.js"></script>
+<script type="text/javascript" src="../js/forum.js"></script>
+
+</html>
