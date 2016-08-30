@@ -96,6 +96,7 @@ td{
 .ui.icon.input{
     display: inline-block;
     > i.icon{
+        top: auto;
         bottom: 0;
         height: 30px;
         color: $orange;
@@ -213,6 +214,9 @@ td{
 .btn-area{
     text-align: center;
     padding: 10px 20px;
+    &.grey{
+        background: $grey-light3;
+    }
 }
 
 .ui.checkbox label{
@@ -227,7 +231,7 @@ td{
 
 .popup-dim{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 99;

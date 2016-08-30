@@ -44,6 +44,10 @@
     color: $blue2;
 }
 
+.small-text{
+    font-size: 0.8em;
+}
+
 .text-orange{
     color: $orange;
 }
@@ -74,4 +78,8 @@
 
 .ui.white.header{
     color: $white-color !important;
+}
+
+.ui.card .image>.ribbon.label, .ui.image>.ribbon.label{
+    z-index: 1000;
 }

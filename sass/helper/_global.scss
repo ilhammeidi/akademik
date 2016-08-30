@@ -52,6 +52,11 @@ h1, h2, h3, h4, h5{
     font-family: 'light', Arial, sans-serif;
 }
 
+a{
+    transition: .3s ease-out;
+    transition-property: border, color, background;
+}
+
 strong, .bold{
     font-weight: bold;
     font-family: 'semi-bold';
@@ -824,4 +829,8 @@ h3.ui.header, h4.ui.header{
 
 .ui.list .list>.item, .ui.list>.item, ol.ui.list li, ul.ui.list li{
     padding: .51428571em 0;
+}
+
+.ui.blue.ribbon.label{
+    z-index: 1000;
 }

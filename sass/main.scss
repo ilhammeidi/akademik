@@ -26,11 +26,14 @@
 @import "components/accordion";
 @import "components/steps";
 @import "components/datepicker";
+@import "components/article";
+@import "components/loader";
 
 // Layouts
 @import "layouts/table_cell";
 @import "layouts/landing_menu";
 @import "layouts/dashboard";
+@import "layouts/parallax";
 
 // Theme
 @import "themes/green_leaf";

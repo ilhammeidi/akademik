@@ -69,6 +69,16 @@ $(document).ready(function () {
     $('.tabed-parent.menu .item').tab({
         context: 'parent'
     });
+    $('.tabed-secondary .item').click(function(){
+        //Set active item
+        $(this).parent().siblings().children('a').removeClass('cur');
+        $(this).addClass('cur');
+        
+        //Show hide tab
+        var dataTab = $(this).data('tab');
+        $(this).parents('.inner').children('.tab-secondary').removeClass('active');
+        $('.tab-secondary[data-tab='+dataTab+']').addClass('active');
+    });
 
     //radio checkbox
     $('.ui.radio.checkbox').checkbox();

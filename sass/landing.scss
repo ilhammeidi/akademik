@@ -1,8 +1,20 @@
+//Vendord
+@import "vendors/jquery_animateSlider";
+
 // Helper
 @import "helper/variable";
 @import "helper/base_class";
 @import "helper/global";
 
+//components
+@import "components/slider";
+@import "components/article";
+@import "components/form";
+@import "components/landing_header";
+@import "components/landing_footer";
+@import "components/error";
+
 //layouts
 @import "layouts/app_choose";
 @import "layouts/login";
+@import "layouts/homepage";

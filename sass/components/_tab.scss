@@ -14,3 +14,10 @@
         }
     }
 }
+
+.tab-secondary{
+    display: none;
+    &.active{
+        display: block;
+    }
+}
